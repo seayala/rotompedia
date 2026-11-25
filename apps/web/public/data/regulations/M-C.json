@@ -106,58 +106,6 @@
         {
           "name": "Grassy Surge",
           "usage": 99.389
-        },
-        {
-          "name": "Trace",
-          "usage": 0.48
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.064
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.016
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.014
-        },
-        {
-          "name": "Magician",
-          "usage": 0.01
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.009
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.005
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.003
-        },
-        {
-          "name": "Simple",
-          "usage": 0.003
-        },
-        {
-          "name": "Moody",
-          "usage": 0.002
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.002
-        },
-        {
-          "name": "Frisk",
-          "usage": 0.002
-        },
-        {
-          "name": "Plus",
-          "usage": 0.002
         }
       ],
       "natures": [
@@ -359,60 +307,8 @@
           "usage": 53.44
         },
         {
-          "name": "Pressure",
-          "usage": 19.038
-        },
-        {
-          "name": "Trace",
-          "usage": 16.547
-        },
-        {
-          "name": "Hospitality",
-          "usage": 9.16
-        },
-        {
           "name": "Pickpocket",
           "usage": 0.718
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.38
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.169
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.127
-        },
-        {
-          "name": "Simple",
-          "usage": 0.127
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.084
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.042
-        },
-        {
-          "name": "Sand Stream",
-          "usage": 0.042
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.042
-        },
-        {
-          "name": "Sap Sipper",
-          "usage": 0.042
-        },
-        {
-          "name": "Plus",
-          "usage": 0.042
         }
       ],
       "natures": [
@@ -583,62 +479,6 @@
         {
           "name": "Intimidate",
           "usage": 98.607
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.845
-        },
-        {
-          "name": "Trace",
-          "usage": 0.345
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.146
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.017
-        },
-        {
-          "name": "Simple",
-          "usage": 0.016
-        },
-        {
-          "name": "Magician",
-          "usage": 0.005
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.005
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.003
-        },
-        {
-          "name": "Own Tempo",
-          "usage": 0.002
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.002
-        },
-        {
-          "name": "Unnerve",
-          "usage": 0.002
-        },
-        {
-          "name": "Opportunist",
-          "usage": 0.002
-        },
-        {
-          "name": "Protean",
-          "usage": 0.002
-        },
-        {
-          "name": "Fire Mane",
-          "usage": 0.002
         }
       ],
       "natures": [
@@ -842,62 +682,6 @@
         {
           "name": "Rough Skin",
           "usage": 92.741
-        },
-        {
-          "name": "Levitate",
-          "usage": 3.21
-        },
-        {
-          "name": "Trace",
-          "usage": 2.254
-        },
-        {
-          "name": "Hospitality",
-          "usage": 1.605
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.036
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.029
-        },
-        {
-          "name": "Simple",
-          "usage": 0.029
-        },
-        {
-          "name": "Plus",
-          "usage": 0.029
-        },
-        {
-          "name": "Moxie",
-          "usage": 0.015
-        },
-        {
-          "name": "Protean",
-          "usage": 0.015
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.007
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.007
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.007
-        },
-        {
-          "name": "Magician",
-          "usage": 0.007
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.007
         }
       ],
       "natures": [
@@ -1090,52 +874,8 @@
       ],
       "abilities": [
         {
-          "name": "Drought",
-          "usage": 98.175
-        },
-        {
           "name": "Solar Power",
           "usage": 0.706
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.656
-        },
-        {
-          "name": "Trace",
-          "usage": 0.404
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.018
-        },
-        {
-          "name": "Simple",
-          "usage": 0.011
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.007
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.007
-        },
-        {
-          "name": "Plus",
-          "usage": 0.007
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.004
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.004
-        },
-        {
-          "name": "Protean",
-          "usage": 0.004
         }
       ],
       "natures": [
@@ -1310,48 +1050,8 @@
           "usage": 98.856
         },
         {
-          "name": "Hospitality",
-          "usage": 0.411
-        },
-        {
           "name": "Sturdy",
           "usage": 0.392
-        },
-        {
-          "name": "Trace",
-          "usage": 0.22
-        },
-        {
-          "name": "Simple",
-          "usage": 0.031
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.031
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.031
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.01
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.007
-        },
-        {
-          "name": "Magician",
-          "usage": 0.005
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.002
-        },
-        {
-          "name": "Drought",
-          "usage": 0.002
         }
       ],
       "natures": [
@@ -1548,96 +1248,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 60.606
-        },
-        {
           "name": "Sap Sipper",
           "usage": 14.738
-        },
-        {
-          "name": "Hospitality",
-          "usage": 14.601
-        },
-        {
-          "name": "Intimidate",
-          "usage": 4.683
-        },
-        {
-          "name": "Simple",
-          "usage": 1.377
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.551
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.551
-        },
-        {
-          "name": "Stamina",
-          "usage": 0.551
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.275
-        },
-        {
-          "name": "Plus",
-          "usage": 0.275
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.138
-        },
-        {
-          "name": "Regenerator",
-          "usage": 0.138
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.138
-        },
-        {
-          "name": "Competitive",
-          "usage": 0.138
-        },
-        {
-          "name": "Magician",
-          "usage": 0.138
-        },
-        {
-          "name": "Spicy Spray",
-          "usage": 0.138
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.138
-        },
-        {
-          "name": "Aroma Veil",
-          "usage": 0.138
-        },
-        {
-          "name": "Sand Stream",
-          "usage": 0.138
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.138
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.138
-        },
-        {
-          "name": "Moxie",
-          "usage": 0.138
-        },
-        {
-          "name": "Unnerve",
-          "usage": 0.138
         }
       ],
       "natures": [
@@ -1826,48 +1438,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 46.685
-        },
-        {
-          "name": "Trace",
-          "usage": 40.46
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 5.548
-        },
-        {
-          "name": "Intimidate",
-          "usage": 3.112
-        },
-        {
-          "name": "Simple",
-          "usage": 1.894
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.624
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.135
-        },
-        {
-          "name": "Unnerve",
-          "usage": 0.135
-        },
-        {
-          "name": "Plus",
-          "usage": 0.135
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.135
-        },
-        {
-          "name": "Drought",
-          "usage": 0.135
+          "name": "Emergency Exit",
+          "usage": 0
         }
       ],
       "natures": [
@@ -2043,56 +1615,8 @@
           "usage": 93.105
         },
         {
-          "name": "Trace",
-          "usage": 3.661
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.691
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.155
-        },
-        {
-          "name": "Simple",
-          "usage": 0.103
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.078
-        },
-        {
           "name": "Pressure",
           "usage": 0.078
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.052
-        },
-        {
-          "name": "Magician",
-          "usage": 0.013
-        },
-        {
-          "name": "Regenerator",
-          "usage": 0.013
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.013
-        },
-        {
-          "name": "Moody",
-          "usage": 0.013
-        },
-        {
-          "name": "Limber",
-          "usage": 0.013
-        },
-        {
-          "name": "Aroma Veil",
-          "usage": 0.013
         }
       ],
       "natures": [
@@ -2270,116 +1794,8 @@
           "usage": 98.498
         },
         {
-          "name": "Trace",
-          "usage": 0.843
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.288
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.073
-        },
-        {
           "name": "Own Tempo",
           "usage": 0.063
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.06
-        },
-        {
-          "name": "Simple",
-          "usage": 0.031
-        },
-        {
-          "name": "Stamina",
-          "usage": 0.029
-        },
-        {
-          "name": "Grassy Surge",
-          "usage": 0.021
-        },
-        {
-          "name": "Drought",
-          "usage": 0.013
-        },
-        {
-          "name": "Magician",
-          "usage": 0.01
-        },
-        {
-          "name": "Rough Skin",
-          "usage": 0.008
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 0.005
-        },
-        {
-          "name": "Levitate",
-          "usage": 0.005
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.005
-        },
-        {
-          "name": "Flash Fire",
-          "usage": 0.005
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.005
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.005
-        },
-        {
-          "name": "Plus",
-          "usage": 0.005
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.003
-        },
-        {
-          "name": "Competitive",
-          "usage": 0.003
-        },
-        {
-          "name": "Flame Body",
-          "usage": 0.003
-        },
-        {
-          "name": "Defiant",
-          "usage": 0.003
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.003
-        },
-        {
-          "name": "Electric Surge",
-          "usage": 0.003
-        },
-        {
-          "name": "Protean",
-          "usage": 0.003
-        },
-        {
-          "name": "Eelevate",
-          "usage": 0.003
-        },
-        {
-          "name": "Snow Warning",
-          "usage": 0.003
-        },
-        {
-          "name": "Curious Medicine",
-          "usage": 0.003
         }
       ],
       "natures": [
@@ -2567,116 +1983,8 @@
           "usage": 98.498
         },
         {
-          "name": "Trace",
-          "usage": 0.843
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.288
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.073
-        },
-        {
           "name": "Own Tempo",
           "usage": 0.063
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.06
-        },
-        {
-          "name": "Simple",
-          "usage": 0.031
-        },
-        {
-          "name": "Stamina",
-          "usage": 0.029
-        },
-        {
-          "name": "Grassy Surge",
-          "usage": 0.021
-        },
-        {
-          "name": "Drought",
-          "usage": 0.013
-        },
-        {
-          "name": "Magician",
-          "usage": 0.01
-        },
-        {
-          "name": "Rough Skin",
-          "usage": 0.008
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 0.005
-        },
-        {
-          "name": "Levitate",
-          "usage": 0.005
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.005
-        },
-        {
-          "name": "Flash Fire",
-          "usage": 0.005
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.005
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.005
-        },
-        {
-          "name": "Plus",
-          "usage": 0.005
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.003
-        },
-        {
-          "name": "Competitive",
-          "usage": 0.003
-        },
-        {
-          "name": "Flame Body",
-          "usage": 0.003
-        },
-        {
-          "name": "Defiant",
-          "usage": 0.003
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.003
-        },
-        {
-          "name": "Electric Surge",
-          "usage": 0.003
-        },
-        {
-          "name": "Protean",
-          "usage": 0.003
-        },
-        {
-          "name": "Eelevate",
-          "usage": 0.003
-        },
-        {
-          "name": "Snow Warning",
-          "usage": 0.003
-        },
-        {
-          "name": "Curious Medicine",
-          "usage": 0.003
         }
       ],
       "natures": [
@@ -2834,48 +2142,8 @@
           "usage": 98.473
         },
         {
-          "name": "Trace",
-          "usage": 0.861
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.449
-        },
-        {
           "name": "Moxie",
           "usage": 0.125
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.037
-        },
-        {
-          "name": "Simple",
-          "usage": 0.02
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.017
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.003
-        },
-        {
-          "name": "Fire Mane",
-          "usage": 0.003
-        },
-        {
-          "name": "Regenerator",
-          "usage": 0.003
-        },
-        {
-          "name": "Limber",
-          "usage": 0.003
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.003
         }
       ],
       "natures": [
@@ -3076,56 +2344,12 @@
       ],
       "abilities": [
         {
-          "name": "Electric Surge",
-          "usage": 78.185
-        },
-        {
           "name": "Lightning Rod",
           "usage": 16.156
         },
         {
-          "name": "Trace",
-          "usage": 2.695
-        },
-        {
-          "name": "Hospitality",
-          "usage": 1.594
-        },
-        {
           "name": "Static",
           "usage": 0.903
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.183
-        },
-        {
-          "name": "Simple",
-          "usage": 0.113
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.056
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.028
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.028
-        },
-        {
-          "name": "Plus",
-          "usage": 0.028
-        },
-        {
-          "name": "Klutz",
-          "usage": 0.014
-        },
-        {
-          "name": "Pressure",
-          "usage": 0.014
         }
       ],
       "natures": [
@@ -3304,60 +2528,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 71.596
-        },
-        {
           "name": "Mold Breaker",
           "usage": 11.737
-        },
-        {
-          "name": "Hospitality",
-          "usage": 8.685
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 2.347
-        },
-        {
-          "name": "Intimidate",
-          "usage": 2.347
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.704
-        },
-        {
-          "name": "Simple",
-          "usage": 0.704
-        },
-        {
-          "name": "Magician",
-          "usage": 0.469
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.235
-        },
-        {
-          "name": "Limber",
-          "usage": 0.235
-        },
-        {
-          "name": "Plus",
-          "usage": 0.235
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.235
-        },
-        {
-          "name": "Pressure",
-          "usage": 0.235
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.235
         }
       ],
       "natures": [
@@ -3522,18 +2694,6 @@
         {
           "name": "Good as Gold",
           "usage": 66.476
-        },
-        {
-          "name": "Hospitality",
-          "usage": 17.55
-        },
-        {
-          "name": "Trace",
-          "usage": 15.688
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.287
         }
       ],
       "natures": [
@@ -3718,40 +2878,8 @@
           "usage": 99.051
         },
         {
-          "name": "Trace",
-          "usage": 0.707
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.167
-        },
-        {
           "name": "Water Absorb",
           "usage": 0.036
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.013
-        },
-        {
-          "name": "Magician",
-          "usage": 0.01
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.007
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.003
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.003
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.003
         }
       ],
       "natures": [
@@ -3936,40 +3064,12 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 52.336
-        },
-        {
-          "name": "Hospitality",
-          "usage": 24.922
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 8.723
-        },
-        {
           "name": "Frisk",
           "usage": 8.1
         },
         {
-          "name": "Intimidate",
-          "usage": 3.115
-        },
-        {
           "name": "Pickpocket",
           "usage": 1.558
-        },
-        {
-          "name": "Simple",
-          "usage": 0.623
-        },
-        {
-          "name": "Inner Focus",
-          "usage": 0.312
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.312
         }
       ],
       "natures": [
@@ -4161,56 +3261,8 @@
           "usage": 98.9
         },
         {
-          "name": "Trace",
-          "usage": 0.588
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.429
-        },
-        {
           "name": "Rain Dish",
           "usage": 0.021
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.01
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.01
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.007
-        },
-        {
-          "name": "Simple",
-          "usage": 0.007
-        },
-        {
-          "name": "Plus",
-          "usage": 0.007
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.007
-        },
-        {
-          "name": "Magician",
-          "usage": 0.003
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.003
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.003
-        },
-        {
-          "name": "Water Absorb",
-          "usage": 0.003
         }
       ],
       "natures": [
@@ -4398,28 +3450,16 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 73.438
+          "name": "Prankster",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 18.359
+          "name": "Infiltrator",
+          "usage": 0
         },
         {
-          "name": "Intimidate",
-          "usage": 3.125
-        },
-        {
-          "name": "Insomnia",
-          "usage": 2.734
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 1.563
-        },
-        {
-          "name": "Simple",
-          "usage": 0.781
+          "name": "Chlorophyll",
+          "usage": 0
         }
       ],
       "natures": [
@@ -4610,48 +3650,8 @@
           "usage": 89.544
         },
         {
-          "name": "Hospitality",
-          "usage": 7.081
-        },
-        {
-          "name": "Trace",
-          "usage": 2.54
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.261
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.244
-        },
-        {
-          "name": "Simple",
-          "usage": 0.104
-        },
-        {
           "name": "Cute Charm",
           "usage": 0.087
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.035
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.035
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.035
-        },
-        {
-          "name": "Magician",
-          "usage": 0.017
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.017
         }
       ],
       "natures": [
@@ -4830,36 +3830,8 @@
           "usage": 97.576
         },
         {
-          "name": "Hospitality",
-          "usage": 1.541
-        },
-        {
-          "name": "Trace",
-          "usage": 0.657
-        },
-        {
           "name": "Unnerve",
           "usage": 0.201
-        },
-        {
-          "name": "Simple",
-          "usage": 0.005
-        },
-        {
-          "name": "Magician",
-          "usage": 0.005
-        },
-        {
-          "name": "Plus",
-          "usage": 0.005
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.005
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.005
         }
       ],
       "natures": [
@@ -5038,60 +4010,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 56.725
-        },
-        {
-          "name": "Hospitality",
-          "usage": 21.053
-        },
-        {
-          "name": "Insomnia",
-          "usage": 5.848
-        },
-        {
-          "name": "Intimidate",
-          "usage": 3.509
-        },
-        {
-          "name": "Simple",
-          "usage": 2.924
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.754
-        },
-        {
           "name": "Cute Charm",
           "usage": 1.754
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 1.754
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 1.754
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.585
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.585
-        },
-        {
-          "name": "Levitate",
-          "usage": 0.585
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.585
-        },
-        {
-          "name": "Curious Medicine",
-          "usage": 0.585
         }
       ],
       "natures": [
@@ -5255,50 +4175,6 @@
         {
           "name": "Intimidate",
           "usage": 96.798
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.31
-        },
-        {
-          "name": "Trace",
-          "usage": 0.757
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.051
-        },
-        {
-          "name": "Simple",
-          "usage": 0.032
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.013
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.006
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.006
-        },
-        {
-          "name": "Cheek Pouch",
-          "usage": 0.006
-        },
-        {
-          "name": "Klutz",
-          "usage": 0.006
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.006
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.006
         }
       ],
       "natures": [
@@ -5467,46 +4343,6 @@
         {
           "name": "Flame Body",
           "usage": 90.289
-        },
-        {
-          "name": "Trace",
-          "usage": 4.426
-        },
-        {
-          "name": "Simple",
-          "usage": 2.484
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.078
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.181
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.136
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.136
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.136
-        },
-        {
-          "name": "Magician",
-          "usage": 0.045
-        },
-        {
-          "name": "Fire Mane",
-          "usage": 0.045
-        },
-        {
-          "name": "Plus",
-          "usage": 0.045
         }
       ],
       "natures": [
@@ -5689,32 +4525,8 @@
       ],
       "abilities": [
         {
-          "name": "Fairy Aura",
-          "usage": 96.75
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.767
-        },
-        {
-          "name": "Trace",
-          "usage": 0.44
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.011
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.011
-        },
-        {
-          "name": "Simple",
-          "usage": 0.011
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.011
+          "name": "Flower Veil",
+          "usage": 0
         }
       ],
       "natures": [
@@ -5878,22 +4690,6 @@
         {
           "name": "Intimidate",
           "usage": 87.745
-        },
-        {
-          "name": "Trace",
-          "usage": 9.362
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.128
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.511
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.17
         },
         {
           "name": "Flash Fire",
@@ -6063,36 +4859,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 76.471
-        },
-        {
-          "name": "No Guard",
-          "usage": 5.882
-        },
-        {
           "name": "Hospitality",
           "usage": 5.882
-        },
-        {
-          "name": "Simple",
-          "usage": 4.412
-        },
-        {
-          "name": "Intimidate",
-          "usage": 2.941
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.471
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 1.471
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 1.471
         }
       ],
       "natures": [
@@ -6280,46 +5048,6 @@
         {
           "name": "Mold Breaker",
           "usage": 46.246
-        },
-        {
-          "name": "Hospitality",
-          "usage": 29.73
-        },
-        {
-          "name": "Trace",
-          "usage": 14.414
-        },
-        {
-          "name": "Piercing Drill",
-          "usage": 5.806
-        },
-        {
-          "name": "No Guard",
-          "usage": 2.102
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.701
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.4
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.3
-        },
-        {
-          "name": "Magician",
-          "usage": 0.1
-        },
-        {
-          "name": "Limber",
-          "usage": 0.1
-        },
-        {
-          "name": "Drought",
-          "usage": 0.1
         }
       ],
       "natures": [
@@ -6492,48 +5220,8 @@
           "usage": 98.898
         },
         {
-          "name": "Trace",
-          "usage": 0.784
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.126
-        },
-        {
           "name": "Inner Focus",
           "usage": 0.052
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.044
-        },
-        {
-          "name": "Plus",
-          "usage": 0.03
-        },
-        {
-          "name": "Grassy Surge",
-          "usage": 0.015
-        },
-        {
-          "name": "Magician",
-          "usage": 0.015
-        },
-        {
-          "name": "Drought",
-          "usage": 0.015
-        },
-        {
-          "name": "Sand Stream",
-          "usage": 0.007
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 0.007
-        },
-        {
-          "name": "Protean",
-          "usage": 0.007
         }
       ],
       "natures": [
@@ -6707,32 +5395,12 @@
       ],
       "abilities": [
         {
-          "name": "Fairy Aura",
-          "usage": 96.75
+          "name": "Flower Veil",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 2.767
-        },
-        {
-          "name": "Trace",
-          "usage": 0.44
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.011
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.011
-        },
-        {
-          "name": "Simple",
-          "usage": 0.011
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.011
+          "name": "Symbiosis",
+          "usage": 0
         }
       ],
       "natures": [
@@ -6893,660 +5561,16 @@
       ],
       "abilities": [
         {
-          "name": "Intimidate",
-          "usage": 8.785
-        },
-        {
-          "name": "Drizzle",
-          "usage": 4.823
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 4.651
-        },
-        {
-          "name": "Armor Tail",
-          "usage": 4.604
-        },
-        {
-          "name": "Prankster",
-          "usage": 4.275
-        },
-        {
-          "name": "Unburden",
-          "usage": 3.93
-        },
-        {
-          "name": "Defiant",
-          "usage": 3.617
-        },
-        {
-          "name": "Stamina",
-          "usage": 3.398
-        },
-        {
-          "name": "Grassy Surge",
-          "usage": 3.367
-        },
-        {
-          "name": "Rough Skin",
-          "usage": 2.991
-        },
-        {
-          "name": "Adaptability",
-          "usage": 2.819
-        },
-        {
-          "name": "Blaze",
-          "usage": 2.819
-        },
-        {
-          "name": "Good as Gold",
-          "usage": 1.957
-        },
-        {
-          "name": "Emergency Exit",
-          "usage": 1.895
-        },
-        {
-          "name": "Competitive",
-          "usage": 1.879
-        },
-        {
-          "name": "Lightning Rod",
-          "usage": 1.769
-        },
-        {
           "name": "Trace",
           "usage": 1.691
-        },
-        {
-          "name": "Hospitality",
-          "usage": 1.644
-        },
-        {
-          "name": "Pixilate",
-          "usage": 1.566
-        },
-        {
-          "name": "Drought",
-          "usage": 1.535
-        },
-        {
-          "name": "Sand Rush",
-          "usage": 1.535
-        },
-        {
-          "name": "Sand Stream",
-          "usage": 1.441
-        },
-        {
-          "name": "Tough Claws",
-          "usage": 1.441
-        },
-        {
-          "name": "Flash Fire",
-          "usage": 1.378
-        },
-        {
-          "name": "Levitate",
-          "usage": 1.347
-        },
-        {
-          "name": "Aerilate",
-          "usage": 1.143
-        },
-        {
-          "name": "Rock Head",
-          "usage": 1.08
-        },
-        {
-          "name": "Cursed Body",
-          "usage": 1.034
-        },
-        {
-          "name": "Flame Body",
-          "usage": 0.987
-        },
-        {
-          "name": "Clear Body",
-          "usage": 0.783
-        },
-        {
-          "name": "Swift Swim",
-          "usage": 0.767
-        },
-        {
-          "name": "Toxic Debris",
-          "usage": 0.736
-        },
-        {
-          "name": "Liquid Voice",
-          "usage": 0.736
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.705
-        },
-        {
-          "name": "Snow Warning",
-          "usage": 0.689
-        },
-        {
-          "name": "Sharpness",
-          "usage": 0.689
-        },
-        {
-          "name": "Flower Veil",
-          "usage": 0.689
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.658
-        },
-        {
-          "name": "Inner Focus",
-          "usage": 0.642
-        },
-        {
-          "name": "Torrent",
-          "usage": 0.626
-        },
-        {
-          "name": "Multiscale",
-          "usage": 0.564
-        },
-        {
-          "name": "Chlorophyll",
-          "usage": 0.548
-        },
-        {
-          "name": "Contrary",
-          "usage": 0.548
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.517
-        },
-        {
-          "name": "Mirror Armor",
-          "usage": 0.485
-        },
-        {
-          "name": "Regenerator",
-          "usage": 0.47
-        },
-        {
-          "name": "Unnerve",
-          "usage": 0.438
-        },
-        {
-          "name": "Thermal Exchange",
-          "usage": 0.407
-        },
-        {
-          "name": "Poison Touch",
-          "usage": 0.345
-        },
-        {
-          "name": "Oblivious",
-          "usage": 0.329
-        },
-        {
-          "name": "Sheer Force",
-          "usage": 0.329
-        },
-        {
-          "name": "Soundproof",
-          "usage": 0.329
-        },
-        {
-          "name": "Technician",
-          "usage": 0.329
-        },
-        {
-          "name": "Frisk",
-          "usage": 0.313
-        },
-        {
-          "name": "Shadow Tag",
-          "usage": 0.313
-        },
-        {
-          "name": "Gale Wings",
-          "usage": 0.313
-        },
-        {
-          "name": "Scrappy",
-          "usage": 0.313
-        },
-        {
-          "name": "Solid Rock",
-          "usage": 0.313
-        },
-        {
-          "name": "Protean",
-          "usage": 0.298
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 0.282
-        },
-        {
-          "name": "Snow Cloak",
-          "usage": 0.282
         },
         {
           "name": "Synchronize",
           "usage": 0.266
         },
         {
-          "name": "Electric Surge",
-          "usage": 0.266
-        },
-        {
-          "name": "Pressure",
-          "usage": 0.266
-        },
-        {
-          "name": "Justified",
-          "usage": 0.251
-        },
-        {
-          "name": "Iron Fist",
-          "usage": 0.219
-        },
-        {
-          "name": "Solar Power",
-          "usage": 0.219
-        },
-        {
-          "name": "Static",
-          "usage": 0.219
-        },
-        {
-          "name": "Sturdy",
-          "usage": 0.219
-        },
-        {
-          "name": "Rain Dish",
-          "usage": 0.204
-        },
-        {
-          "name": "Hyper Cutter",
-          "usage": 0.204
-        },
-        {
-          "name": "Infiltrator",
-          "usage": 0.188
-        },
-        {
-          "name": "Bulletproof",
-          "usage": 0.188
-        },
-        {
-          "name": "Compound Eyes",
-          "usage": 0.188
-        },
-        {
-          "name": "Huge Power",
-          "usage": 0.172
-        },
-        {
-          "name": "Friend Guard",
-          "usage": 0.172
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.172
-        },
-        {
-          "name": "Steadfast",
-          "usage": 0.172
-        },
-        {
-          "name": "Punk Rock",
-          "usage": 0.172
-        },
-        {
-          "name": "Sniper",
-          "usage": 0.172
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.172
-        },
-        {
           "name": "Telepathy",
           "usage": 0.157
-        },
-        {
-          "name": "Electromorphosis",
-          "usage": 0.157
-        },
-        {
-          "name": "Sand Veil",
-          "usage": 0.157
-        },
-        {
-          "name": "Sap Sipper",
-          "usage": 0.141
-        },
-        {
-          "name": "Overgrow",
-          "usage": 0.141
-        },
-        {
-          "name": "Weak Armor",
-          "usage": 0.141
-        },
-        {
-          "name": "Dry Skin",
-          "usage": 0.141
-        },
-        {
-          "name": "Aroma Veil",
-          "usage": 0.141
-        },
-        {
-          "name": "Volt Absorb",
-          "usage": 0.125
-        },
-        {
-          "name": "Damp",
-          "usage": 0.125
-        },
-        {
-          "name": "Aura Guard",
-          "usage": 0.11
-        },
-        {
-          "name": "Mega Launcher",
-          "usage": 0.11
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.11
-        },
-        {
-          "name": "Magic Guard",
-          "usage": 0.11
-        },
-        {
-          "name": "Thick Fat",
-          "usage": 0.11
-        },
-        {
-          "name": "Limber",
-          "usage": 0.11
-        },
-        {
-          "name": "Queenly Majesty",
-          "usage": 0.094
-        },
-        {
-          "name": "Moxie",
-          "usage": 0.094
-        },
-        {
-          "name": "Unaware",
-          "usage": 0.094
-        },
-        {
-          "name": "Shell Armor",
-          "usage": 0.094
-        },
-        {
-          "name": "Guts",
-          "usage": 0.078
-        },
-        {
-          "name": "Simple",
-          "usage": 0.078
-        },
-        {
-          "name": "Own Tempo",
-          "usage": 0.078
-        },
-        {
-          "name": "Ice Body",
-          "usage": 0.063
-        },
-        {
-          "name": "Filter",
-          "usage": 0.063
-        },
-        {
-          "name": "Super Luck",
-          "usage": 0.063
-        },
-        {
-          "name": "Wandering Spirit",
-          "usage": 0.063
-        },
-        {
-          "name": "Healer",
-          "usage": 0.063
-        },
-        {
-          "name": "Stalwart",
-          "usage": 0.063
-        },
-        {
-          "name": "Natural Cure",
-          "usage": 0.063
-        },
-        {
-          "name": "Libero",
-          "usage": 0.063
-        },
-        {
-          "name": "Reckless",
-          "usage": 0.063
-        },
-        {
-          "name": "Illuminate",
-          "usage": 0.063
-        },
-        {
-          "name": "Sweet Veil",
-          "usage": 0.063
-        },
-        {
-          "name": "Sand Force",
-          "usage": 0.063
-        },
-        {
-          "name": "Supreme Overlord",
-          "usage": 0.047
-        },
-        {
-          "name": "Steely Spirit",
-          "usage": 0.047
-        },
-        {
-          "name": "Skill Link",
-          "usage": 0.047
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.047
-        },
-        {
-          "name": "Surge Surfer",
-          "usage": 0.047
-        },
-        {
-          "name": "Moody",
-          "usage": 0.047
-        },
-        {
-          "name": "Cute Charm",
-          "usage": 0.047
-        },
-        {
-          "name": "Merciless",
-          "usage": 0.047
-        },
-        {
-          "name": "Seed Sower",
-          "usage": 0.031
-        },
-        {
-          "name": "Innards Out",
-          "usage": 0.031
-        },
-        {
-          "name": "Purifying Salt",
-          "usage": 0.031
-        },
-        {
-          "name": "Cud Chew",
-          "usage": 0.031
-        },
-        {
-          "name": "Water Absorb",
-          "usage": 0.031
-        },
-        {
-          "name": "Leaf Guard",
-          "usage": 0.031
-        },
-        {
-          "name": "Spicy Spray",
-          "usage": 0.031
-        },
-        {
-          "name": "Cloud Nine",
-          "usage": 0.031
-        },
-        {
-          "name": "Harvest",
-          "usage": 0.031
-        },
-        {
-          "name": "Screen Cleaner",
-          "usage": 0.031
-        },
-        {
-          "name": "Swarm",
-          "usage": 0.031
-        },
-        {
-          "name": "Symbiosis",
-          "usage": 0.031
-        },
-        {
-          "name": "Pure Power",
-          "usage": 0.031
-        },
-        {
-          "name": "Fire Mane",
-          "usage": 0.031
-        },
-        {
-          "name": "Early Bird",
-          "usage": 0.031
-        },
-        {
-          "name": "Keen Eye",
-          "usage": 0.031
-        },
-        {
-          "name": "Heavy Metal",
-          "usage": 0.031
-        },
-        {
-          "name": "Klutz",
-          "usage": 0.016
-        },
-        {
-          "name": "Strong Jaw",
-          "usage": 0.016
-        },
-        {
-          "name": "Fluffy",
-          "usage": 0.016
-        },
-        {
-          "name": "Eelevate",
-          "usage": 0.016
-        },
-        {
-          "name": "Motor Drive",
-          "usage": 0.016
-        },
-        {
-          "name": "Refrigerate",
-          "usage": 0.016
-        },
-        {
-          "name": "Heatproof",
-          "usage": 0.016
-        },
-        {
-          "name": "Liquid Ooze",
-          "usage": 0.016
-        },
-        {
-          "name": "Unseen Fist",
-          "usage": 0.016
-        },
-        {
-          "name": "Supersweet Syrup",
-          "usage": 0.016
-        },
-        {
-          "name": "Slush Rush",
-          "usage": 0.016
-        },
-        {
-          "name": "Mummy",
-          "usage": 0.016
-        },
-        {
-          "name": "Parental Bond",
-          "usage": 0.016
-        },
-        {
-          "name": "Hustle",
-          "usage": 0.016
-        },
-        {
-          "name": "Poison Heal",
-          "usage": 0.016
-        },
-        {
-          "name": "Immunity",
-          "usage": 0.016
-        },
-        {
-          "name": "Overcoat",
-          "usage": 0.016
-        },
-        {
-          "name": "Shield Dust",
-          "usage": 0.016
-        },
-        {
-          "name": "Magma Armor",
-          "usage": 0.016
-        },
-        {
-          "name": "Pickup",
-          "usage": 0.016
-        },
-        {
-          "name": "Rivalry",
-          "usage": 0.016
-        },
-        {
-          "name": "Berserk",
-          "usage": 0.016
-        },
-        {
-          "name": "Cheek Pouch",
-          "usage": 0.016
         }
       ],
       "natures": [
@@ -7717,20 +5741,8 @@
       ],
       "abilities": [
         {
-          "name": "Snow Warning",
-          "usage": 97.687
-        },
-        {
           "name": "Cursed Body",
           "usage": 1.725
-        },
-        {
-          "name": "Trace",
-          "usage": 0.342
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.246
         }
       ],
       "natures": [
@@ -7904,40 +5916,8 @@
           "usage": 73.741
         },
         {
-          "name": "Trace",
-          "usage": 10.069
-        },
-        {
           "name": "Flash Fire",
           "usage": 9.872
-        },
-        {
-          "name": "Hospitality",
-          "usage": 5.726
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.099
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.099
-        },
-        {
-          "name": "Magician",
-          "usage": 0.099
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.099
-        },
-        {
-          "name": "Simple",
-          "usage": 0.099
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.099
         }
       ],
       "natures": [
@@ -8117,48 +6097,8 @@
           "usage": 98.943
         },
         {
-          "name": "Trace",
-          "usage": 0.524
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.316
-        },
-        {
           "name": "White Smoke",
           "usage": 0.059
-        },
-        {
-          "name": "Harvest",
-          "usage": 0.049
-        },
-        {
-          "name": "Simple",
-          "usage": 0.04
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.02
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.01
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.01
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.01
-        },
-        {
-          "name": "Magician",
-          "usage": 0.01
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.01
         }
       ],
       "natures": [
@@ -8343,46 +6283,6 @@
         {
           "name": "Clear Body",
           "usage": 80.847
-        },
-        {
-          "name": "Hospitality",
-          "usage": 13.567
-        },
-        {
-          "name": "Trace",
-          "usage": 4.788
-        },
-        {
-          "name": "Simple",
-          "usage": 0.368
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.061
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.061
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.061
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.061
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.061
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.061
-        },
-        {
-          "name": "Snow Warning",
-          "usage": 0.061
         }
       ],
       "natures": [
@@ -8561,36 +6461,12 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 54.286
+          "name": "Overgrow",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 22.857
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 15.714
-        },
-        {
-          "name": "Magician",
-          "usage": 1.429
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.429
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 1.429
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.429
-        },
-        {
-          "name": "Intimidate",
-          "usage": 1.429
+          "name": "Chlorophyll",
+          "usage": 0
         }
       ],
       "natures": [
@@ -8749,44 +6625,12 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 58.201
+          "name": "Torrent",
+          "usage": 0
         },
         {
-          "name": "Trace",
-          "usage": 32.275
-        },
-        {
-          "name": "Intimidate",
-          "usage": 2.646
-        },
-        {
-          "name": "Simple",
-          "usage": 1.587
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 1.587
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.058
-        },
-        {
-          "name": "Magician",
-          "usage": 1.058
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.529
-        },
-        {
-          "name": "Plus",
-          "usage": 0.529
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.529
+          "name": "Liquid Voice",
+          "usage": 0
         }
       ],
       "natures": [
@@ -8974,54 +6818,6 @@
         {
           "name": "Cursed Body",
           "usage": 69.737
-        },
-        {
-          "name": "Trace",
-          "usage": 12.993
-        },
-        {
-          "name": "Hospitality",
-          "usage": 11.349
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.987
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.987
-        },
-        {
-          "name": "Simple",
-          "usage": 0.987
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.822
-        },
-        {
-          "name": "Plus",
-          "usage": 0.658
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.493
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.493
-        },
-        {
-          "name": "Regenerator",
-          "usage": 0.164
-        },
-        {
-          "name": "Mega Launcher",
-          "usage": 0.164
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.164
         }
       ],
       "natures": [
@@ -9191,24 +6987,12 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 67.308
+          "name": "Toxic Debris",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 28.846
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.923
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.962
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.962
+          "name": "Corrosion",
+          "usage": 0
         }
       ],
       "natures": [
@@ -9379,34 +7163,6 @@
         {
           "name": "Inner Focus",
           "usage": 78.734
-        },
-        {
-          "name": "Hospitality",
-          "usage": 9.873
-        },
-        {
-          "name": "Trace",
-          "usage": 9.873
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.759
-        },
-        {
-          "name": "Simple",
-          "usage": 0.38
-        },
-        {
-          "name": "Plus",
-          "usage": 0.127
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.127
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.127
         }
       ],
       "natures": [
@@ -9576,40 +7332,12 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 54.464
+          "name": "Torrent",
+          "usage": 0
         },
         {
-          "name": "Trace",
-          "usage": 33.482
-        },
-        {
-          "name": "Sap Sipper",
-          "usage": 6.696
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 1.786
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 1.339
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.893
-        },
-        {
-          "name": "Drought",
-          "usage": 0.446
-        },
-        {
-          "name": "Spicy Spray",
-          "usage": 0.446
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.446
+          "name": "Damp",
+          "usage": 0
         }
       ],
       "natures": [
@@ -9777,26 +7505,6 @@
         {
           "name": "Snow Warning",
           "usage": 99.08
-        },
-        {
-          "name": "Trace",
-          "usage": 0.635
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.233
-        },
-        {
-          "name": "Magician",
-          "usage": 0.026
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.013
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.013
         }
       ],
       "natures": [
@@ -9963,48 +7671,12 @@
           "usage": 77.619
         },
         {
-          "name": "Hospitality",
-          "usage": 9.238
-        },
-        {
           "name": "Justified",
           "usage": 6.381
         },
         {
-          "name": "Trace",
-          "usage": 4.095
-        },
-        {
           "name": "Steadfast",
           "usage": 1.238
-        },
-        {
-          "name": "Simple",
-          "usage": 0.571
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.286
-        },
-        {
-          "name": "Mega Launcher",
-          "usage": 0.19
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.095
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.095
-        },
-        {
-          "name": "Plus",
-          "usage": 0.095
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.095
         }
       ],
       "natures": [
@@ -10181,100 +7853,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 44.481
-        },
-        {
-          "name": "Levitate",
-          "usage": 38.312
-        },
-        {
-          "name": "Trace",
-          "usage": 8.009
-        },
-        {
           "name": "Magician",
           "usage": 1.407
-        },
-        {
-          "name": "Plus",
-          "usage": 1.407
-        },
-        {
-          "name": "Intimidate",
-          "usage": 1.19
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 1.19
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.866
-        },
-        {
-          "name": "Simple",
-          "usage": 0.649
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.325
-        },
-        {
-          "name": "Lightning Rod",
-          "usage": 0.325
-        },
-        {
-          "name": "Earth Eater",
-          "usage": 0.216
-        },
-        {
-          "name": "Defiant",
-          "usage": 0.216
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 0.216
-        },
-        {
-          "name": "Protean",
-          "usage": 0.216
-        },
-        {
-          "name": "Innards Out",
-          "usage": 0.108
-        },
-        {
-          "name": "Armor Tail",
-          "usage": 0.108
-        },
-        {
-          "name": "Pixilate",
-          "usage": 0.108
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.108
-        },
-        {
-          "name": "Tangled Feet",
-          "usage": 0.108
-        },
-        {
-          "name": "Competitive",
-          "usage": 0.108
-        },
-        {
-          "name": "Fur Coat",
-          "usage": 0.108
-        },
-        {
-          "name": "Moody",
-          "usage": 0.108
-        },
-        {
-          "name": "Frisk",
-          "usage": 0.108
         }
       ],
       "natures": [
@@ -10444,28 +8024,12 @@
           "usage": 58.091
         },
         {
-          "name": "Hospitality",
-          "usage": 22.584
-        },
-        {
           "name": "Bulletproof",
           "usage": 10.827
         },
         {
-          "name": "Simple",
-          "usage": 4.424
-        },
-        {
-          "name": "Trace",
-          "usage": 3.376
-        },
-        {
           "name": "Overcoat",
           "usage": 0.466
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.233
         }
       ],
       "natures": [
@@ -10633,28 +8197,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 46.729
-        },
-        {
-          "name": "Hospitality",
-          "usage": 36.449
-        },
-        {
           "name": "Anger Point",
           "usage": 12.15
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.869
-        },
-        {
-          "name": "Intimidate",
-          "usage": 1.869
-        },
-        {
-          "name": "Simple",
-          "usage": 0.935
         }
       ],
       "natures": [
@@ -10833,26 +8377,6 @@
         {
           "name": "Pressure",
           "usage": 2.122
-        },
-        {
-          "name": "Trace",
-          "usage": 0.765
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.313
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.052
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.017
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.017
         }
       ],
       "natures": [
@@ -11022,32 +8546,8 @@
           "usage": 93.267
         },
         {
-          "name": "Hospitality",
-          "usage": 3.396
-        },
-        {
-          "name": "Trace",
-          "usage": 2.693
-        },
-        {
           "name": "Inner Focus",
           "usage": 0.234
-        },
-        {
-          "name": "Simple",
-          "usage": 0.176
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.059
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.059
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.059
         },
         {
           "name": "Vital Spirit",
@@ -11225,44 +8725,8 @@
           "usage": 78.494
         },
         {
-          "name": "Hospitality",
-          "usage": 10.01
-        },
-        {
           "name": "Ice Body",
           "usage": 6.442
-        },
-        {
-          "name": "Trace",
-          "usage": 4.163
-        },
-        {
-          "name": "Simple",
-          "usage": 0.198
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.198
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.099
-        },
-        {
-          "name": "Fire Mane",
-          "usage": 0.099
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.099
-        },
-        {
-          "name": "Grassy Surge",
-          "usage": 0.099
-        },
-        {
-          "name": "Sap Sipper",
-          "usage": 0.099
         }
       ],
       "natures": [
@@ -11429,36 +8893,12 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 41.509
-        },
-        {
-          "name": "Hospitality",
-          "usage": 21.698
-        },
-        {
           "name": "Magic Bounce",
           "usage": 21.698
         },
         {
           "name": "Anticipation",
           "usage": 11.321
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.943
-        },
-        {
-          "name": "Plus",
-          "usage": 0.943
-        },
-        {
-          "name": "Stamina",
-          "usage": 0.943
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.943
         }
       ],
       "natures": [
@@ -11629,38 +9069,6 @@
         {
           "name": "Unnerve",
           "usage": 6.002
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.492
-        },
-        {
-          "name": "Trace",
-          "usage": 1.982
-        },
-        {
-          "name": "Simple",
-          "usage": 0.396
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.283
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.113
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.057
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.057
-        },
-        {
-          "name": "Magician",
-          "usage": 0.057
         }
       ],
       "natures": [
@@ -11837,32 +9245,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 61.818
-        },
-        {
           "name": "Mold Breaker",
           "usage": 23.636
-        },
-        {
-          "name": "Intimidate",
-          "usage": 5.455
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.636
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.818
-        },
-        {
-          "name": "Magician",
-          "usage": 1.818
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.818
         }
       ],
       "natures": [
@@ -12032,26 +9416,6 @@
         {
           "name": "Speed Boost",
           "usage": 99.572
-        },
-        {
-          "name": "Trace",
-          "usage": 0.184
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.153
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.031
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.031
-        },
-        {
-          "name": "Simple",
-          "usage": 0.031
         }
       ],
       "natures": [
@@ -12240,36 +9604,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 61.644
-        },
-        {
           "name": "Rain Dish",
           "usage": 23.973
-        },
-        {
-          "name": "Trace",
-          "usage": 8.676
-        },
-        {
-          "name": "Simple",
-          "usage": 2.74
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 2.283
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.228
-        },
-        {
-          "name": "Technician",
-          "usage": 0.228
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.228
         }
       ],
       "natures": [
@@ -12444,32 +9780,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 61.818
-        },
-        {
           "name": "Mold Breaker",
           "usage": 23.636
-        },
-        {
-          "name": "Intimidate",
-          "usage": 5.455
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.636
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.818
-        },
-        {
-          "name": "Magician",
-          "usage": 1.818
-        },
-        {
-          "name": "No Guard",
-          "usage": 1.818
         }
       ],
       "natures": [
@@ -12637,22 +9949,6 @@
         {
           "name": "Cursed Body",
           "usage": 21.574
-        },
-        {
-          "name": "Trace",
-          "usage": 3.934
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.299
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.127
-        },
-        {
-          "name": "Simple",
-          "usage": 0.127
         }
       ],
       "natures": [
@@ -12811,30 +10107,6 @@
         {
           "name": "Justified",
           "usage": 14.024
-        },
-        {
-          "name": "Trace",
-          "usage": 3.383
-        },
-        {
-          "name": "Hospitality",
-          "usage": 1.128
-        },
-        {
-          "name": "Simple",
-          "usage": 0.141
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.07
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.07
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.07
         }
       ],
       "natures": [
@@ -13000,68 +10272,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 29.787
-        },
-        {
           "name": "Cute Charm",
           "usage": 18.085
-        },
-        {
-          "name": "Trace",
-          "usage": 14.894
-        },
-        {
-          "name": "Intimidate",
-          "usage": 10.638
-        },
-        {
-          "name": "Simple",
-          "usage": 9.574
-        },
-        {
-          "name": "No Guard",
-          "usage": 3.191
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 3.191
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 2.128
-        },
-        {
-          "name": "Electric Surge",
-          "usage": 1.064
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 1.064
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 1.064
-        },
-        {
-          "name": "Inner Focus",
-          "usage": 1.064
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 1.064
-        },
-        {
-          "name": "Stamina",
-          "usage": 1.064
-        },
-        {
-          "name": "Insomnia",
-          "usage": 1.064
-        },
-        {
-          "name": "Regenerator",
-          "usage": 1.064
         }
       ],
       "natures": [
@@ -13227,28 +10439,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 39.13
-        },
-        {
-          "name": "Trace",
-          "usage": 36.957
-        },
-        {
           "name": "Flame Body",
           "usage": 17.391
-        },
-        {
-          "name": "Insomnia",
-          "usage": 2.174
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 2.174
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 2.174
         }
       ],
       "natures": [
@@ -13429,34 +10621,6 @@
         {
           "name": "Flash Fire",
           "usage": 26.899
-        },
-        {
-          "name": "Hospitality",
-          "usage": 8.544
-        },
-        {
-          "name": "Trace",
-          "usage": 6.013
-        },
-        {
-          "name": "Simple",
-          "usage": 0.949
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.633
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.633
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.316
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.316
         }
       ],
       "natures": [
@@ -13619,26 +10783,6 @@
         {
           "name": "Hyper Cutter",
           "usage": 12.106
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.079
-        },
-        {
-          "name": "Trace",
-          "usage": 1.26
-        },
-        {
-          "name": "Simple",
-          "usage": 0.21
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.14
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.07
         }
       ],
       "natures": [
@@ -13806,76 +10950,16 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 31.618
+          "name": "Keen Eye",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 30.147
+          "name": "Stall",
+          "usage": 0
         },
         {
-          "name": "Intimidate",
-          "usage": 17.647
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 4.412
-        },
-        {
-          "name": "Stamina",
-          "usage": 3.676
-        },
-        {
-          "name": "Simple",
-          "usage": 1.471
-        },
-        {
-          "name": "Drought",
-          "usage": 1.471
-        },
-        {
-          "name": "Lightning Rod",
-          "usage": 1.471
-        },
-        {
-          "name": "Fairy Aura",
-          "usage": 1.471
-        },
-        {
-          "name": "Snow Warning",
-          "usage": 0.735
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.735
-        },
-        {
-          "name": "Frisk",
-          "usage": 0.735
-        },
-        {
-          "name": "Soundproof",
-          "usage": 0.735
-        },
-        {
-          "name": "Drizzle",
-          "usage": 0.735
-        },
-        {
-          "name": "Effect Spore",
-          "usage": 0.735
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.735
-        },
-        {
-          "name": "Weak Armor",
-          "usage": 0.735
-        },
-        {
-          "name": "Moody",
-          "usage": 0.735
+          "name": "Prankster",
+          "usage": 0
         }
       ],
       "natures": [
@@ -14050,44 +11134,8 @@
           "usage": 48.276
         },
         {
-          "name": "Trace",
-          "usage": 23.276
-        },
-        {
-          "name": "Hospitality",
-          "usage": 16.379
-        },
-        {
           "name": "Natural Cure",
           "usage": 2.586
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 1.724
-        },
-        {
-          "name": "Intimidate",
-          "usage": 1.724
-        },
-        {
-          "name": "Receiver",
-          "usage": 1.724
-        },
-        {
-          "name": "Harvest",
-          "usage": 1.724
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.862
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.862
-        },
-        {
-          "name": "Simple",
-          "usage": 0.862
         }
       ],
       "natures": [
@@ -14256,34 +11304,6 @@
         {
           "name": "Regenerator",
           "usage": 91.194
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.582
-        },
-        {
-          "name": "Trace",
-          "usage": 3.134
-        },
-        {
-          "name": "Simple",
-          "usage": 0.896
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.746
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.149
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.149
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.149
         }
       ],
       "natures": [
@@ -14464,28 +11484,16 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 58.333
+          "name": "Shield Dust",
+          "usage": 0
         },
         {
-          "name": "Magic Bounce",
-          "usage": 25
+          "name": "Compound Eyes",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 4.167
-        },
-        {
-          "name": "Plus",
-          "usage": 4.167
-        },
-        {
-          "name": "Simple",
-          "usage": 4.167
-        },
-        {
-          "name": "No Guard",
-          "usage": 4.167
+          "name": "Friend Guard",
+          "usage": 0
         }
       ],
       "natures": [
@@ -14651,22 +11659,6 @@
         {
           "name": "Levitate",
           "usage": 79.581
-        },
-        {
-          "name": "Trace",
-          "usage": 10.471
-        },
-        {
-          "name": "Hospitality",
-          "usage": 8.901
-        },
-        {
-          "name": "Speed Boost",
-          "usage": 0.524
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.524
         }
       ],
       "natures": [
@@ -14835,34 +11827,6 @@
         {
           "name": "Sand Stream",
           "usage": 92.936
-        },
-        {
-          "name": "No Guard",
-          "usage": 5.447
-        },
-        {
-          "name": "Trace",
-          "usage": 0.681
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.596
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.085
-        },
-        {
-          "name": "Mold Breaker",
-          "usage": 0.085
-        },
-        {
-          "name": "Simple",
-          "usage": 0.085
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 0.085
         }
       ],
       "natures": [
@@ -15048,28 +12012,8 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 41.667
-        },
-        {
-          "name": "Hospitality",
-          "usage": 27.778
-        },
-        {
           "name": "Cheek Pouch",
           "usage": 16.667
-        },
-        {
-          "name": "No Guard",
-          "usage": 8.333
-        },
-        {
-          "name": "Simple",
-          "usage": 2.778
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 2.778
         }
       ],
       "natures": [
@@ -15245,24 +12189,12 @@
       ],
       "abilities": [
         {
-          "name": "Lightning Rod",
-          "usage": 98.429
+          "name": "Overgrow",
+          "usage": 0
         },
         {
-          "name": "Trace",
-          "usage": 0.785
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.393
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.262
-        },
-        {
-          "name": "Simple",
-          "usage": 0.131
+          "name": "Unburden",
+          "usage": 0
         }
       ],
       "natures": [
@@ -15433,32 +12365,8 @@
           "usage": 27.364
         },
         {
-          "name": "Hospitality",
-          "usage": 1.543
-        },
-        {
           "name": "Sap Sipper",
           "usage": 0.201
-        },
-        {
-          "name": "Trace",
-          "usage": 0.134
-        },
-        {
-          "name": "Simple",
-          "usage": 0.067
-        },
-        {
-          "name": "Magician",
-          "usage": 0.067
-        },
-        {
-          "name": "Water Bubble",
-          "usage": 0.067
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.067
         }
       ],
       "natures": [
@@ -15627,12 +12535,8 @@
       ],
       "abilities": [
         {
-          "name": "Hospitality",
-          "usage": 93.75
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 6.25
+          "name": "Stance Change",
+          "usage": 0
         }
       ],
       "natures": [
@@ -15815,18 +12719,6 @@
         {
           "name": "Levitate",
           "usage": 88.696
-        },
-        {
-          "name": "Trace",
-          "usage": 6.957
-        },
-        {
-          "name": "Hospitality",
-          "usage": 3.913
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.435
         }
       ],
       "natures": [
@@ -15996,32 +12888,8 @@
       ],
       "abilities": [
         {
-          "name": "Spicy Spray",
-          "usage": 79.151
-        },
-        {
           "name": "Moody",
           "usage": 20.295
-        },
-        {
-          "name": "Hospitality",
-          "usage": 0.185
-        },
-        {
-          "name": "Trace",
-          "usage": 0.123
-        },
-        {
-          "name": "Simple",
-          "usage": 0.123
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.062
-        },
-        {
-          "name": "No Guard",
-          "usage": 0.062
         }
       ],
       "natures": [
@@ -16196,24 +13064,8 @@
           "usage": 97.379
         },
         {
-          "name": "Hospitality",
-          "usage": 1.079
-        },
-        {
           "name": "Moxie",
           "usage": 1.079
-        },
-        {
-          "name": "Trace",
-          "usage": 0.308
-        },
-        {
-          "name": "Simple",
-          "usage": 0.103
-        },
-        {
-          "name": "Psychic Surge",
-          "usage": 0.051
         }
       ],
       "natures": [
@@ -16374,19 +13226,7 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 50
-        },
-        {
-          "name": "Hospitality",
-          "usage": 38.889
-        },
-        {
           "name": "Leaf Guard",
-          "usage": 5.556
-        },
-        {
-          "name": "Intimidate",
           "usage": 5.556
         }
       ],
@@ -16557,22 +13397,6 @@
         {
           "name": "Cloud Nine",
           "usage": 98.352
-        },
-        {
-          "name": "Hospitality",
-          "usage": 1.124
-        },
-        {
-          "name": "Trace",
-          "usage": 0.225
-        },
-        {
-          "name": "Insomnia",
-          "usage": 0.15
-        },
-        {
-          "name": "Simple",
-          "usage": 0.15
         }
       ],
       "natures": [
@@ -16756,28 +13580,8 @@
           "usage": 88.985
         },
         {
-          "name": "Trace",
-          "usage": 4.104
-        },
-        {
           "name": "Inner Focus",
           "usage": 3.24
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.808
-        },
-        {
-          "name": "Simple",
-          "usage": 0.432
-        },
-        {
-          "name": "Intimidate",
-          "usage": 0.216
-        },
-        {
-          "name": "Receiver",
-          "usage": 0.216
         }
       ],
       "natures": [
@@ -16933,20 +13737,16 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 76.471
+          "name": "Leaf Guard",
+          "usage": 0
         },
         {
-          "name": "Hospitality",
-          "usage": 11.765
+          "name": "Queenly Majesty",
+          "usage": 0
         },
         {
-          "name": "Mold Breaker",
-          "usage": 5.882
-        },
-        {
-          "name": "Pickpocket",
-          "usage": 5.882
+          "name": "Sweet Veil",
+          "usage": 0
         }
       ],
       "natures": [
@@ -17115,22 +13915,6 @@
         {
           "name": "Poison Heal",
           "usage": 7.732
-        },
-        {
-          "name": "Hospitality",
-          "usage": 2.835
-        },
-        {
-          "name": "Trace",
-          "usage": 2.577
-        },
-        {
-          "name": "Cursed Body",
-          "usage": 0.258
-        },
-        {
-          "name": "Magic Bounce",
-          "usage": 0.258
         }
       ],
       "natures": [
@@ -17204,7 +13988,12 @@
       "tournamentAppearances": 19,
       "moves": [],
       "items": [],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Tough Claws",
+          "usage": 0
+        }
+      ],
       "natures": [
         {
           "name": "Adamant",

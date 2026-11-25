@@ -1,14 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  DEFAULT_REGULATION_CODE,
+import { DEFAULT_REGULATION_CODE,
   getRegulationDefinition,
   REGULATIONS,
   type PokemonMetaStats,
   type RegulationCode,
   type RegulationSnapshot,
   type TournamentCategory,
-  type TournamentTeam,
-} from "@rotompedia/core";
+  type TournamentTeam, filterLegalAbilities } from "@rotompedia/core";
 import { useI18n } from "./i18n.tsx";
 
 type Tab = "usage" | "cores" | "teams";
@@ -644,7 +642,7 @@ export default function App() {
                       />
                       <DetailList
                         title={lang === "es" ? "Habilidades comunes" : "Common abilities"}
-                        items={selectedMon.abilities.slice(0, 4)}
+                        items={filterLegalAbilities(selectedMon.name, selectedMon.abilities).slice(0, 3)}
                       />
                       <DetailList
                         title={

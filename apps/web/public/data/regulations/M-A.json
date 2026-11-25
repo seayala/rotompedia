@@ -505,10 +505,6 @@
         {
           "name": "Poison Touch",
           "usage": 11.793
-        },
-        {
-          "name": "Pressure",
-          "usage": 1.139
         }
       ],
       "natures": [
@@ -1244,10 +1240,6 @@
         {
           "name": "Sturdy",
           "usage": 12.84
-        },
-        {
-          "name": "Stalwart",
-          "usage": 1.642
         }
       ],
       "natures": [
@@ -4829,10 +4821,6 @@
         {
           "name": "Flower Veil",
           "usage": 93.501
-        },
-        {
-          "name": "Symbiosis",
-          "usage": 6.499
         }
       ],
       "natures": [
@@ -5615,7 +5603,16 @@
       "tournamentAppearances": 103,
       "moves": [],
       "items": [],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Overgrow",
+          "usage": 0
+        },
+        {
+          "name": "Grassy Surge",
+          "usage": 0
+        }
+      ],
       "natures": [],
       "teammates": [],
       "baseStats": {
@@ -5944,7 +5941,20 @@
       "tournamentAppearances": 36,
       "moves": [],
       "items": [],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Prankster",
+          "usage": 0
+        },
+        {
+          "name": "Frisk",
+          "usage": 0
+        },
+        {
+          "name": "Pickpocket",
+          "usage": 0
+        }
+      ],
       "natures": [],
       "teammates": [],
       "baseStats": {
@@ -6223,7 +6233,20 @@
       "tournamentAppearances": 16,
       "moves": [],
       "items": [],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Own Tempo",
+          "usage": 0
+        },
+        {
+          "name": "Synchronize",
+          "usage": 0
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 0
+        }
+      ],
       "natures": [],
       "teammates": [],
       "baseStats": {
@@ -6792,7 +6815,20 @@
       "tournamentAppearances": 8,
       "moves": [],
       "items": [],
-      "abilities": [],
+      "abilities": [
+        {
+          "name": "Vital Spirit",
+          "usage": 0
+        },
+        {
+          "name": "Inner Focus",
+          "usage": 0
+        },
+        {
+          "name": "Defiant",
+          "usage": 0
+        }
+      ],
       "natures": [],
       "teammates": [],
       "baseStats": {

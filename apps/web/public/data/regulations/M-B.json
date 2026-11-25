@@ -906,10 +906,6 @@
         {
           "name": "Flower Veil",
           "usage": 98.9
-        },
-        {
-          "name": "Symbiosis",
-          "usage": 1.1
         }
       ],
       "natures": [
@@ -1047,10 +1043,6 @@
         {
           "name": "Poison Touch",
           "usage": 11.2
-        },
-        {
-          "name": "Pressure",
-          "usage": 0.1
         }
       ],
       "natures": [
@@ -2364,10 +2356,6 @@
         {
           "name": "Sturdy",
           "usage": 5.3
-        },
-        {
-          "name": "Stalwart",
-          "usage": 1.3
         }
       ],
       "natures": [],
