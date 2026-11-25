@@ -38,6 +38,8 @@ function countUniqueTournaments(teams: readonly { tournamentId?: string | null; 
 }
 
 const SPRITE_SPECIAL_SLUGS: Record<string, string> = {
+
+
   "alolan-muk": "muk-alola",
   "alolan-ninetales": "ninetales-alola",
   "alolan-persian": "persian-alola",
@@ -52,12 +54,6 @@ const SPRITE_SPECIAL_SLUGS: Record<string, string> = {
   "hisuian-zoroark": "zoroark-hisui",
   "paldean-tauros-aqua-breed": "tauros-paldea-aqua",
   "paldean-tauros": "tauros-paldea",
-  "female-indeedee": "indeedee-f",
-  "indeedee": "indeedee-f",
-  "female-basculegion": "basculegion-f",
-  "basculegion": "basculegion-f",
-  "female-meowstic": "meowstic-f",
-  "meowstic": "meowstic-f",
   "bloodmoon-ursaluna": "ursaluna-bloodmoon",
   "eternal-flower-floette": "floette-eternal",
   "giratina-origin": "giratina-origin",
@@ -98,6 +94,12 @@ const SPRITE_SPECIAL_SLUGS: Record<string, string> = {
   "raging-bolt": "ragingbolt",
   "roaring-moon": "roaringmoon",
   "walking-wake": "walkingwake",
+  "indeedee": "indeedee",
+  "indeedee-f": "indeedee-f",
+  "basculegion": "basculegion-m",
+  "basculegion-f": "basculegion-f",
+  "meowstic": "meowstic-m",
+  "meowstic-f": "meowstic-f",
 };
 
 const BASE_SPECIES_FALLBACKS: Record<string, string> = {
@@ -116,7 +118,9 @@ const BASE_SPECIES_FALLBACKS: Record<string, string> = {
   "paldean-tauros-aqua-breed": "tauros",
   "paldean-tauros": "tauros",
   "female-indeedee": "indeedee",
-  "female-basculegion": "basculegion",
+  "basculegion": "basculegion-m",
+  "female-basculegion": "basculegion-f",
+  "basculegion-f": "basculegion-f",
   "female-meowstic": "meowstic",
   "bloodmoon-ursaluna": "ursaluna",
   "eternal-flower-floette": "floette",
@@ -134,14 +138,36 @@ const BASE_SPECIES_FALLBACKS: Record<string, string> = {
   "tatsugiri-droopy-form": "tatsugiri",
 };
 
+function canonicalSpeciesDedupeKey(name: string): string {
+  const trimmed = name.trim().toLowerCase();
+  const femaleMatch = trimmed.match(/^(?:female\s+(.+)|(.+?)\s*♀)$/);
+  if (femaleMatch) {
+    const base = (femaleMatch[1] || femaleMatch[2] || "").trim().replace(/[^a-z0-9]+/g, "-");
+    return `${base}-f`;
+  }
+  return trimmed.replace(/[^a-z0-9]+/g, "-");
+}
+
+function canonicalDisplayName(name: string): string {
+  const trimmed = name.trim();
+  const femalePrefix = trimmed.match(/^female\s+(.+)$/i);
+  if (femalePrefix) {
+    return `${femalePrefix[1].trim()} ♀`;
+  }
+  return trimmed;
+}
+
 function normalizePokemonKey(name: string): string {
-  return name
-    .toLowerCase()
+  const raw = name.trim().toLowerCase();
+  const hasFemaleMarker = /♀/.test(raw) || /^female\s+/.test(raw);
+  const base = raw
+    .replace(/^female\s+/, "")
     .replace(/[♀]/g, "")
     .replace(/['’]/g, "-")
     .replace(/\s*\((hisuian|galarian|alolan|paldean)\)\s*/g, "-$1")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+  return hasFemaleMarker && !base.endsWith("-f") ? `${base}-f` : base;
 }
 
 function getPokemonSpriteCandidates(name: string): string[] {
@@ -152,23 +178,30 @@ function getPokemonSpriteCandidates(name: string): string[] {
   const lastWord = clean.split("-").pop() || clean;
   const firstWord = clean.split("-")[0] || clean;
 
+  const isVariantSpecific =
+    clean.endsWith("-f") ||
+    mapped.endsWith("-f") ||
+    mapped.endsWith("-m") ||
+    clean === "basculegion";
+
   const slugs = Array.from(
     new Set(
-      [
-        mapped,
-        noHyphenMapped,
-        clean,
-        fallbackSpecies,
-        lastWord,
-        firstWord,
-      ].filter((s): s is string => Boolean(s))
+      (
+        isVariantSpecific
+          ? [mapped, noHyphenMapped, clean, fallbackSpecies]
+          : [mapped, noHyphenMapped, clean, fallbackSpecies, lastWord, firstWord]
+      ).filter((s): s is string => Boolean(s))
     )
   );
 
+  if (clean === "basculegion" && !slugs.includes("basculegion")) {
+    slugs.push("basculegion");
+  }
+
   const urls: string[] = [];
   for (const slug of slugs) {
-    urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${slug}.png`);
     urls.push(`https://play.pokemonshowdown.com/sprites/dex/${slug}.png`);
+    urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${slug}.png`);
   }
 
   return Array.from(new Set(urls));
@@ -428,9 +461,26 @@ export default function App() {
       })
       .then((data) => {
         if (!active) return;
-        setSnapshot(data);
-        if (data.pokemon.length > 0) {
-          setSelectedId(data.pokemon[0].id);
+        const dedupedMons = Array.isArray(data.pokemon)
+          ? Array.from(
+              data.pokemon.reduce((acc, mon) => {
+                if (mon.name.trim().toLowerCase() === "floette") {
+                  return acc;
+                }
+                const key = canonicalSpeciesDedupeKey(mon.name);
+                const candidate = { ...mon, name: canonicalDisplayName(mon.name) };
+                const prev = acc.get(key);
+                if (!prev || (candidate.usage ?? 0) > (prev.usage ?? 0)) {
+                  acc.set(key, candidate);
+                }
+                return acc;
+              }, new Map<string, typeof data.pokemon[number]>()).values()
+            )
+          : data.pokemon;
+        const normalizedData = { ...data, pokemon: dedupedMons };
+        setSnapshot(normalizedData);
+        if (normalizedData.pokemon.length > 0) {
+          setSelectedId(normalizedData.pokemon[0].id);
         }
         setLoading(false);
       })
