@@ -39,6 +39,178 @@ function countUniqueTournaments(teams: readonly { tournamentId?: string | null; 
   return ids.size;
 }
 
+const SPRITE_SPECIAL_SLUGS: Record<string, string> = {
+  "alolan-muk": "muk-alola",
+  "alolan-ninetales": "ninetales-alola",
+  "alolan-persian": "persian-alola",
+  "galarian-weezing": "weezing-galar",
+  "galarian-slowking": "slowking-galar",
+  "hisuian-arcanine": "arcanine-hisui",
+  "hisuian-lilligant": "lilligant-hisui",
+  "hisuian-samurott": "samurott-hisui",
+  "hisuian-typhlosion": "typhlosion-hisui",
+  "hisuian-decidueye": "decidueye-hisui",
+  "hisuian-goodra": "goodra-hisui",
+  "hisuian-zoroark": "zoroark-hisui",
+  "paldean-tauros-aqua-breed": "tauros-paldea-aqua",
+  "paldean-tauros": "tauros-paldea",
+  "female-indeedee": "indeedee-f",
+  "indeedee": "indeedee-f",
+  "female-basculegion": "basculegion-f",
+  "basculegion": "basculegion-f",
+  "female-meowstic": "meowstic-f",
+  "meowstic": "meowstic-f",
+  "bloodmoon-ursaluna": "ursaluna-bloodmoon",
+  "eternal-flower-floette": "floette-eternal",
+  "giratina-origin": "giratina-origin",
+  "hearthflame-mask-ogerpon": "ogerpon-hearthflame",
+  "wellspring-mask-ogerpon": "ogerpon-wellspring",
+  "cornerstone-mask-ogerpon": "ogerpon-cornerstone",
+  "oogerpon-hearthflame": "ogerpon-hearthflame",
+  "oogerpon-wellspring": "ogerpon-wellspring",
+  "oogerpon-cornerstone": "ogerpon-cornerstone",
+  "heat-rotom": "rotom-heat",
+  "wash-rotom": "rotom-wash",
+  "mow-rotom": "rotom-mow",
+  "ice-rider-calyrex": "calyrex-ice",
+  "shadow-rider-calyrex": "calyrex-shadow",
+  "rapid-strike-urshifu": "urshifu-rapid-strike",
+  "single-strike-urshifu": "urshifu",
+  "landorus-therian": "landorus-therian",
+  "tornadus-therian": "tornadus-therian",
+  "thundurus-therian": "thundurus-therian",
+  "enamorus-therian": "enamorus-therian",
+  "lycanroc-dusk": "lycanroc-dusk",
+  "tatsugiri-droopy-form": "tatsugiri-droopy",
+  "sirfetch-d": "sirfetchd",
+  "kommo-o": "kommoo",
+  "ho-oh": "hooh",
+  "chi-yu": "chiyu",
+  "chien-pao": "chienpao",
+  "ting-lu": "tinglu",
+  "iron-bundle": "ironbundle",
+  "iron-hands": "ironhands",
+  "iron-jugulis": "ironjugulis",
+  "iron-moth": "ironmoth",
+  "iron-treads": "irontreads",
+  "iron-valiant": "ironvaliant",
+  "flutter-mane": "fluttermane",
+  "brute-bonnet": "brutebonnet",
+  "gouging-fire": "gougingfire",
+  "raging-bolt": "ragingbolt",
+  "roaring-moon": "roaringmoon",
+  "walking-wake": "walkingwake",
+};
+
+const BASE_SPECIES_FALLBACKS: Record<string, string> = {
+  "alolan-muk": "muk",
+  "alolan-ninetales": "ninetales",
+  "alolan-persian": "persian",
+  "galarian-weezing": "weezing",
+  "galarian-slowking": "slowking",
+  "hisuian-arcanine": "arcanine",
+  "hisuian-lilligant": "lilligant",
+  "hisuian-samurott": "samurott",
+  "hisuian-typhlosion": "typhlosion",
+  "hisuian-decidueye": "decidueye",
+  "hisuian-goodra": "goodra",
+  "hisuian-zoroark": "zoroark",
+  "paldean-tauros-aqua-breed": "tauros",
+  "paldean-tauros": "tauros",
+  "female-indeedee": "indeedee",
+  "female-basculegion": "basculegion",
+  "female-meowstic": "meowstic",
+  "bloodmoon-ursaluna": "ursaluna",
+  "eternal-flower-floette": "floette",
+  "hearthflame-mask-ogerpon": "ogerpon",
+  "wellspring-mask-ogerpon": "ogerpon",
+  "cornerstone-mask-ogerpon": "ogerpon",
+  "heat-rotom": "rotom",
+  "wash-rotom": "rotom",
+  "mow-rotom": "rotom",
+  "ice-rider-calyrex": "calyrex",
+  "shadow-rider-calyrex": "calyrex",
+  "rapid-strike-urshifu": "urshifu",
+  "single-strike-urshifu": "urshifu",
+  "lycanroc-dusk": "lycanroc",
+  "tatsugiri-droopy-form": "tatsugiri",
+};
+
+function normalizePokemonKey(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[♀]/g, "")
+    .replace(/['’]/g, "-")
+    .replace(/\s*\((hisuian|galarian|alolan|paldean)\)\s*/g, "-$1")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function getPokemonSpriteCandidates(name: string): string[] {
+  const clean = normalizePokemonKey(name);
+  const mapped = SPRITE_SPECIAL_SLUGS[clean] ?? clean;
+  const noHyphenMapped = mapped.replace(/-/g, "");
+  const fallbackSpecies = BASE_SPECIES_FALLBACKS[clean];
+  const lastWord = clean.split("-").pop() || clean;
+  const firstWord = clean.split("-")[0] || clean;
+
+  const slugs = Array.from(
+    new Set(
+      [
+        mapped,
+        noHyphenMapped,
+        clean,
+        fallbackSpecies,
+        lastWord,
+        firstWord,
+      ].filter((s): s is string => Boolean(s))
+    )
+  );
+
+  const urls: string[] = [];
+  for (const slug of slugs) {
+    urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${slug}.png`);
+    urls.push(`https://play.pokemonshowdown.com/sprites/dex/${slug}.png`);
+  }
+
+  return Array.from(new Set(urls));
+}
+function PokemonSprite({
+  name,
+  sizeClass = "w-8 h-8",
+}: {
+  name: string;
+  sizeClass?: string;
+}) {
+  const candidates = useMemo(() => getPokemonSpriteCandidates(name), [name]);
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    setStep(0);
+  }, [name]);
+
+  if (step >= candidates.length) {
+    return (
+      <span
+        aria-hidden="true"
+        className={`${sizeClass} inline-flex items-center justify-center rounded-md bg-slate-800/80 text-[10px] font-mono text-slate-400 shrink-0`}
+      >
+        ?
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={candidates[step]}
+      alt={name}
+      loading="lazy"
+      onError={() => setStep((prev) => prev + 1)}
+      className={`${sizeClass} object-contain shrink-0 select-none`}
+    />
+  );
+}
+
 export default function App() {
   const { lang, setLang, t } = useI18n();
   const [regulationCode, setRegulationCode] = useState<RegulationCode>(DEFAULT_REGULATION_CODE);
@@ -179,19 +351,26 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+    <div className="min-h-screen text-slate-100 flex flex-col">
       {/* Cabecera y selector de idioma */}
-      <header className="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur">
+      <header className="border-b border-orange-500/20 bg-slate-900/75 backdrop-blur shadow-[0_1px_24px_rgba(249,115,22,0.08)]">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2.5">
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-500/15 text-orange-300 border border-orange-500/30">
-                {t.wipBadge}
-              </span>
-              <span className="text-xs font-mono text-slate-400">REG {currentReg.code}</span>
+          <div className="flex items-center gap-3.5">
+            <img
+              src={`${import.meta.env.BASE_URL}rotomdex-logo.png`}
+              alt="RotomDex"
+              className="w-12 h-12 sm:w-14 sm:h-14 object-contain drop-shadow shrink-0"
+            />
+            <div>
+              <div className="flex items-center gap-2.5">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-500/15 text-orange-300 border border-orange-500/30">
+                  {t.wipBadge}
+                </span>
+                <span className="text-xs font-mono text-slate-400">REG {currentReg.code}</span>
+              </div>
+              <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mt-0.5">{t.appName}</h1>
+              <p className="text-sm text-slate-400">{t.subtitle}</p>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mt-1">{t.appName}</h1>
-            <p className="text-sm text-slate-400">{t.subtitle}</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5">
@@ -367,7 +546,12 @@ export default function App() {
                                 <td className="py-2.5 px-3 font-mono text-xs text-slate-400">
                                   {idx + 1}
                                 </td>
-                                <td className="py-2.5 px-3 font-medium">{mon.name}</td>
+                                <td className="py-2.5 px-3 font-medium">
+                                  <div className="flex items-center gap-2.5">
+                                    <PokemonSprite name={mon.name} sizeClass="w-8 h-8" />
+                                    <span>{mon.name}</span>
+                                  </div>
+                                </td>
                                 <td className="py-2.5 px-3 text-right font-mono">
                                   {mon.usage.toFixed(1)}%
                                 </td>
@@ -390,15 +574,18 @@ export default function App() {
                 <div className="lg:col-span-5 rounded-xl border border-slate-800 bg-slate-900/60 p-5 space-y-4">
                   {selectedMon ? (
                     <>
-                      <div className="flex items-baseline justify-between border-b border-slate-800 pb-3">
-                        <div>
-                          <h2 className="text-xl font-bold">{selectedMon.name}</h2>
+                      <div className="flex items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                        <div className="flex items-center gap-3">
+                          <PokemonSprite name={selectedMon.name} sizeClass="w-12 h-12" />
+                          <div>
+                            <h2 className="text-xl font-bold">{selectedMon.name}</h2>
                           <p className="text-xs text-slate-400 font-mono">
                             {t.colUsage}: {selectedMon.usage.toFixed(2)}%
                             {selectedMon.winRate !== null
                               ? ` · WR: ${selectedMon.winRate.toFixed(2)}%`
                               : ""}
                           </p>
+                          </div>
                         </div>
                         {selectedMon.baseStats && (
                           <span className="text-xs font-mono px-2 py-1 rounded bg-slate-800 text-slate-300">
@@ -639,7 +826,10 @@ export default function App() {
                                     key={`${m.id}-${mIdx}`}
                                     className="rounded-lg border border-slate-800/90 bg-slate-950/70 px-2.5 py-2 text-xs"
                                   >
-                                    <div className="font-medium text-slate-200 truncate">{m.name}</div>
+                                    <div className="flex items-center gap-2 min-w-0">
+                                      <PokemonSprite name={m.name} sizeClass="w-7 h-7" />
+                                      <div className="font-medium text-slate-200 truncate">{m.name}</div>
+                                    </div>
                                     <div className="text-slate-400 truncate mt-0.5">{m.item ?? "—"}</div>
                                     {m.nature && (
                                       <div className="text-[11px] font-mono text-orange-300/80 truncate">

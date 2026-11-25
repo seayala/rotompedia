@@ -6,8 +6,8 @@ const STORAGE_KEY = "rotompedia_lang";
 
 const translations = {
   es: {
-    appName: "RotomPedia",
-    subtitle: "Analizador del meta de Pokémon Champions (VGC) · Regulación M-C",
+    appName: "RotomPedia · Analizador Meta VGC",
+    subtitle: "Estadísticas de uso, cores y equipos competitivos de Pokémon Champions VGC",
     wipBadge: "En construcción · v1 Meta Viewer",
     loading: "Cargando snapshot de la regulación M-C...",
     errorTitle: "No se pudo cargar el snapshot de datos",
@@ -16,7 +16,7 @@ const translations = {
     teamsAnalyzed: "Equipos analizados",
     trackedPokemon: "Pokémon catalogados",
     topCores: "Cores destacados",
-    searchPlaceholder: "Buscar Pokémon, objeto, habilidad o movimiento...",
+    searchPlaceholder: "Buscar Pokémon, ítem, hab. o mov...",
     tabUsage: "Uso y estadísticas",
     tabCores: "Cores de equipo",
     tabTeams: "Equipos de torneo",
@@ -36,8 +36,8 @@ const translations = {
     disclaimer: "Proyecto personal de fans sin afiliación oficial con Nintendo, Game Freak ni The Pokémon Company.",
   },
   en: {
-    appName: "RotomPedia",
-    subtitle: "Pokémon Champions (VGC) Meta Analyzer · Regulation M-C",
+    appName: "RotomPedia · VGC Meta Analyzer",
+    subtitle: "Usage stats, team cores, and competitive rosters for Pokémon Champions VGC",
     wipBadge: "In progress · v1 Meta Viewer",
     loading: "Loading Regulation M-C snapshot...",
     errorTitle: "Could not load data snapshot",
@@ -85,8 +85,8 @@ function detectInitialLang(): Lang {
   } catch {
     // Ignorar errores de almacenamiento en modo privado
   }
-  const navLang = window.navigator.language?.toLowerCase() ?? "en";
-  return navLang.startsWith("es") ? "es" : "en";
+  void window;
+  return "en";
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
