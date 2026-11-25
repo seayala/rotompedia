@@ -1,0 +1,11 @@
+{
+  "name": "rotompedia-monorepo",
+  "private": true,
+  "packageManager": "pnpm@latest",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test"
+  }
+}
