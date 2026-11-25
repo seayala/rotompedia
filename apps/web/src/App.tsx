@@ -333,6 +333,46 @@ export default function App() {
                         )}
                       </div>
 
+                      {selectedMon.matchups && (
+                        <div className="space-y-1.5 rounded-lg border border-slate-800/80 bg-slate-950/60 p-3">
+                          <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                            {lang === "es" ? "Matchups defensivos" : "Defensive matchups"}
+                          </h3>
+                          <div className="space-y-1 text-xs">
+                            <div className="flex items-start justify-between gap-2">
+                              <span className="text-red-300/90 shrink-0">
+                                {lang === "es" ? "Débil ante" : "Weak to"}
+                              </span>
+                              <span className="text-right text-slate-200">
+                                {selectedMon.matchups.weakTo.length > 0
+                                  ? selectedMon.matchups.weakTo.join(", ")
+                                  : "—"}
+                              </span>
+                            </div>
+                            <div className="flex items-start justify-between gap-2">
+                              <span className="text-emerald-300/90 shrink-0">
+                                {lang === "es" ? "Resiste" : "Resists"}
+                              </span>
+                              <span className="text-right text-slate-200">
+                                {selectedMon.matchups.resists.length > 0
+                                  ? selectedMon.matchups.resists.join(", ")
+                                  : "—"}
+                              </span>
+                            </div>
+                            <div className="flex items-start justify-between gap-2">
+                              <span className="text-sky-300/90 shrink-0">
+                                {lang === "es" ? "Inmune a" : "Immune to"}
+                              </span>
+                              <span className="text-right text-slate-200">
+                                {selectedMon.matchups.immuneTo.length > 0
+                                  ? selectedMon.matchups.immuneTo.join(", ")
+                                  : "—"}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       <DetailList
                         title={lang === "es" ? "Objetos comunes" : "Common items"}
                         items={selectedMon.items.slice(0, 5)}

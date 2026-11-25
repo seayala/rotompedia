@@ -3,7 +3,7 @@
     "code": "M-C",
     "name": "Pokémon Champions VGC 2026 — Regulation M-C",
     "pikalyticsFormat": "gen9championsvgc2026regmc",
-    "generatedAt": "2026-11-25T10:58:18.599Z",
+    "generatedAt": "2026-11-25T11:03:01.260Z",
     "sources": {
       "limitlessTournaments": 40,
       "limitlessTeams": 1326,
@@ -2171,6 +2171,303 @@
       }
     },
     {
+      "id": "indeedee-f",
+      "name": "Indeedee ♀",
+      "usage": 17,
+      "winRate": 50.264,
+      "record": {
+        "wins": 27709,
+        "losses": 27418
+      },
+      "tournamentAppearances": 123,
+      "moves": [
+        {
+          "name": "Follow Me",
+          "usage": 58.662
+        },
+        {
+          "name": "Helping Hand",
+          "usage": 29.67
+        },
+        {
+          "name": "Psychic",
+          "usage": 23.526
+        },
+        {
+          "name": "Trick Room",
+          "usage": 22.742
+        },
+        {
+          "name": "Protect",
+          "usage": 5.971
+        },
+        {
+          "name": "Terrain Pulse",
+          "usage": 4.025
+        },
+        {
+          "name": "Mystical Fire",
+          "usage": 2.238
+        },
+        {
+          "name": "Imprison",
+          "usage": 1.919
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 1.226
+        },
+        {
+          "name": "Heal Pulse",
+          "usage": 1.182
+        }
+      ],
+      "items": [
+        {
+          "name": "Psychic Seed",
+          "usage": 49.219
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 20.074
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 15.588
+        },
+        {
+          "name": "Eject Button",
+          "usage": 5.679
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 2.675
+        },
+        {
+          "name": "Leftovers",
+          "usage": 2.112
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 2.005
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.892
+        },
+        {
+          "name": "Red Card",
+          "usage": 0.436
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 0.416
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Psychic Surge",
+          "usage": 98.498
+        },
+        {
+          "name": "Trace",
+          "usage": 0.843
+        },
+        {
+          "name": "Hospitality",
+          "usage": 0.288
+        },
+        {
+          "name": "Intimidate",
+          "usage": 0.073
+        },
+        {
+          "name": "Own Tempo",
+          "usage": 0.063
+        },
+        {
+          "name": "No Guard",
+          "usage": 0.06
+        },
+        {
+          "name": "Simple",
+          "usage": 0.031
+        },
+        {
+          "name": "Stamina",
+          "usage": 0.029
+        },
+        {
+          "name": "Grassy Surge",
+          "usage": 0.021
+        },
+        {
+          "name": "Drought",
+          "usage": 0.013
+        },
+        {
+          "name": "Magician",
+          "usage": 0.01
+        },
+        {
+          "name": "Rough Skin",
+          "usage": 0.008
+        },
+        {
+          "name": "Fairy Aura",
+          "usage": 0.005
+        },
+        {
+          "name": "Levitate",
+          "usage": 0.005
+        },
+        {
+          "name": "Magic Bounce",
+          "usage": 0.005
+        },
+        {
+          "name": "Flash Fire",
+          "usage": 0.005
+        },
+        {
+          "name": "Water Bubble",
+          "usage": 0.005
+        },
+        {
+          "name": "Drizzle",
+          "usage": 0.005
+        },
+        {
+          "name": "Plus",
+          "usage": 0.005
+        },
+        {
+          "name": "Speed Boost",
+          "usage": 0.003
+        },
+        {
+          "name": "Competitive",
+          "usage": 0.003
+        },
+        {
+          "name": "Flame Body",
+          "usage": 0.003
+        },
+        {
+          "name": "Defiant",
+          "usage": 0.003
+        },
+        {
+          "name": "Insomnia",
+          "usage": 0.003
+        },
+        {
+          "name": "Electric Surge",
+          "usage": 0.003
+        },
+        {
+          "name": "Protean",
+          "usage": 0.003
+        },
+        {
+          "name": "Eelevate",
+          "usage": 0.003
+        },
+        {
+          "name": "Snow Warning",
+          "usage": 0.003
+        },
+        {
+          "name": "Curious Medicine",
+          "usage": 0.003
+        }
+      ],
+      "natures": [
+        {
+          "name": "Relaxed",
+          "count": 64,
+          "usage": 52
+        },
+        {
+          "name": "Bold",
+          "count": 41,
+          "usage": 33.3
+        },
+        {
+          "name": "Calm",
+          "count": 8,
+          "usage": 6.5
+        },
+        {
+          "name": "Sassy",
+          "count": 7,
+          "usage": 5.7
+        },
+        {
+          "name": "Quiet",
+          "count": 1,
+          "usage": 0.8
+        },
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 0.8
+        },
+        {
+          "name": "Timid",
+          "count": 1,
+          "usage": 0.8
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Sneasler",
+          "usage": 37.25
+        },
+        {
+          "name": "Gardevoir",
+          "usage": 30.326
+        },
+        {
+          "name": "Armarouge",
+          "usage": 22.163
+        },
+        {
+          "name": "Kingambit",
+          "usage": 20.48
+        },
+        {
+          "name": "Golisopod",
+          "usage": 18.566
+        },
+        {
+          "name": "Incineroar",
+          "usage": 17.276
+        }
+      ],
+      "baseStats": {
+        "hp": 70,
+        "atk": 55,
+        "def": 65,
+        "spa": 95,
+        "spd": 105,
+        "spe": 85,
+        "bst": 475
+      },
+      "matchups": {
+        "weakTo": [
+          "Bug (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Psychic (1/2x)"
+        ],
+        "immuneTo": [
+          "Ghost (0x)"
+        ]
+      }
+    },
+    {
       "id": "salamence",
       "name": "Salamence",
       "usage": 16,
@@ -3048,34 +3345,6 @@
           "Poison (0x)"
         ]
       }
-    },
-    {
-      "id": "eternal-flower-floette",
-      "name": "Eternal Flower Floette",
-      "usage": 13.57,
-      "winRate": null,
-      "tournamentAppearances": 180,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Modest",
-          "count": 157,
-          "usage": 87.2
-        },
-        {
-          "name": "Timid",
-          "count": 21,
-          "usage": 11.7
-        },
-        {
-          "name": "Bold",
-          "count": 2,
-          "usage": 1.1
-        }
-      ],
-      "teammates": []
     },
     {
       "id": "politoed",
@@ -4402,54 +4671,6 @@
       }
     },
     {
-      "id": "indeedee-♀",
-      "name": "Indeedee ♀",
-      "usage": 9.28,
-      "winRate": null,
-      "tournamentAppearances": 123,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Relaxed",
-          "count": 64,
-          "usage": 52
-        },
-        {
-          "name": "Bold",
-          "count": 41,
-          "usage": 33.3
-        },
-        {
-          "name": "Calm",
-          "count": 8,
-          "usage": 6.5
-        },
-        {
-          "name": "Sassy",
-          "count": 7,
-          "usage": 5.7
-        },
-        {
-          "name": "Quiet",
-          "count": 1,
-          "usage": 0.8
-        },
-        {
-          "name": "Modest",
-          "count": 1,
-          "usage": 0.8
-        },
-        {
-          "name": "Timid",
-          "count": 1,
-          "usage": 0.8
-        }
-      ],
-      "teammates": []
-    },
-    {
       "id": "sylveon",
       "name": "Sylveon",
       "usage": 9,
@@ -4667,34 +4888,6 @@
           "Dragon (0x)"
         ]
       }
-    },
-    {
-      "id": "hisuian-arcanine",
-      "name": "Hisuian Arcanine",
-      "usage": 8.07,
-      "winRate": null,
-      "tournamentAppearances": 107,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Jolly",
-          "count": 70,
-          "usage": 65.4
-        },
-        {
-          "name": "Adamant",
-          "count": 36,
-          "usage": 33.6
-        },
-        {
-          "name": "Naive",
-          "count": 1,
-          "usage": 0.9
-        }
-      ],
-      "teammates": []
     },
     {
       "id": "staraptor",
@@ -5129,6 +5322,197 @@
       }
     },
     {
+      "id": "floette-eternal",
+      "name": "Eternal Flower Floette",
+      "usage": 7,
+      "winRate": 52.031,
+      "record": {
+        "wins": 12090,
+        "losses": 11146
+      },
+      "tournamentAppearances": 180,
+      "moves": [
+        {
+          "name": "Dazzling Gleam",
+          "usage": 59.281
+        },
+        {
+          "name": "Protect",
+          "usage": 50.984
+        },
+        {
+          "name": "Moonblast",
+          "usage": 35.333
+        },
+        {
+          "name": "Calm Mind",
+          "usage": 34.401
+        },
+        {
+          "name": "Draining Kiss",
+          "usage": 11.122
+        },
+        {
+          "name": "Light of Ruin",
+          "usage": 9.784
+        },
+        {
+          "name": "Psychic",
+          "usage": 0.471
+        },
+        {
+          "name": "Giga Drain",
+          "usage": 0.245
+        },
+        {
+          "name": "Pollen Puff",
+          "usage": 0.16
+        },
+        {
+          "name": "Energy Ball",
+          "usage": 0.104
+        }
+      ],
+      "items": [
+        {
+          "name": "Floettite",
+          "usage": 98.911
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 0.576
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.213
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.064
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.053
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.043
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.043
+        },
+        {
+          "name": "Grassy Seed",
+          "usage": 0.021
+        },
+        {
+          "name": "Shell Bell",
+          "usage": 0.011
+        },
+        {
+          "name": "Light Clay",
+          "usage": 0.011
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Fairy Aura",
+          "usage": 96.75
+        },
+        {
+          "name": "Hospitality",
+          "usage": 2.767
+        },
+        {
+          "name": "Trace",
+          "usage": 0.44
+        },
+        {
+          "name": "Intimidate",
+          "usage": 0.011
+        },
+        {
+          "name": "Insomnia",
+          "usage": 0.011
+        },
+        {
+          "name": "Simple",
+          "usage": 0.011
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 0.011
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 157,
+          "usage": 87.2
+        },
+        {
+          "name": "Timid",
+          "count": 21,
+          "usage": 11.7
+        },
+        {
+          "name": "Bold",
+          "count": 2,
+          "usage": 1.1
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Rillaboom",
+          "usage": 57.488
+        },
+        {
+          "name": "Sneasler",
+          "usage": 53.697
+        },
+        {
+          "name": "Incineroar",
+          "usage": 51.016
+        },
+        {
+          "name": "Kingambit",
+          "usage": 37.042
+        },
+        {
+          "name": "Basculegion",
+          "usage": 31.365
+        },
+        {
+          "name": "Salamence",
+          "usage": 27.148
+        }
+      ],
+      "baseStats": {
+        "hp": 74,
+        "atk": 65,
+        "def": 67,
+        "spa": 125,
+        "spd": 128,
+        "spe": 92,
+        "bst": 551
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Fighting (1/2x)",
+          "Bug (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
       "id": "sinistcha",
       "name": "Sinistcha",
       "usage": 7,
@@ -5337,6 +5721,193 @@
           "Normal (0x)",
           "Fighting (0x)"
         ]
+      }
+    },
+    {
+      "id": "arcanine-hisui",
+      "name": "Hisuian Arcanine",
+      "usage": 7,
+      "winRate": 50.72,
+      "tournamentAppearances": 107,
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "usage": 51.798
+        },
+        {
+          "name": "Head Smash",
+          "usage": 45.826
+        },
+        {
+          "name": "Protect",
+          "usage": 37.273
+        },
+        {
+          "name": "Extreme Speed",
+          "usage": 21.359
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 7.752
+        },
+        {
+          "name": "Close Combat",
+          "usage": 0.808
+        },
+        {
+          "name": "Wild Charge",
+          "usage": 0.493
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 0.281
+        },
+        {
+          "name": "Psychic Fangs",
+          "usage": 0.178
+        },
+        {
+          "name": "Snarl",
+          "usage": 0.158
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 78.353
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 9.802
+        },
+        {
+          "name": "Life Orb",
+          "usage": 6.627
+        },
+        {
+          "name": "Air Balloon",
+          "usage": 2.163
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.774
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.615
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.337
+        },
+        {
+          "name": "Passho Berry",
+          "usage": 0.238
+        },
+        {
+          "name": "Chople Berry",
+          "usage": 0.218
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 0.218
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Intimidate",
+          "usage": 87.745
+        },
+        {
+          "name": "Trace",
+          "usage": 9.362
+        },
+        {
+          "name": "Hospitality",
+          "usage": 2.128
+        },
+        {
+          "name": "Pickpocket",
+          "usage": 0.511
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 0.17
+        },
+        {
+          "name": "Flash Fire",
+          "usage": 0.085
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 70,
+          "usage": 65.4
+        },
+        {
+          "name": "Adamant",
+          "count": 36,
+          "usage": 33.6
+        },
+        {
+          "name": "Naive",
+          "count": 1,
+          "usage": 0.9
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Rillaboom",
+          "usage": 67.294
+        },
+        {
+          "name": "Raichu",
+          "usage": 41.564
+        },
+        {
+          "name": "Sneasler",
+          "usage": 39.368
+        },
+        {
+          "name": "Salamence",
+          "usage": 37.085
+        },
+        {
+          "name": "Gholdengo",
+          "usage": 35.709
+        },
+        {
+          "name": "Kingambit",
+          "usage": 28.277
+        }
+      ],
+      "baseStats": {
+        "hp": 95,
+        "atk": 115,
+        "def": 80,
+        "spa": 95,
+        "spd": 80,
+        "spe": 90,
+        "bst": 555
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (4x)",
+          "Ground (4x)",
+          "Fighting (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Fire (1/4x)",
+          "Normal (1/2x)",
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Flying (1/2x)",
+          "Bug (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
       }
     },
     {
@@ -6777,34 +7348,6 @@
           "Dragon (0x)"
         ]
       }
-    },
-    {
-      "id": "basculegion-♀",
-      "name": "Basculegion ♀",
-      "usage": 5.35,
-      "winRate": null,
-      "tournamentAppearances": 71,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Modest",
-          "count": 63,
-          "usage": 88.7
-        },
-        {
-          "name": "Timid",
-          "count": 5,
-          "usage": 7
-        },
-        {
-          "name": "Jolly",
-          "count": 3,
-          "usage": 4.2
-        }
-      ],
-      "teammates": []
     },
     {
       "id": "froslass",
@@ -8865,6 +9408,190 @@
       }
     },
     {
+      "id": "ninetales-alola",
+      "name": "Alolan Ninetales",
+      "usage": 4,
+      "winRate": 48.269,
+      "record": {
+        "wins": 6064,
+        "losses": 6499
+      },
+      "tournamentAppearances": 27,
+      "moves": [
+        {
+          "name": "Blizzard",
+          "usage": 45.342
+        },
+        {
+          "name": "Aurora Veil",
+          "usage": 39.427
+        },
+        {
+          "name": "Freeze-Dry",
+          "usage": 19.751
+        },
+        {
+          "name": "Protect",
+          "usage": 14.446
+        },
+        {
+          "name": "Moonblast",
+          "usage": 9.738
+        },
+        {
+          "name": "Encore",
+          "usage": 5.355
+        },
+        {
+          "name": "Icy Wind",
+          "usage": 3.935
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 2.441
+        },
+        {
+          "name": "Rain Dance",
+          "usage": 1.146
+        },
+        {
+          "name": "Disable",
+          "usage": 0.685
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 54.391
+        },
+        {
+          "name": "Life Orb",
+          "usage": 15.1
+        },
+        {
+          "name": "Light Clay",
+          "usage": 6.934
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 4.314
+        },
+        {
+          "name": "Leftovers",
+          "usage": 4.006
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 3.698
+        },
+        {
+          "name": "Eject Button",
+          "usage": 2.157
+        },
+        {
+          "name": "Never-Melt Ice",
+          "usage": 1.849
+        },
+        {
+          "name": "Babiri Berry",
+          "usage": 1.695
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 1.387
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Snow Warning",
+          "usage": 99.08
+        },
+        {
+          "name": "Trace",
+          "usage": 0.635
+        },
+        {
+          "name": "Hospitality",
+          "usage": 0.233
+        },
+        {
+          "name": "Magician",
+          "usage": 0.026
+        },
+        {
+          "name": "Magic Bounce",
+          "usage": 0.013
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 0.013
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 23,
+          "usage": 85.2
+        },
+        {
+          "name": "Modest",
+          "count": 4,
+          "usage": 14.8
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Sneasler",
+          "usage": 41.256
+        },
+        {
+          "name": "Kingambit",
+          "usage": 30.853
+        },
+        {
+          "name": "Rillaboom",
+          "usage": 30.001
+        },
+        {
+          "name": "Basculegion",
+          "usage": 26.379
+        },
+        {
+          "name": "Baxcalibur",
+          "usage": 23.84
+        },
+        {
+          "name": "Incineroar",
+          "usage": 23.338
+        }
+      ],
+      "baseStats": {
+        "hp": 73,
+        "atk": 67,
+        "def": 75,
+        "spa": 81,
+        "spd": 100,
+        "spe": 109,
+        "bst": 505
+      },
+      "matchups": {
+        "weakTo": [
+          "Steel (4x)",
+          "Fire (2x)",
+          "Poison (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Ice (1/2x)",
+          "Bug (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
       "id": "lucario",
       "name": "Lucario",
       "usage": 4,
@@ -10743,27 +11470,201 @@
       }
     },
     {
-      "id": "alolan-ninetales",
-      "name": "Alolan Ninetales",
-      "usage": 2.04,
-      "winRate": null,
-      "tournamentAppearances": 27,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
+      "id": "basculegion-f",
+      "name": "Basculegion ♀",
+      "usage": 2,
+      "winRate": 55.382,
+      "record": {
+        "wins": 4080,
+        "losses": 3287
+      },
+      "tournamentAppearances": 71,
+      "moves": [
         {
-          "name": "Timid",
-          "count": 23,
-          "usage": 85.2
+          "name": "Muddy Water",
+          "usage": 63.416
         },
         {
-          "name": "Modest",
-          "count": 4,
-          "usage": 14.8
+          "name": "Shadow Ball",
+          "usage": 35.968
+        },
+        {
+          "name": "Protect",
+          "usage": 35.856
+        },
+        {
+          "name": "Ice Beam",
+          "usage": 27.747
+        },
+        {
+          "name": "Last Respects",
+          "usage": 1.626
+        },
+        {
+          "name": "Hydro Pump",
+          "usage": 0.916
+        },
+        {
+          "name": "Surf",
+          "usage": 0.916
+        },
+        {
+          "name": "Flip Turn",
+          "usage": 0.785
+        },
+        {
+          "name": "Icy Wind",
+          "usage": 0.673
+        },
+        {
+          "name": "Wave Crash",
+          "usage": 0.654
         }
       ],
-      "teammates": []
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 59.743
+        },
+        {
+          "name": "Life Orb",
+          "usage": 36.967
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.874
+        },
+        {
+          "name": "Kasib Berry",
+          "usage": 0.668
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.411
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 0.36
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 0.257
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.206
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 0.154
+        },
+        {
+          "name": "Rindo Berry",
+          "usage": 0.154
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Trace",
+          "usage": 61.818
+        },
+        {
+          "name": "Mold Breaker",
+          "usage": 23.636
+        },
+        {
+          "name": "Intimidate",
+          "usage": 5.455
+        },
+        {
+          "name": "Hospitality",
+          "usage": 3.636
+        },
+        {
+          "name": "Insomnia",
+          "usage": 1.818
+        },
+        {
+          "name": "Magician",
+          "usage": 1.818
+        },
+        {
+          "name": "No Guard",
+          "usage": 1.818
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 63,
+          "usage": 88.7
+        },
+        {
+          "name": "Timid",
+          "count": 5,
+          "usage": 7
+        },
+        {
+          "name": "Jolly",
+          "count": 3,
+          "usage": 4.2
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Pelipper",
+          "usage": 83.44
+        },
+        {
+          "name": "Archaludon",
+          "usage": 77.929
+        },
+        {
+          "name": "Golisopod",
+          "usage": 72.784
+        },
+        {
+          "name": "Sneasler",
+          "usage": 71.861
+        },
+        {
+          "name": "Raichu",
+          "usage": 50.685
+        },
+        {
+          "name": "Swampert",
+          "usage": 14.076
+        }
+      ],
+      "baseStats": {
+        "hp": 120,
+        "atk": 92,
+        "def": 65,
+        "spa": 100,
+        "spd": 75,
+        "spe": 78,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Grass (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Bug (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)"
+        ]
+      }
     },
     {
       "id": "blaziken",
@@ -12403,32 +13304,191 @@
       }
     },
     {
-      "id": "heat-rotom",
-      "name": "Heat Rotom",
-      "usage": 1.36,
-      "winRate": null,
-      "tournamentAppearances": 18,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
+      "id": "rotom-wash",
+      "name": "Wash Rotom",
+      "usage": 2,
+      "winRate": 47.304,
+      "record": {
+        "wins": 2395,
+        "losses": 2668
+      },
+      "tournamentAppearances": 12,
+      "moves": [
         {
-          "name": "Timid",
-          "count": 12,
-          "usage": 66.7
+          "name": "Hydro Pump",
+          "usage": 38.277
         },
         {
-          "name": "Calm",
-          "count": 4,
-          "usage": 22.2
+          "name": "Thunderbolt",
+          "usage": 28.892
         },
         {
-          "name": "Modest",
-          "count": 2,
-          "usage": 11.1
+          "name": "Will-O-Wisp",
+          "usage": 28.411
+        },
+        {
+          "name": "Volt Switch",
+          "usage": 19.923
+        },
+        {
+          "name": "Protect",
+          "usage": 13.965
+        },
+        {
+          "name": "Electroweb",
+          "usage": 11.371
+        },
+        {
+          "name": "Discharge",
+          "usage": 7.559
+        },
+        {
+          "name": "Light Screen",
+          "usage": 7.463
+        },
+        {
+          "name": "Trick",
+          "usage": 4.901
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 3.075
         }
       ],
-      "teammates": []
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 43.579
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 38.023
+        },
+        {
+          "name": "Life Orb",
+          "usage": 5.483
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 2.381
+        },
+        {
+          "name": "Rindo Berry",
+          "usage": 2.092
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 1.732
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 0.722
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 0.649
+        },
+        {
+          "name": "Grassy Seed",
+          "usage": 0.577
+        },
+        {
+          "name": "Magnet",
+          "usage": 0.577
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Levitate",
+          "usage": 86.192
+        },
+        {
+          "name": "Hospitality",
+          "usage": 8.996
+        },
+        {
+          "name": "Trace",
+          "usage": 4.184
+        },
+        {
+          "name": "No Guard",
+          "usage": 0.209
+        },
+        {
+          "name": "Magic Bounce",
+          "usage": 0.209
+        },
+        {
+          "name": "Mold Breaker",
+          "usage": 0.209
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 7,
+          "usage": 58.3
+        },
+        {
+          "name": "Bold",
+          "count": 3,
+          "usage": 25
+        },
+        {
+          "name": "Timid",
+          "count": 2,
+          "usage": 16.7
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Garchomp",
+          "usage": 24.926
+        },
+        {
+          "name": "Sneasler",
+          "usage": 24.136
+        },
+        {
+          "name": "Incineroar",
+          "usage": 23.405
+        },
+        {
+          "name": "Rillaboom",
+          "usage": 20.205
+        },
+        {
+          "name": "Tyranitar",
+          "usage": 16.532
+        },
+        {
+          "name": "Salamence",
+          "usage": 14.023
+        }
+      ],
+      "baseStats": {
+        "hp": 50,
+        "atk": 65,
+        "def": 107,
+        "spa": 105,
+        "spd": 107,
+        "spe": 86,
+        "bst": 520
+      },
+      "matchups": {
+        "weakTo": [
+          "Grass (2x)",
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Steel (1/4x)",
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Flying (1/2x)"
+        ],
+        "immuneTo": []
+      }
     },
     {
       "id": "vivillon",
@@ -13590,6 +14650,189 @@
       }
     },
     {
+      "id": "rotom-heat",
+      "name": "Heat Rotom",
+      "usage": 1,
+      "winRate": 47.954,
+      "record": {
+        "wins": 1641,
+        "losses": 1781
+      },
+      "tournamentAppearances": 18,
+      "moves": [
+        {
+          "name": "Overheat",
+          "usage": 34.89
+        },
+        {
+          "name": "Discharge",
+          "usage": 28.837
+        },
+        {
+          "name": "Volt Switch",
+          "usage": 26.416
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 14.008
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 10.073
+        },
+        {
+          "name": "Trick",
+          "usage": 9.252
+        },
+        {
+          "name": "Electroweb",
+          "usage": 8.258
+        },
+        {
+          "name": "Protect",
+          "usage": 6.701
+        },
+        {
+          "name": "Light Screen",
+          "usage": 2.421
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 1.038
+        }
+      ],
+      "items": [
+        {
+          "name": "Sitrus Berry",
+          "usage": 36.222
+        },
+        {
+          "name": "Leftovers",
+          "usage": 20.597
+        },
+        {
+          "name": "Life Orb",
+          "usage": 11.648
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 10.369
+        },
+        {
+          "name": "White Herb",
+          "usage": 5.824
+        },
+        {
+          "name": "Passho Berry",
+          "usage": 2.131
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 1.847
+        },
+        {
+          "name": "Rocky Helmet",
+          "usage": 1.42
+        },
+        {
+          "name": "Psychic Seed",
+          "usage": 1.278
+        },
+        {
+          "name": "Light Clay",
+          "usage": 1.278
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Levitate",
+          "usage": 88.696
+        },
+        {
+          "name": "Trace",
+          "usage": 6.957
+        },
+        {
+          "name": "Hospitality",
+          "usage": 3.913
+        },
+        {
+          "name": "Magic Bounce",
+          "usage": 0.435
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 12,
+          "usage": 66.7
+        },
+        {
+          "name": "Calm",
+          "count": 4,
+          "usage": 22.2
+        },
+        {
+          "name": "Modest",
+          "count": 2,
+          "usage": 11.1
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Sceptile",
+          "usage": 36.178
+        },
+        {
+          "name": "Sneasler",
+          "usage": 31.94
+        },
+        {
+          "name": "Tyranitar",
+          "usage": 28.171
+        },
+        {
+          "name": "Indeedee-F",
+          "usage": 27.528
+        },
+        {
+          "name": "Excadrill",
+          "usage": 22.209
+        },
+        {
+          "name": "Garchomp",
+          "usage": 19.141
+        }
+      ],
+      "baseStats": {
+        "hp": 50,
+        "atk": 65,
+        "def": 107,
+        "spa": 105,
+        "spd": 107,
+        "spe": 86,
+        "bst": 520
+      },
+      "matchups": {
+        "weakTo": [
+          "Ground (4x)",
+          "Water (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Steel (1/4x)",
+          "Fire (1/2x)",
+          "Electric (1/2x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Flying (1/2x)",
+          "Bug (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
       "id": "meganium",
       "name": "Meganium",
       "usage": 1,
@@ -14732,6 +15975,193 @@
       }
     },
     {
+      "id": "zoroark-hisui",
+      "name": "Hisuian Zoroark",
+      "usage": 1,
+      "winRate": 50,
+      "record": {
+        "wins": 1739,
+        "losses": 1739
+      },
+      "tournamentAppearances": 12,
+      "moves": [
+        {
+          "name": "Shadow Ball",
+          "usage": 19.565
+        },
+        {
+          "name": "Hyper Voice",
+          "usage": 18.478
+        },
+        {
+          "name": "Bitter Malice",
+          "usage": 17.391
+        },
+        {
+          "name": "Icy Wind",
+          "usage": 10.87
+        },
+        {
+          "name": "Protect",
+          "usage": 7.609
+        },
+        {
+          "name": "Flamethrower",
+          "usage": 6.522
+        },
+        {
+          "name": "Snarl",
+          "usage": 5.435
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 4.348
+        },
+        {
+          "name": "Psychic",
+          "usage": 4.348
+        },
+        {
+          "name": "Round",
+          "usage": 3.261
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 39.13
+        },
+        {
+          "name": "Life Orb",
+          "usage": 34.783
+        },
+        {
+          "name": "Twisted Spoon",
+          "usage": 4.348
+        },
+        {
+          "name": "Air Balloon",
+          "usage": 4.348
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 4.348
+        },
+        {
+          "name": "Grassy Seed",
+          "usage": 4.348
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 4.348
+        },
+        {
+          "name": "Leftovers",
+          "usage": 4.348
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Focus Sash",
+          "usage": 39.13
+        },
+        {
+          "name": "Life Orb",
+          "usage": 34.783
+        },
+        {
+          "name": "Twisted Spoon",
+          "usage": 4.348
+        },
+        {
+          "name": "Air Balloon",
+          "usage": 4.348
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 4.348
+        },
+        {
+          "name": "Grassy Seed",
+          "usage": 4.348
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 4.348
+        },
+        {
+          "name": "Leftovers",
+          "usage": 4.348
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 9,
+          "usage": 75
+        },
+        {
+          "name": "Modest",
+          "count": 2,
+          "usage": 16.7
+        },
+        {
+          "name": "Quiet",
+          "count": 1,
+          "usage": 8.3
+        }
+      ],
+      "teammates": [
+        {
+          "name": "Whimsicott",
+          "usage": 16.647
+        },
+        {
+          "name": "Indeedee-F",
+          "usage": 14.577
+        },
+        {
+          "name": "Garchomp",
+          "usage": 14.549
+        },
+        {
+          "name": "Farigiraf",
+          "usage": 14.319
+        },
+        {
+          "name": "Rillaboom",
+          "usage": 13.629
+        },
+        {
+          "name": "Sneasler",
+          "usage": 13.6
+        }
+      ],
+      "baseStats": {
+        "hp": 55,
+        "atk": 100,
+        "def": 60,
+        "spa": 125,
+        "spd": 60,
+        "spe": 110,
+        "bst": 510
+      },
+      "matchups": {
+        "weakTo": [
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Poison (1/2x)",
+          "Bug (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)",
+          "Ghost (0x)"
+        ]
+      }
+    },
+    {
       "id": "snorlax",
       "name": "Snorlax",
       "usage": 1,
@@ -15468,62 +16898,6 @@
           "name": "Jolly",
           "count": 2,
           "usage": 15.4
-        }
-      ],
-      "teammates": []
-    },
-    {
-      "id": "wash-rotom",
-      "name": "Wash Rotom",
-      "usage": 0.9,
-      "winRate": null,
-      "tournamentAppearances": 12,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Modest",
-          "count": 7,
-          "usage": 58.3
-        },
-        {
-          "name": "Bold",
-          "count": 3,
-          "usage": 25
-        },
-        {
-          "name": "Timid",
-          "count": 2,
-          "usage": 16.7
-        }
-      ],
-      "teammates": []
-    },
-    {
-      "id": "hisuian-zoroark",
-      "name": "Hisuian Zoroark",
-      "usage": 0.9,
-      "winRate": null,
-      "tournamentAppearances": 12,
-      "moves": [],
-      "items": [],
-      "abilities": [],
-      "natures": [
-        {
-          "name": "Timid",
-          "count": 9,
-          "usage": 75
-        },
-        {
-          "name": "Modest",
-          "count": 2,
-          "usage": 16.7
-        },
-        {
-          "name": "Quiet",
-          "count": 1,
-          "usage": 8.3
         }
       ],
       "teammates": []

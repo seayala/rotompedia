@@ -11,6 +11,66 @@ const BASE = "https://www.pikalytics.com/ai";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+const EXPLICIT_SLUG_OVERRIDES: Record<string, string[]> = {
+  "eternal flower floette": ["floette-eternal", "floette-eternal-flower"],
+  "floette eternal": ["floette-eternal"],
+  "indeedee ♀": ["indeedee-f", "indeedee-female"],
+  "indeedee f": ["indeedee-f"],
+  "basculegion ♀": ["basculegion-f", "basculegion-female"],
+  "basculegion f": ["basculegion-f"],
+  "hisuian arcanine": ["arcanine-hisui", "arcanine-hisuian"],
+  "hisuian zoroark": ["zoroark-hisui", "zoroark-hisuian"],
+  "alolan ninetales": ["ninetales-alola", "ninetales-alolan"],
+  "heat rotom": ["rotom-heat"],
+  "wash rotom": ["rotom-wash"],
+  "lycanroc dusk": ["lycanroc-dusk"],
+};
+
+function buildSlugCandidates(speciesName: string): string[] {
+  const raw = speciesName.trim().toLowerCase();
+  const candidates: string[] = [];
+  const push = (s: string) => {
+    const clean = s
+      .replace(/♀/g, "-f")
+      .replace(/♂/g, "-m")
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/-{2,}/g, "-")
+      .replace(/^-|-$/g, "");
+    if (clean && !candidates.includes(clean)) {
+      candidates.push(clean);
+    }
+  };
+
+  push(raw.replace(/\s+/g, "-"));
+
+  const overrides = EXPLICIT_SLUG_OVERRIDES[raw];
+  if (overrides) {
+    for (const ov of overrides) push(ov);
+  }
+
+  // Patrones generales: "Regional Form" -> "form-regional" y "Form Mon" -> "mon-form"
+  const regionalMatch = raw.match(/^(alolan|galarian|hisuian|paldean)\s+(.+)$/);
+  if (regionalMatch) {
+    const regionMap: Record<string, string> = {
+      alolan: "alola",
+      galarian: "galar",
+      hisuian: "hisui",
+      paldean: "paldea",
+    };
+    const mon = regionalMatch[2].replace(/\s+/g, "-");
+    push(`${mon}-${regionalMatch[1]}`);
+    push(`${mon}-${regionMap[regionalMatch[1]]}`);
+  }
+
+  const parts = raw.split(/\s+/);
+  if (parts.length >= 2) {
+    const reversed = `${parts.slice(1).join("-")}-${parts[0]}`;
+    push(reversed);
+  }
+
+  return candidates;
+}
+
 async function fetchText(url: string): Promise<string> {
   const res = await fetch(url, {
     headers: { "User-Agent": UA, Accept: "text/plain, text/markdown, */*" },
@@ -111,36 +171,41 @@ export async function fetchPikalyticsPokemon(
   formatCode: string,
   speciesName: string
 ): Promise<Omit<PokemonMetaStats, "tournamentAppearances" | "natures"> | null> {
-  try {
-    const slug = speciesName.toLowerCase().replace(/\s+/g, "-");
-    const md = await fetchText(`${BASE}/pokedex/${formatCode}/${encodeURIComponent(slug)}`);
+  const candidates = buildSlugCandidates(speciesName);
 
-    const usageMatch = md.match(/\|\s*\*\*Usage\*\*\s*\|\s*([\d.]+)%\s*\|/);
-    const wrMatch = md.match(/\|\s*\*\*Win Rate\*\*\s*\|\s*([\d.]+)%\s*\|/);
-    const recMatch = md.match(/\|\s*\*\*Record\*\*\s*\|\s*(\d+)-(\d+)\s*\|/);
+  for (const slug of candidates) {
+    try {
+      const md = await fetchText(`${BASE}/pokedex/${formatCode}/${encodeURIComponent(slug)}`);
 
-    const usage = usageMatch ? parseFloat(usageMatch[1]) : 0;
-    const winRate = wrMatch ? parseFloat(wrMatch[1]) : null;
-    const record = recMatch
-      ? { wins: parseInt(recMatch[1], 10), losses: parseInt(recMatch[2], 10) }
-      : undefined;
+      const usageMatch = md.match(/\|\s*\*\*Usage\*\*\s*\|\s*([\d.]+)%\s*\|/);
+      const wrMatch = md.match(/\|\s*\*\*Win Rate\*\*\s*\|\s*([\d.]+)%\s*\|/);
+      const recMatch = md.match(/\|\s*\*\*Record\*\*\s*\|\s*(\d+)-(\d+)\s*\|/);
 
-    return {
-      id: slug,
-      name: speciesName,
-      usage,
-      winRate,
-      record,
-      moves: parseBulletPercentages(getSection(md, "Common Moves")),
-      items: parseBulletPercentages(getSection(md, "Common Items")),
-      abilities: parseBulletPercentages(getSection(md, "Common Abilities")),
-      teammates: parseBulletPercentages(getSection(md, "Common Teammates")),
-      baseStats: parseBaseStats(md),
-      matchups: parseMatchups(md),
-    };
-  } catch {
-    return null;
+      const usage = usageMatch ? parseFloat(usageMatch[1]) : 0;
+      const winRate = wrMatch ? parseFloat(wrMatch[1]) : null;
+      const record = recMatch
+        ? { wins: parseInt(recMatch[1], 10), losses: parseInt(recMatch[2], 10) }
+        : undefined;
+
+      return {
+        id: slug,
+        name: speciesName,
+        usage,
+        winRate,
+        record,
+        moves: parseBulletPercentages(getSection(md, "Common Moves")),
+        items: parseBulletPercentages(getSection(md, "Common Items")),
+        abilities: parseBulletPercentages(getSection(md, "Common Abilities")),
+        teammates: parseBulletPercentages(getSection(md, "Common Teammates")),
+        baseStats: parseBaseStats(md),
+        matchups: parseMatchups(md),
+      };
+    } catch {
+      // Probar siguiente candidato de slug
+    }
   }
+
+  return null;
 }
 
 export async function fetchPikalyticsRoster(
