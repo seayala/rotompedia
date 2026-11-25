@@ -41,6 +41,7 @@ export default function App() {
 
   const [tab, setTab] = useState<Tab>("usage");
   const [tournamentFilter, setTournamentFilter] = useState<TournamentFilter>("all");
+  const [selectedTournamentId, setSelectedTournamentId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -50,6 +51,7 @@ export default function App() {
     setError(false);
     setSelectedId(null);
     setTournamentFilter("all");
+    setSelectedTournamentId(null);
 
     fetch(`${import.meta.env.BASE_URL}data/regulations/${currentReg.snapshotFile}`)
       .then((res) => {
@@ -97,26 +99,60 @@ export default function App() {
     );
   }, [snapshot, normalizedQuery]);
 
-  const filteredTeams = useMemo(() => {
+  const matchingTeams = useMemo(() => {
     if (!snapshot) return [];
-    return snapshot.teams
-      .filter((tm) => {
-        if (tournamentFilter !== "all" && inferTeamCategory(tm) !== tournamentFilter) {
-          return false;
-        }
-        if (!normalizedQuery) return true;
-        return (
-          tm.playerDisplayName.toLowerCase().includes(normalizedQuery) ||
-          tm.tournamentName.toLowerCase().includes(normalizedQuery) ||
-          tm.pokemon.some(
-            (m) =>
-              m.name.toLowerCase().includes(normalizedQuery) ||
-              (m.item ?? "").toLowerCase().includes(normalizedQuery)
-          )
-        );
-      })
-      .slice(0, 60);
+    return snapshot.teams.filter((tm) => {
+      if (tournamentFilter !== "all" && inferTeamCategory(tm) !== tournamentFilter) {
+        return false;
+      }
+      if (!normalizedQuery) return true;
+      return (
+        tm.playerDisplayName.toLowerCase().includes(normalizedQuery) ||
+        tm.tournamentName.toLowerCase().includes(normalizedQuery) ||
+        tm.pokemon.some(
+          (m) =>
+            m.name.toLowerCase().includes(normalizedQuery) ||
+            (m.item ?? "").toLowerCase().includes(normalizedQuery)
+        )
+      );
+    });
   }, [snapshot, tournamentFilter, normalizedQuery]);
+
+  const availableTournaments = useMemo(() => {
+    const map = new Map<
+      string,
+      {
+        id: string;
+        name: string;
+        date: string;
+        category: TournamentCategory;
+        teamCount: number;
+      }
+    >();
+    for (const tm of matchingTeams) {
+      const id = String(tm.tournamentId || tm.tournamentName);
+      const prev = map.get(id);
+      if (prev) {
+        prev.teamCount += 1;
+      } else {
+        map.set(id, {
+          id,
+          name: tm.tournamentName,
+          date: tm.date,
+          category: inferTeamCategory(tm),
+          teamCount: 1,
+        });
+      }
+    }
+    return Array.from(map.values());
+  }, [matchingTeams]);
+
+  const filteredTeams = useMemo(() => {
+    if (!selectedTournamentId) return [];
+    return matchingTeams
+      .filter((tm) => String(tm.tournamentId || tm.tournamentName) === selectedTournamentId)
+      .slice(0, 60);
+  }, [matchingTeams, selectedTournamentId]);
 
   const selectedMon: PokemonMetaStats | undefined = useMemo(() => {
     if (!snapshot || !selectedId) return undefined;
@@ -490,7 +526,10 @@ export default function App() {
                     <button
                       key={key}
                       type="button"
-                      onClick={() => setTournamentFilter(key)}
+                      onClick={() => {
+                        setTournamentFilter(key);
+                        setSelectedTournamentId(null);
+                      }}
                       className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
                         tournamentFilter === key
                           ? "bg-orange-500/15 text-orange-300 border-orange-500/40"
@@ -502,56 +541,105 @@ export default function App() {
                   ))}
                 </div>
 
-                {filteredTeams.length === 0 ? (
-                  <p className="text-sm text-slate-400">{t.noResults}</p>
+                {!selectedTournamentId ? (
+                  availableTournaments.length === 0 ? (
+                    <p className="text-sm text-slate-400">{t.noResults}</p>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {availableTournaments.map((trn) => (
+                        <button
+                          key={trn.id}
+                          type="button"
+                          onClick={() => setSelectedTournamentId(trn.id)}
+                          className="text-left rounded-xl border border-slate-800 bg-slate-900/60 hover:border-orange-500/50 hover:bg-slate-900 p-4 transition flex items-center justify-between gap-4"
+                        >
+                          <div className="space-y-1 min-w-0">
+                            <div className="font-semibold text-sm text-slate-100 truncate">
+                              {trn.name}
+                            </div>
+                            <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400">
+                              <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">
+                                {categoryBadgeLabel(trn.category)}
+                              </span>
+                              {trn.date && <span className="font-mono">{trn.date}</span>}
+                            </div>
+                          </div>
+                          <div className="text-right shrink-0">
+                            <div className="font-mono text-sm font-semibold text-orange-300">
+                              {trn.teamCount}
+                            </div>
+                            <div className="text-[11px] text-slate-400">
+                              {lang === "es" ? "equipos" : "teams"}
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )
                 ) : (
                   <div className="space-y-3">
-                    {filteredTeams.map((tm, idx) => {
-                      const cat = inferTeamCategory(tm);
-                      return (
-                        <div
-                          key={`${tm.tournamentId}-${tm.player}-${idx}`}
-                          className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-2.5"
-                        >
-                          <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                            <div className="flex flex-wrap items-center gap-2">
-                              {tm.placing !== null && (
-                                <span className="font-mono px-2 py-0.5 rounded bg-orange-500/15 text-orange-300">
-                                  #{tm.placing}
-                                </span>
-                              )}
-                              <span className="font-semibold text-sm text-slate-100">
-                                {tm.playerDisplayName}
-                              </span>
-                              <span className="font-mono text-slate-400">
-                                ({tm.record.wins}W-{tm.record.losses}L-{tm.record.ties}T)
-                              </span>
-                              <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">
-                                {categoryBadgeLabel(cat)}
-                              </span>
-                            </div>
-                            <span className="text-slate-400">{tm.tournamentName}</span>
-                          </div>
+                    <div className="flex items-center justify-between gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedTournamentId(null)}
+                        className="px-3 py-1.5 rounded-lg text-xs font-medium border border-slate-700 bg-slate-900 text-slate-200 hover:border-orange-500/40 transition"
+                      >
+                        {lang === "es" ? "← Volver a torneos" : "← Back to tournaments"}
+                      </button>
+                    </div>
 
-                          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
-                            {tm.pokemon.map((m, mIdx) => (
-                              <div
-                                key={`${m.id}-${mIdx}`}
-                                className="rounded-lg border border-slate-800/90 bg-slate-950/70 px-2.5 py-2 text-xs"
-                              >
-                                <div className="font-medium text-slate-200 truncate">{m.name}</div>
-                                <div className="text-slate-400 truncate mt-0.5">{m.item ?? "—"}</div>
-                                {m.nature && (
-                                  <div className="text-[11px] font-mono text-orange-300/80 truncate">
-                                    {m.nature}
-                                  </div>
-                                )}
+                    {filteredTeams.length === 0 ? (
+                      <p className="text-sm text-slate-400">{t.noResults}</p>
+                    ) : (
+                      <div className="space-y-3">
+                        {filteredTeams.map((tm, idx) => {
+                          const cat = inferTeamCategory(tm);
+                          return (
+                            <div
+                              key={`${tm.tournamentId}-${tm.player}-${idx}`}
+                              className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-2.5"
+                            >
+                              <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                                <div className="flex flex-wrap items-center gap-2">
+                                  {tm.placing !== null && (
+                                    <span className="font-mono px-2 py-0.5 rounded bg-orange-500/15 text-orange-300">
+                                      #{tm.placing}
+                                    </span>
+                                  )}
+                                  <span className="font-semibold text-sm text-slate-100">
+                                    {tm.playerDisplayName}
+                                  </span>
+                                  <span className="font-mono text-slate-400">
+                                    ({tm.record.wins}W-{tm.record.losses}L-{tm.record.ties}T)
+                                  </span>
+                                  <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">
+                                    {categoryBadgeLabel(cat)}
+                                  </span>
+                                </div>
+                                <span className="text-slate-400">{tm.tournamentName}</span>
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    })}
+
+                              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                                {tm.pokemon.map((m, mIdx) => (
+                                  <div
+                                    key={`${m.id}-${mIdx}`}
+                                    className="rounded-lg border border-slate-800/90 bg-slate-950/70 px-2.5 py-2 text-xs"
+                                  >
+                                    <div className="font-medium text-slate-200 truncate">{m.name}</div>
+                                    <div className="text-slate-400 truncate mt-0.5">{m.item ?? "—"}</div>
+                                    {m.nature && (
+                                      <div className="text-[11px] font-mono text-orange-300/80 truncate">
+                                        {m.nature}
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                 )}
               </section>
