@@ -40,7 +40,7 @@ export function classifyTournament(name: string): TournamentCategory {
   ) {
     return "major";
   }
-  if (/\bglobal challenge\b/.test(n)) {
+  if (/\b(global challenge|gc)\b/.test(n)) {
     return "global-challenge";
   }
   return "circuit";

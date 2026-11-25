@@ -399,12 +399,25 @@ export default function App() {
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
-                      ["all", t.filterAllTournaments],
-                      ["major", t.filterMajorTournaments],
-                      ["global-challenge", t.filterGlobalChallenge],
-                      ["circuit", t.filterCircuit],
+                      ["all", t.filterAllTournaments, snapshot.teams.length],
+                      [
+                        "major",
+                        t.filterMajorTournaments,
+                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "major").length,
+                      ],
+                      [
+                        "global-challenge",
+                        t.filterGlobalChallenge,
+                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "global-challenge")
+                          .length,
+                      ],
+                      [
+                        "circuit",
+                        t.filterCircuit,
+                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "circuit").length,
+                      ],
                     ] as const
-                  ).map(([key, label]) => (
+                  ).map(([key, label, count]) => (
                     <button
                       key={key}
                       type="button"
@@ -415,7 +428,7 @@ export default function App() {
                           : "bg-slate-900/60 text-slate-400 border-slate-800 hover:text-slate-200"
                       }`}
                     >
-                      {label}
+                      {label} ({count})
                     </button>
                   ))}
                 </div>
