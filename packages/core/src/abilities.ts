@@ -106,18 +106,34 @@ export function filterLegalAbilities(
 ): WeightedEntry[] {
   const legal = getLegalAbilitiesForSpecies(speciesName);
   if (legal.length === 0) {
-    return abilities.slice(0, 3);
+    return [...abilities]
+      .sort((a, b) => (b.usage ?? 0) - (a.usage ?? 0))
+      .slice(0, 3);
   }
 
-  const legalSet = new Set(legal.map(normalizeKey));
-  const filtered = abilities
-    .filter((entry) => legalSet.has(normalizeKey(entry.name)))
-    .slice(0, 3);
+  const legalOrder = new Map<string, number>();
+  legal.forEach((name, idx) => legalOrder.set(normalizeKey(name), idx));
 
-  if (filtered.length > 0) {
-    return filtered;
+  const presentMap = new Map<string, WeightedEntry>();
+  for (const entry of abilities) {
+    const k = normalizeKey(entry.name);
+    if (legalOrder.has(k) && !presentMap.has(k)) {
+      presentMap.set(k, entry);
+    }
   }
 
-  // Si la fuente no devolvió porcentajes válidos para las habilidades legales, devolver base con peso 0
-  return legal.map((name) => ({ name, usage: 0 }));
+  const merged: WeightedEntry[] = legal.map((name) => {
+    const existing = presentMap.get(normalizeKey(name));
+    return existing ?? { name, usage: 0 };
+  });
+
+  merged.sort((a, b) => {
+    const diff = (b.usage ?? 0) - (a.usage ?? 0);
+    if (diff !== 0) return diff;
+    const ia = legalOrder.get(normalizeKey(a.name)) ?? Number.MAX_SAFE_INTEGER;
+    const ib = legalOrder.get(normalizeKey(b.name)) ?? Number.MAX_SAFE_INTEGER;
+    return ia - ib;
+  });
+
+  return merged.slice(0, 3);
 }

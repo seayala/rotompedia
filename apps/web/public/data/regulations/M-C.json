@@ -104,6 +104,10 @@
       ],
       "abilities": [
         {
+          "name": "Overgrow",
+          "usage": 0
+        },
+        {
           "name": "Grassy Surge",
           "usage": 99.389
         }
@@ -307,6 +311,10 @@
           "usage": 53.44
         },
         {
+          "name": "Unburden",
+          "usage": 0
+        },
+        {
           "name": "Pickpocket",
           "usage": 0.718
         }
@@ -476,6 +484,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Blaze",
+          "usage": 0
+        },
         {
           "name": "Intimidate",
           "usage": 98.607
@@ -680,6 +692,10 @@
       ],
       "abilities": [
         {
+          "name": "Sand Veil",
+          "usage": 0
+        },
+        {
           "name": "Rough Skin",
           "usage": 92.741
         }
@@ -874,6 +890,10 @@
       ],
       "abilities": [
         {
+          "name": "Blaze",
+          "usage": 0
+        },
+        {
           "name": "Solar Power",
           "usage": 0.706
         }
@@ -1048,6 +1068,10 @@
         {
           "name": "Stamina",
           "usage": 98.856
+        },
+        {
+          "name": "Inner Focus",
+          "usage": 0
         },
         {
           "name": "Sturdy",
@@ -1247,6 +1271,14 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Cud Chew",
+          "usage": 0
+        },
+        {
+          "name": "Armor Tail",
+          "usage": 0
+        },
         {
           "name": "Sap Sipper",
           "usage": 14.738
@@ -1615,6 +1647,10 @@
           "usage": 93.105
         },
         {
+          "name": "Supreme Overlord",
+          "usage": 0
+        },
+        {
           "name": "Pressure",
           "usage": 0.078
         }
@@ -1790,12 +1826,16 @@
       ],
       "abilities": [
         {
-          "name": "Psychic Surge",
-          "usage": 98.498
-        },
-        {
           "name": "Own Tempo",
           "usage": 0.063
+        },
+        {
+          "name": "Synchronize",
+          "usage": 0
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 98.498
         }
       ],
       "natures": [
@@ -1979,12 +2019,16 @@
       ],
       "abilities": [
         {
-          "name": "Psychic Surge",
-          "usage": 98.498
-        },
-        {
           "name": "Own Tempo",
           "usage": 0.063
+        },
+        {
+          "name": "Synchronize",
+          "usage": 0
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 98.498
         }
       ],
       "natures": [
@@ -2344,12 +2388,12 @@
       ],
       "abilities": [
         {
-          "name": "Lightning Rod",
-          "usage": 16.156
-        },
-        {
           "name": "Static",
           "usage": 0.903
+        },
+        {
+          "name": "Lightning Rod",
+          "usage": 16.156
         }
       ],
       "natures": [
@@ -2527,6 +2571,14 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Swift Swim",
+          "usage": 0
+        },
+        {
+          "name": "Adaptability",
+          "usage": 0
+        },
         {
           "name": "Mold Breaker",
           "usage": 11.737
@@ -2874,12 +2926,16 @@
       ],
       "abilities": [
         {
-          "name": "Drizzle",
-          "usage": 99.051
-        },
-        {
           "name": "Water Absorb",
           "usage": 0.036
+        },
+        {
+          "name": "Damp",
+          "usage": 0
+        },
+        {
+          "name": "Drizzle",
+          "usage": 99.051
         }
       ],
       "natures": [
@@ -3063,6 +3119,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Prankster",
+          "usage": 0
+        },
         {
           "name": "Frisk",
           "usage": 8.1
@@ -3256,6 +3316,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Keen Eye",
+          "usage": 0
+        },
         {
           "name": "Drizzle",
           "usage": 98.9
@@ -3646,6 +3710,10 @@
       ],
       "abilities": [
         {
+          "name": "Marvel Scale",
+          "usage": 0
+        },
+        {
           "name": "Competitive",
           "usage": 89.544
         },
@@ -4012,6 +4080,10 @@
         {
           "name": "Cute Charm",
           "usage": 1.754
+        },
+        {
+          "name": "Pixilate",
+          "usage": 0
         }
       ],
       "natures": [
@@ -4175,6 +4247,10 @@
         {
           "name": "Intimidate",
           "usage": 96.798
+        },
+        {
+          "name": "Reckless",
+          "usage": 0
         }
       ],
       "natures": [
@@ -4343,6 +4419,10 @@
         {
           "name": "Flame Body",
           "usage": 90.289
+        },
+        {
+          "name": "Swarm",
+          "usage": 0
         }
       ],
       "natures": [
@@ -4694,6 +4774,10 @@
         {
           "name": "Flash Fire",
           "usage": 0.085
+        },
+        {
+          "name": "Rock Head",
+          "usage": 0
         }
       ],
       "natures": [
@@ -4861,6 +4945,10 @@
         {
           "name": "Hospitality",
           "usage": 5.882
+        },
+        {
+          "name": "Heatproof",
+          "usage": 0
         }
       ],
       "natures": [
@@ -5046,6 +5134,14 @@
       ],
       "abilities": [
         {
+          "name": "Sand Rush",
+          "usage": 0
+        },
+        {
+          "name": "Sand Force",
+          "usage": 0
+        },
+        {
           "name": "Mold Breaker",
           "usage": 46.246
         }
@@ -5216,12 +5312,16 @@
       ],
       "abilities": [
         {
-          "name": "Psychic Surge",
-          "usage": 98.898
-        },
-        {
           "name": "Inner Focus",
           "usage": 0.052
+        },
+        {
+          "name": "Synchronize",
+          "usage": 0
+        },
+        {
+          "name": "Psychic Surge",
+          "usage": 98.898
         }
       ],
       "natures": [
@@ -5561,12 +5661,12 @@
       ],
       "abilities": [
         {
-          "name": "Trace",
-          "usage": 1.691
-        },
-        {
           "name": "Synchronize",
           "usage": 0.266
+        },
+        {
+          "name": "Trace",
+          "usage": 1.691
         },
         {
           "name": "Telepathy",
@@ -5741,6 +5841,10 @@
       ],
       "abilities": [
         {
+          "name": "Snow Cloak",
+          "usage": 0
+        },
+        {
           "name": "Cursed Body",
           "usage": 1.725
         }
@@ -5912,12 +6016,12 @@
       ],
       "abilities": [
         {
-          "name": "Weak Armor",
-          "usage": 73.741
-        },
-        {
           "name": "Flash Fire",
           "usage": 9.872
+        },
+        {
+          "name": "Weak Armor",
+          "usage": 73.741
         }
       ],
       "natures": [
@@ -6093,12 +6197,16 @@
       ],
       "abilities": [
         {
+          "name": "White Smoke",
+          "usage": 0.059
+        },
+        {
           "name": "Drought",
           "usage": 98.943
         },
         {
-          "name": "White Smoke",
-          "usage": 0.059
+          "name": "Shell Armor",
+          "usage": 0
         }
       ],
       "natures": [
@@ -6283,6 +6391,10 @@
         {
           "name": "Clear Body",
           "usage": 80.847
+        },
+        {
+          "name": "Light Metal",
+          "usage": 0
         }
       ],
       "natures": [
@@ -7163,6 +7275,10 @@
         {
           "name": "Inner Focus",
           "usage": 78.734
+        },
+        {
+          "name": "Multiscale",
+          "usage": 0
         }
       ],
       "natures": [
@@ -7503,6 +7619,10 @@
       ],
       "abilities": [
         {
+          "name": "Snow Cloak",
+          "usage": 0
+        },
+        {
           "name": "Snow Warning",
           "usage": 99.08
         }
@@ -7667,16 +7787,16 @@
       ],
       "abilities": [
         {
+          "name": "Steadfast",
+          "usage": 1.238
+        },
+        {
           "name": "Inner Focus",
           "usage": 77.619
         },
         {
           "name": "Justified",
           "usage": 6.381
-        },
-        {
-          "name": "Steadfast",
-          "usage": 1.238
         }
       ],
       "natures": [
@@ -7853,6 +7973,10 @@
       ],
       "abilities": [
         {
+          "name": "Blaze",
+          "usage": 0
+        },
+        {
           "name": "Magician",
           "usage": 1.407
         }
@@ -8020,12 +8144,12 @@
       ],
       "abilities": [
         {
-          "name": "Soundproof",
-          "usage": 58.091
-        },
-        {
           "name": "Bulletproof",
           "usage": 10.827
+        },
+        {
+          "name": "Soundproof",
+          "usage": 58.091
         },
         {
           "name": "Overcoat",
@@ -8196,6 +8320,14 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Magma Armor",
+          "usage": 0
+        },
+        {
+          "name": "Solid Rock",
+          "usage": 0
+        },
         {
           "name": "Anger Point",
           "usage": 12.15
@@ -8371,12 +8503,16 @@
       ],
       "abilities": [
         {
-          "name": "Unnerve",
-          "usage": 96.713
+          "name": "Rock Head",
+          "usage": 0
         },
         {
           "name": "Pressure",
           "usage": 2.122
+        },
+        {
+          "name": "Unnerve",
+          "usage": 96.713
         }
       ],
       "natures": [
@@ -8542,16 +8678,16 @@
       ],
       "abilities": [
         {
-          "name": "Defiant",
-          "usage": 93.267
+          "name": "Vital Spirit",
+          "usage": 0.059
         },
         {
           "name": "Inner Focus",
           "usage": 0.234
         },
         {
-          "name": "Vital Spirit",
-          "usage": 0.059
+          "name": "Defiant",
+          "usage": 93.267
         }
       ],
       "natures": [
@@ -8893,12 +9029,16 @@
       ],
       "abilities": [
         {
-          "name": "Magic Bounce",
-          "usage": 21.698
+          "name": "Healer",
+          "usage": 0
         },
         {
           "name": "Anticipation",
           "usage": 11.321
+        },
+        {
+          "name": "Magic Bounce",
+          "usage": 21.698
         }
       ],
       "natures": [
@@ -9059,16 +9199,16 @@
       ],
       "abilities": [
         {
-          "name": "Mirror Armor",
-          "usage": 81.257
-        },
-        {
           "name": "Pressure",
           "usage": 7.305
         },
         {
           "name": "Unnerve",
           "usage": 6.002
+        },
+        {
+          "name": "Mirror Armor",
+          "usage": 81.257
         }
       ],
       "natures": [
@@ -9245,6 +9385,14 @@
       ],
       "abilities": [
         {
+          "name": "Swift Swim",
+          "usage": 0
+        },
+        {
+          "name": "Adaptability",
+          "usage": 0
+        },
+        {
           "name": "Mold Breaker",
           "usage": 23.636
         }
@@ -9413,6 +9561,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Blaze",
+          "usage": 0
+        },
         {
           "name": "Speed Boost",
           "usage": 99.572
@@ -9604,6 +9756,10 @@
       ],
       "abilities": [
         {
+          "name": "Torrent",
+          "usage": 0
+        },
+        {
           "name": "Rain Dish",
           "usage": 23.973
         }
@@ -9780,6 +9936,14 @@
       ],
       "abilities": [
         {
+          "name": "Swift Swim",
+          "usage": 0
+        },
+        {
+          "name": "Adaptability",
+          "usage": 0
+        },
+        {
           "name": "Mold Breaker",
           "usage": 23.636
         }
@@ -9947,6 +10111,10 @@
           "usage": 70.939
         },
         {
+          "name": "Infiltrator",
+          "usage": 0
+        },
+        {
           "name": "Cursed Body",
           "usage": 21.574
         }
@@ -10103,6 +10271,10 @@
         {
           "name": "Pressure",
           "usage": 81.113
+        },
+        {
+          "name": "Super Luck",
+          "usage": 0
         },
         {
           "name": "Justified",
@@ -10274,6 +10446,14 @@
         {
           "name": "Cute Charm",
           "usage": 18.085
+        },
+        {
+          "name": "Magic Guard",
+          "usage": 0
+        },
+        {
+          "name": "Unaware",
+          "usage": 0
         }
       ],
       "natures": [
@@ -10441,6 +10621,10 @@
         {
           "name": "Flame Body",
           "usage": 17.391
+        },
+        {
+          "name": "Gale Wings",
+          "usage": 0
         }
       ],
       "natures": [
@@ -10615,12 +10799,12 @@
       ],
       "abilities": [
         {
-          "name": "Weak Armor",
-          "usage": 55.696
-        },
-        {
           "name": "Flash Fire",
           "usage": 26.899
+        },
+        {
+          "name": "Weak Armor",
+          "usage": 55.696
         }
       ],
       "natures": [
@@ -10777,12 +10961,16 @@
       ],
       "abilities": [
         {
+          "name": "Hyper Cutter",
+          "usage": 12.106
+        },
+        {
           "name": "Intimidate",
           "usage": 83.135
         },
         {
-          "name": "Hyper Cutter",
-          "usage": 12.106
+          "name": "Sheer Force",
+          "usage": 0
         }
       ],
       "natures": [
@@ -11136,6 +11324,10 @@
         {
           "name": "Natural Cure",
           "usage": 2.586
+        },
+        {
+          "name": "Iron Fist",
+          "usage": 0
         }
       ],
       "natures": [
@@ -11301,6 +11493,14 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Merciless",
+          "usage": 0
+        },
+        {
+          "name": "Limber",
+          "usage": 0
+        },
         {
           "name": "Regenerator",
           "usage": 91.194
@@ -11827,6 +12027,10 @@
         {
           "name": "Sand Stream",
           "usage": 92.936
+        },
+        {
+          "name": "Sand Force",
+          "usage": 0
         }
       ],
       "natures": [
@@ -12012,8 +12216,16 @@
       ],
       "abilities": [
         {
+          "name": "Friend Guard",
+          "usage": 0
+        },
+        {
           "name": "Cheek Pouch",
           "usage": 16.667
+        },
+        {
+          "name": "Technician",
+          "usage": 0
         }
       ],
       "natures": [
@@ -12357,16 +12569,16 @@
       ],
       "abilities": [
         {
-          "name": "Cloud Nine",
-          "usage": 70.49
-        },
-        {
           "name": "Berserk",
           "usage": 27.364
         },
         {
           "name": "Sap Sipper",
           "usage": 0.201
+        },
+        {
+          "name": "Cloud Nine",
+          "usage": 70.49
         }
       ],
       "natures": [
@@ -12888,6 +13100,14 @@
       ],
       "abilities": [
         {
+          "name": "Chlorophyll",
+          "usage": 0
+        },
+        {
+          "name": "Insomnia",
+          "usage": 0
+        },
+        {
           "name": "Moody",
           "usage": 20.295
         }
@@ -13060,6 +13280,10 @@
       ],
       "abilities": [
         {
+          "name": "Shed Skin",
+          "usage": 0
+        },
+        {
           "name": "Intimidate",
           "usage": 97.379
         },
@@ -13225,6 +13449,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Overgrow",
+          "usage": 0
+        },
         {
           "name": "Leaf Guard",
           "usage": 5.556
@@ -13394,6 +13622,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Natural Cure",
+          "usage": 0
+        },
         {
           "name": "Cloud Nine",
           "usage": 98.352
@@ -13575,6 +13807,10 @@
         }
       ],
       "abilities": [
+        {
+          "name": "Early Bird",
+          "usage": 0
+        },
         {
           "name": "Scrappy",
           "usage": 88.985
@@ -13911,6 +14147,10 @@
         {
           "name": "Hyper Cutter",
           "usage": 86.34
+        },
+        {
+          "name": "Sand Veil",
+          "usage": 0
         },
         {
           "name": "Poison Heal",

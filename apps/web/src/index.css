@@ -1,19 +1,48 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    background-color: #060913;
-    color: #f1f5f9;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 12% -8%, rgba(249, 115, 22, 0.14), transparent 60%),
-      radial-gradient(ellipse 70% 45% at 88% -5%, rgba(56, 189, 248, 0.11), transparent 58%),
-      linear-gradient(to right, rgba(148, 163, 184, 0.035) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(148, 163, 184, 0.035) 1px, transparent 1px);
-    background-size:
-      100% 100%,
-      100% 100%,
-      36px 36px,
-      36px 36px;
-    background-attachment: fixed;
+:root {
+  --bg-base: #070b12;
+  --rotom-orange: 249, 115, 22;
+  --rotom-amber: 251, 191, 36;
+  --rotom-cyan: 34, 211, 238;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--bg-base);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(700px circle at 12% 8%, rgba(var(--rotom-orange), 0.15), transparent 60%),
+    radial-gradient(600px circle at 88% 24%, rgba(var(--rotom-amber), 0.09), transparent 60%),
+    radial-gradient(700px circle at 50% 100%, rgba(var(--rotom-cyan), 0.08), transparent 60%);
+}
+
+#rotom-net {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  #rotom-net {
+    display: none;
   }
 }

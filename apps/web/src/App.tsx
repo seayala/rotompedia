@@ -209,6 +209,195 @@ function PokemonSprite({
   );
 }
 
+
+function RotomNetworkBackground() {
+  useEffect(() => {
+    const canvas = document.getElementById("rotom-net") as HTMLCanvasElement | null;
+    if (!canvas) return;
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let width = 0;
+    let height = 0;
+    let animId = 0;
+    let frameCount = 0;
+    const pointer = { x: -9999, y: -9999 };
+    let uiRects: DOMRect[] = [];
+
+    const interactiveSelector =
+      'header, nav, button, a, input, select, textarea, label, table, [role="button"], [role="tab"], [role="menuitem"], .rounded-xl, .rounded-lg';
+
+    const uiBackdropSelector =
+      'header, nav, table, [role="menu"], [role="listbox"], .rounded-xl, .rounded-lg';
+
+    interface NodePt {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      r: number;
+      warm: boolean;
+    }
+
+    let nodes: NodePt[] = [];
+
+    const refreshUiRects = () => {
+      const els = document.querySelectorAll(uiBackdropSelector);
+      const next: DOMRect[] = [];
+      els.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (
+          rect.width > 0 &&
+          rect.height > 0 &&
+          rect.bottom > 0 &&
+          rect.top < window.innerHeight &&
+          rect.right > 0 &&
+          rect.left < window.innerWidth
+        ) {
+          next.push(rect);
+        }
+      });
+      uiRects = next;
+    };
+
+    const getDimFactor = (x: number, y: number): number => {
+      for (let i = 0; i < uiRects.length; i++) {
+        const r = uiRects[i];
+        if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) {
+          return 0.22;
+        }
+      }
+      return 1;
+    };
+
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const count = Math.max(24, Math.min(64, Math.floor((width * height) / 28000)));
+      nodes = Array.from({ length: count }, (_, idx) => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        r: 1.4 + Math.random() * 1.6,
+        warm: idx % 3 !== 0,
+      }));
+      refreshUiRects();
+    };
+
+    const onMove = (e: MouseEvent) => {
+      const target = e.target as Element | null;
+      if (!target || target.closest(interactiveSelector)) {
+        pointer.x = -9999;
+        pointer.y = -9999;
+        return;
+      }
+      pointer.x = e.clientX;
+      pointer.y = e.clientY;
+    };
+
+    const onLeave = () => {
+      pointer.x = -9999;
+      pointer.y = -9999;
+    };
+
+    const onScrollOrResize = () => {
+      refreshUiRects();
+    };
+
+    const step = () => {
+      frameCount += 1;
+      if (frameCount % 20 === 0) {
+        refreshUiRects();
+      }
+
+      ctx.clearRect(0, 0, width, height);
+      const maxDist = 135;
+
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        a.x += a.vx;
+        a.y += a.vy;
+        if (a.x < 0 || a.x > width) a.vx *= -1;
+        if (a.y < 0 || a.y > height) a.vy *= -1;
+
+        const dimA = getDimFactor(a.x, a.y);
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < maxDist) {
+            const dimB = getDimFactor(b.x, b.y);
+            const dimMid = getDimFactor((a.x + b.x) * 0.5, (a.y + b.y) * 0.5);
+            const edgeDim = Math.min(dimA, dimB, dimMid);
+            const alpha = (1 - dist / maxDist) * 0.14 * edgeDim;
+            ctx.strokeStyle = a.warm
+              ? `rgba(249, 115, 22, ${alpha.toFixed(3)})`
+              : `rgba(34, 211, 238, ${alpha.toFixed(3)})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+
+        const pdx = a.x - pointer.x;
+        const pdy = a.y - pointer.y;
+        const pdist = Math.hypot(pdx, pdy);
+        if (pdist < 170) {
+          const pAlpha = (1 - pdist / 170) * 0.25 * dimA;
+          ctx.strokeStyle = `rgba(251, 191, 36, ${pAlpha.toFixed(3)})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(pointer.x, pointer.y);
+          ctx.stroke();
+        }
+
+        const dotAlpha = (a.warm ? 0.42 : 0.36) * dimA;
+        ctx.fillStyle = a.warm
+          ? `rgba(249, 115, 22, ${dotAlpha.toFixed(3)})`
+          : `rgba(34, 211, 238, ${dotAlpha.toFixed(3)})`;
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      animId = window.requestAnimationFrame(step);
+    };
+
+    resize();
+    step();
+    window.addEventListener("resize", resize);
+    window.addEventListener("scroll", onScrollOrResize, { passive: true });
+    window.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      window.cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("scroll", onScrollOrResize);
+      window.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
+
+  return <canvas id="rotom-net" aria-hidden="true" />;
+}
 export default function App() {
   const { lang, setLang, t } = useI18n();
   const [regulationCode, setRegulationCode] = useState<RegulationCode>(DEFAULT_REGULATION_CODE);
@@ -350,6 +539,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen text-slate-100 flex flex-col">
+      <RotomNetworkBackground />
       {/* Cabecera y selector de idioma */}
       <header className="border-b border-orange-500/20 bg-slate-900/75 backdrop-blur shadow-[0_1px_24px_rgba(249,115,22,0.08)]">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">

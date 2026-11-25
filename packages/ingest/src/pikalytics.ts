@@ -200,7 +200,7 @@ export async function fetchPikalyticsPokemon(
         record,
         moves: parseBulletPercentages(getSection(md, "Common Moves")),
         items: parseBulletPercentages(getSection(md, "Common Items")),
-        abilities: parseBulletPercentages(getSection(md, "Common Abilities")),
+        abilities: filterLegalAbilities(speciesName, parseBulletPercentages(getSection(md, "Common Abilities"))),
         teammates: parseBulletPercentages(getSection(md, "Common Teammates")),
         baseStats: parseBaseStats(md),
         matchups: parseMatchups(md),
