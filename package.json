@@ -1,7 +1,7 @@
 {
   "name": "rotompedia-monorepo",
   "private": true,
-  "packageManager": "pnpm@latest",
+  "packageManager": "pnpm@12.23.0",
   "scripts": {
     "dev": "pnpm --filter web dev",
     "build": "pnpm --filter web build",
