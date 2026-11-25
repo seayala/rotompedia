@@ -30,6 +30,15 @@ function inferTeamCategory(tm: TournamentTeam): TournamentCategory {
   return "circuit";
 }
 
+function countUniqueTournaments(teams: readonly { tournamentId?: string | null; tournamentName?: string | null }[]): number {
+  const ids = new Set<string>();
+  for (const tm of teams) {
+    const key = (tm.tournamentId ?? tm.tournamentName ?? "").trim();
+    if (key) ids.add(key);
+  }
+  return ids.size;
+}
+
 export default function App() {
   const { lang, setLang, t } = useI18n();
   const [regulationCode, setRegulationCode] = useState<RegulationCode>(DEFAULT_REGULATION_CODE);
@@ -504,22 +513,27 @@ export default function App() {
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
-                      ["all", t.filterAllTournaments, snapshot.teams.length],
+                      ["all", t.filterAllTournaments, countUniqueTournaments(snapshot.teams)],
                       [
                         "major",
                         t.filterMajorTournaments,
-                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "major").length,
+                        countUniqueTournaments(
+                          snapshot.teams.filter((tm) => inferTeamCategory(tm) === "major")
+                        ),
                       ],
                       [
                         "global-challenge",
                         t.filterGlobalChallenge,
-                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "global-challenge")
-                          .length,
+                        countUniqueTournaments(
+                          snapshot.teams.filter((tm) => inferTeamCategory(tm) === "global-challenge")
+                        ),
                       ],
                       [
                         "circuit",
                         t.filterCircuit,
-                        snapshot.teams.filter((tm) => inferTeamCategory(tm) === "circuit").length,
+                        countUniqueTournaments(
+                          snapshot.teams.filter((tm) => inferTeamCategory(tm) === "circuit")
+                        ),
                       ],
                     ] as const
                   ).map(([key, label, count]) => (

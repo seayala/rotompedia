@@ -10,6 +10,7 @@ export interface RegulationDefinition {
   limitlessFormat: string;
   pikalyticsFormat: string;
   snapshotFile: string;
+  startDate?: string;
   endDate?: string;
   status: "active" | "archived";
 }
@@ -25,6 +26,7 @@ export const REGULATIONS: RegulationDefinition[] = [
     limitlessFormat: "M-C",
     pikalyticsFormat: "gen9championsvgc2026regmc",
     snapshotFile: "M-C.json",
+    startDate: "2026-09-09",
     endDate: "2026-12-02",
     status: "active",
   },
@@ -38,7 +40,22 @@ export const REGULATIONS: RegulationDefinition[] = [
     limitlessFormat: "M-B",
     pikalyticsFormat: "gen9championsvgc2026regmb",
     snapshotFile: "M-B.json",
+    startDate: "2026-06-17",
     endDate: "2026-09-09",
+    status: "archived",
+  },
+  {
+    code: "M-A",
+    name: "Pokémon Champions VGC 2026 — Regulation M-A",
+    shortLabel: {
+      es: "Reg. M-A",
+      en: "Reg. M-A",
+    },
+    limitlessFormat: "M-A",
+    pikalyticsFormat: "gen9championsvgc2026regma",
+    snapshotFile: "M-A.json",
+    startDate: "2026-04-08",
+    endDate: "2026-06-17",
     status: "archived",
   },
 ];

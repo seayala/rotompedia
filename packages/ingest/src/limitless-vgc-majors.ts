@@ -65,6 +65,98 @@ function slugifyId(raw: string): string {
     .replace(/^-|-$/g, "");
 }
 
+const MONTHS: Record<string, string> = {
+  jan: "01", january: "01",
+  feb: "02", february: "02",
+  mar: "03", march: "03",
+  apr: "04", april: "04",
+  may: "05",
+  jun: "06", june: "06",
+  jul: "07", july: "07",
+  aug: "08", august: "08",
+  sep: "09", sept: "09", september: "09",
+  oct: "10", october: "10",
+  nov: "11", november: "11",
+  dec: "12", december: "12",
+};
+
+export function parseTournamentDateToIso(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const s = raw.trim();
+  if (!s) return null;
+
+  const iso = s.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
+  if (iso) return `${iso[1]}-${iso[2]}-${iso[3]}`;
+
+  const mdy = s.match(/\b([A-Za-z]+)\s+(\d{1,2}),?\s+(20\d{2})\b/);
+  if (mdy) {
+    const mm = MONTHS[mdy[1].toLowerCase()];
+    if (mm) return `${mdy[3]}-${mm}-${mdy[2].padStart(2, "0")}`;
+  }
+
+  const dmy = s.match(/\b(\d{1,2})\s+([A-Za-z]+),?\s+(20\d{2})\b/);
+  if (dmy) {
+    const mm = MONTHS[dmy[2].toLowerCase()];
+    if (mm) return `${dmy[3]}-${mm}-${dmy[1].padStart(2, "0")}`;
+  }
+
+  const slash = s.match(/\b(\d{1,2})\/(\d{1,2})\/(20\d{2})\b/);
+  if (slash) {
+    const a = Number(slash[1]);
+    const b = Number(slash[2]);
+    if (a > 12 && b <= 12) {
+      return `${slash[3]}-${String(b).padStart(2, "0")}-${String(a).padStart(2, "0")}`;
+    }
+    return `${slash[3]}-${String(a).padStart(2, "0")}-${String(b).padStart(2, "0")}`;
+  }
+
+  const monShortYear = s.match(/\b([A-Za-z]+)\s+(\d{2})\b/);
+  if (monShortYear) {
+    const mm = MONTHS[monShortYear[1].toLowerCase()];
+    if (mm) {
+      return `20${monShortYear[2]}-${mm}-15`;
+    }
+  }
+
+  return null;
+}
+
+function extractPageTournamentDate(html: string): string | null {
+  const timeMatch = html.match(/<time[^>]*datetime=["']([^"']+)["'][^>]*>/i);
+  if (timeMatch) {
+    const parsed = parseTournamentDateToIso(timeMatch[1]);
+    if (parsed) return parsed;
+  }
+
+  const dataDateMatch = html.match(/\bdata-date=["']([^"']+)["']/i);
+  if (dataDateMatch) {
+    const parsed = parseTournamentDateToIso(dataDateMatch[1]);
+    if (parsed) return parsed;
+  }
+
+  const cleanText = decodeEntities(html.replace(/<[^>]+>/g, " "));
+  const iso = cleanText.match(/\b(20\d{2}-\d{2}-\d{2})\b/);
+  if (iso) return iso[1];
+
+  const mdy = cleanText.match(
+    /\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{1,2},?\s+20\d{2}\b/i
+  );
+  if (mdy) {
+    const parsed = parseTournamentDateToIso(mdy[0]);
+    if (parsed) return parsed;
+  }
+
+  const dmy = cleanText.match(
+    /\b\d{1,2}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?),?\s+20\d{2}\b/i
+  );
+  if (dmy) {
+    const parsed = parseTournamentDateToIso(dmy[0]);
+    if (parsed) return parsed;
+  }
+
+  return null;
+}
+
 export function isMajorTournamentTitle(name: string): boolean {
   const n = name.trim();
   if (!n) return false;
@@ -305,9 +397,9 @@ export async function fetchMajorTournamentTeams(
 
     const html = await res.text();
     const pageDate =
-      options.date ??
-      html.match(/\b(20\d{2}-\d{2}-\d{2})\b/)?.[1] ??
-      new Date().toISOString().slice(0, 10);
+      parseTournamentDateToIso(options.date) ??
+      extractPageTournamentDate(html) ??
+      "";
 
     const rowMatches = [...html.matchAll(/<tr\b([^>]*)>([\s\S]*?)<\/tr>/gi)];
     const teams: MajorExtractedTeam[] = [];

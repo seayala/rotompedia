@@ -9,6 +9,11 @@ import {
   type WeightedEntry,
 } from "@rotompedia/core";
 import { classifyTournament, fetchLimitlessRegulation } from "./limitless.js";
+import {
+  fetchMajorTournamentTeams,
+  fetchLimitlessVgcMajors,
+  parseTournamentDateToIso,
+} from "./limitless-vgc-majors.js";
 import { fetchPikalyticsRoster, fetchPikalyticsTeamUsage } from "./pikalytics.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -32,17 +37,87 @@ function resolveRegulationCode(): string {
   return process.env.REGULATION || DEFAULT_REGULATION_CODE;
 }
 
+function isWithinRegulationDates(
+  dateStr: string | undefined | null,
+  startDate?: string,
+  endDate?: string
+): boolean {
+  if (!startDate && !endDate) return true;
+  if (!dateStr) return false;
+  const iso = dateStr.trim().slice(0, 10);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) return false;
+  if (startDate && iso < startDate) return false;
+  if (endDate && iso > endDate) return false;
+  return true;
+}
+
 async function main() {
   const reg = getRegulationDefinition(resolveRegulationCode());
   console.log(`Generando snapshot para ${reg.code} (${reg.name})...`);
 
-  const limitless = await fetchLimitlessRegulation(reg.limitlessFormat, 100);
+  // 1. Prioridad absoluta: descubrir y extraer primero los torneos Major en rango de fechas
+  const discoveredMajors = await fetchLimitlessVgcMajors({ limit: 30 });
+  const majorsInReg = discoveredMajors
+    .map((m) => ({
+      ...m,
+      parsedDate: parseTournamentDateToIso(m.dateText),
+    }))
+    .filter((m) => isWithinRegulationDates(m.parsedDate, reg.startDate, reg.endDate));
+
+  console.log(
+    `[Prioridad Major] ${majorsInReg.length} majors en rango para ${reg.code} (${reg.startDate ?? "?"} .. ${reg.endDate ?? "?"})`
+  );
+
+  const majorTeams = [];
+  for (const m of majorsInReg) {
+    const extracted = await fetchMajorTournamentTeams(m.id, m.name, {
+      date: m.parsedDate ?? undefined,
+    });
+    for (const tm of extracted) {
+      if (isWithinRegulationDates(tm.date, reg.startDate, reg.endDate)) {
+        majorTeams.push({
+          tournamentId: tm.tournamentId,
+          tournamentName: tm.tournamentName,
+          tournamentCategory: "major" as const,
+          date: tm.date,
+          player: tm.player.toLowerCase(),
+          playerDisplayName: tm.playerDisplayName,
+          country: tm.country,
+          placing: tm.placing,
+          record: tm.record,
+          pokemon: tm.pokemon.map((pk) => ({
+            id: pk.id,
+            name: pk.name,
+            item: pk.item,
+            ability: pk.ability,
+            nature: pk.nature,
+            moves: pk.moves,
+          })),
+        });
+      }
+    }
+  }
+
+  // 2. Complemento secundario: torneos de circuito/API de la regulación
+  const limitless = await fetchLimitlessRegulation(reg.limitlessFormat, 40);
   const teamUsage = await fetchPikalyticsTeamUsage(reg.pikalyticsFormat, 60);
 
-  const normalizedTeams = limitless.teams.map((tm) => ({
-    ...tm,
-    tournamentCategory: tm.tournamentCategory ?? classifyTournament(tm.tournamentName),
-  }));
+  const circuitTeamsFiltered = limitless.teams
+    .filter((tm) => isWithinRegulationDates(tm.date, reg.startDate, reg.endDate))
+    .map((tm) => ({
+      ...tm,
+      tournamentCategory: tm.tournamentCategory ?? classifyTournament(tm.tournamentName),
+    }));
+
+  const majorTournamentIds = new Set(majorTeams.map((t) => String(t.tournamentId)));
+  const normalizedTeams = [
+    ...majorTeams,
+    ...circuitTeamsFiltered.filter((t) => !majorTournamentIds.has(String(t.tournamentId))),
+  ];
+
+  const uniqueTournamentIds = new Set(
+    normalizedTeams.map((t) => (t.tournamentId ?? t.tournamentName).trim()).filter(Boolean)
+  );
 
   const appearances = new Map<string, { name: string; count: number; natures: Map<string, number> }>();
   for (const team of normalizedTeams) {
@@ -123,7 +198,7 @@ async function main() {
       pikalyticsFormat: reg.pikalyticsFormat,
       generatedAt: new Date().toISOString(),
       sources: {
-        limitlessTournaments: limitless.tournamentCount,
+        limitlessTournaments: uniqueTournamentIds.size,
         limitlessTeams: normalizedTeams.length,
         pikalyticsSampleTeams: teamUsage.sampleTeams,
         pikalyticsDataDate: teamUsage.dataDate,

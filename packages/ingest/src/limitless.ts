@@ -46,10 +46,14 @@ export function classifyTournament(name: string): TournamentCategory {
   return "circuit";
 }
 
-async function fetchJson<T>(url: string): Promise<T> {
+async function fetchJson<T>(url: string, attempt = 1): Promise<T> {
   const res = await fetch(url, {
     headers: { "User-Agent": UA, Accept: "application/json" },
   });
+  if (res.status === 429 && attempt <= 2) {
+    await sleep(2000 * attempt);
+    return fetchJson<T>(url, attempt + 1);
+  }
   if (!res.ok) throw new Error(`HTTP ${res.status} en ${url}`);
   return (await res.json()) as T;
 }
@@ -64,10 +68,11 @@ export async function fetchLimitlessRegulation(formatCode: string, maxTournament
 
   const teams: TournamentTeam[] = [];
 
+  let consecutive429 = 0;
   for (let i = 0; i < filtered.length; i++) {
     const t = filtered[i];
     const category = classifyTournament(t.name);
-    await sleep(250);
+    await sleep(600);
     try {
       const standings = await fetchJson<RawStanding[]>(`${BASE}/tournaments/${t.id}/standings`);
       for (const s of standings) {
@@ -99,11 +104,22 @@ export async function fetchLimitlessRegulation(formatCode: string, maxTournament
           pokemon,
         });
       }
+      consecutive429 = 0;
       if ((i + 1) % 10 === 0 || i === filtered.length - 1) {
         console.log(`  Progreso Limitless: ${i + 1}/${filtered.length} torneos (${teams.length} equipos)`);
       }
     } catch (err) {
-      console.warn(`  Aviso en torneo ${t.id}:`, (err as Error).message);
+      const msg = (err as Error).message;
+      console.warn(`  Aviso en torneo ${t.id}:`, msg);
+      if (msg.includes("HTTP 429")) {
+        consecutive429 += 1;
+        if (consecutive429 >= 5) {
+          console.warn("  Límite HTTP 429 alcanzado repetidamente en API de circuito; se conservan los datos ya obtenidos y los majors.");
+          break;
+        }
+      } else {
+        consecutive429 = 0;
+      }
     }
   }
 
