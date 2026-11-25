@@ -454,6 +454,15 @@ export default function App() {
     setTournamentFilter("all");
     setSelectedTournamentId(null);
 
+    if (currentReg.status === "upcoming") {
+      setSnapshot(null);
+      setLoading(false);
+      setError(false);
+      return () => {
+        active = false;
+      };
+    }
+
     fetch(`${import.meta.env.BASE_URL}data/regulations/${currentReg.snapshotFile}`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -622,11 +631,19 @@ export default function App() {
                 className="bg-slate-950 text-slate-100 focus:outline-none cursor-pointer"
                 aria-label={lang === "es" ? "Selector de regulación" : "Regulation selector"}
               >
-                {REGULATIONS.map((reg) => (
-                  <option key={reg.code} value={reg.code}>
-                    {reg.shortLabel[lang]}
-                  </option>
-                ))}
+                {REGULATIONS.map((reg) => {
+                  const isUpcoming = reg.status === "upcoming";
+                  const baseLabel = reg.shortLabel[lang].replace(/\s*\((Próx\.|Soon)\)/i, "").trim();
+                  return (
+                    <option
+                      key={reg.code}
+                      value={reg.code}
+                      disabled={isUpcoming}
+                    >
+                      {isUpcoming ? `${baseLabel} — Soon` : reg.shortLabel[lang]}
+                    </option>
+                  );
+                })}
               </select>
             </label>
 

@@ -12,10 +12,22 @@ export interface RegulationDefinition {
   snapshotFile: string;
   startDate?: string;
   endDate?: string;
-  status: "active" | "archived";
+  status: "active" | "archived" | "upcoming";
 }
 
 export const REGULATIONS: RegulationDefinition[] = [
+  {
+    code: "M-D",
+    name: "Pokémon Champions VGC 2026 — Regulation M-D",
+    shortLabel: {
+      es: "Reg. M-D (Próx.)",
+      en: "Reg. M-D (Soon)",
+    },
+    limitlessFormat: "M-D",
+    pikalyticsFormat: "gen9championsvgc2026regmd",
+    snapshotFile: "M-D.json",
+    status: "upcoming",
+  },
   {
     code: "M-C",
     name: "Pokémon Champions VGC 2026 — Regulation M-C",
