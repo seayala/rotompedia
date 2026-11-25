@@ -12,3 +12,8 @@ Proyecto personal de fans, sin ánimo de lucro y con fines de portfolio y uso pr
 - `packages/analysis`: cálculos deterministas (velocidades, tipos/daño, arquetipos, matchups y apertura).
 - `data/`: datos estáticos por regulación en JSON.
 - `docs/`: documentación del proyecto y decisiones técnicas.
+
+## Licencia
+- **Código fuente (`apps/`, `packages/`):** bajo licencia [MIT](./LICENSE).
+- **Documentación y datos procesados propios (`docs/`, `data/`):** bajo licencia [Creative Commons CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+- **Recursos de terceros:** los sprites, nombres y datos originales de torneos pertenecen a sus respectivos propietarios.
