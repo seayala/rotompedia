@@ -1,20 +1,43 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import type { PokemonMetaStats, RegulationSnapshot, WeightedEntry } from "@rotompedia/core";
+import {
+  DEFAULT_REGULATION_CODE,
+  getRegulationDefinition,
+  type PokemonMetaStats,
+  type RegulationSnapshot,
+  type WeightedEntry,
+} from "@rotompedia/core";
 import { classifyTournament, fetchLimitlessRegulation } from "./limitless.js";
 import { fetchPikalyticsRoster, fetchPikalyticsTeamUsage } from "./pikalytics.js";
-
-const FORMAT_CODE = "M-C";
-const PIKALYTICS_FORMAT = "gen9championsvgc2026regmc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, "../../..");
 
+function resolveRegulationCode(): string {
+  const args = process.argv.slice(2);
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i];
+    if (arg === "--regulation" || arg === "--reg" || arg === "-r") {
+      if (args[i + 1]) return args[i + 1];
+    } else if (arg.startsWith("--regulation=")) {
+      return arg.slice("--regulation=".length);
+    } else if (arg.startsWith("--reg=")) {
+      return arg.slice("--reg=".length);
+    } else if (!arg.startsWith("-")) {
+      return arg;
+    }
+  }
+  return process.env.REGULATION || DEFAULT_REGULATION_CODE;
+}
+
 async function main() {
-  const limitless = await fetchLimitlessRegulation(FORMAT_CODE, 40);
-  const teamUsage = await fetchPikalyticsTeamUsage(PIKALYTICS_FORMAT, 60);
+  const reg = getRegulationDefinition(resolveRegulationCode());
+  console.log(`Generando snapshot para ${reg.code} (${reg.name})...`);
+
+  const limitless = await fetchLimitlessRegulation(reg.limitlessFormat, 100);
+  const teamUsage = await fetchPikalyticsTeamUsage(reg.pikalyticsFormat, 60);
 
   const normalizedTeams = limitless.teams.map((tm) => ({
     ...tm,
@@ -49,7 +72,7 @@ async function main() {
     }
   }
 
-  const pikaMap = await fetchPikalyticsRoster(PIKALYTICS_FORMAT, rankedSpecies, 80);
+  const pikaMap = await fetchPikalyticsRoster(reg.pikalyticsFormat, rankedSpecies, 80);
 
   const pokemon: PokemonMetaStats[] = [];
   for (const name of rankedSpecies.slice(0, 80)) {
@@ -95,9 +118,9 @@ async function main() {
 
   const snapshot: RegulationSnapshot = {
     meta: {
-      code: FORMAT_CODE,
-      name: "Pokémon Champions VGC 2026 — Regulation M-C",
-      pikalyticsFormat: PIKALYTICS_FORMAT,
+      code: reg.code,
+      name: reg.name,
+      pikalyticsFormat: reg.pikalyticsFormat,
       generatedAt: new Date().toISOString(),
       sources: {
         limitlessTournaments: limitless.tournamentCount,
@@ -111,7 +134,7 @@ async function main() {
     teams: normalizedTeams,
   };
 
-  const outPath = path.join(REPO_ROOT, "apps/web/public/data/regulations/M-C.json");
+  const outPath = path.join(REPO_ROOT, "apps/web/public/data/regulations", reg.snapshotFile);
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, JSON.stringify(snapshot, null, 2), "utf8");
 

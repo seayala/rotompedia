@@ -1,9 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-import type {
-  PokemonMetaStats,
-  RegulationSnapshot,
-  TournamentCategory,
-  TournamentTeam,
+import {
+  DEFAULT_REGULATION_CODE,
+  getRegulationDefinition,
+  REGULATIONS,
+  type PokemonMetaStats,
+  type RegulationCode,
+  type RegulationSnapshot,
+  type TournamentCategory,
+  type TournamentTeam,
 } from "@rotompedia/core";
 import { useI18n } from "./i18n.tsx";
 
@@ -28,6 +32,9 @@ function inferTeamCategory(tm: TournamentTeam): TournamentCategory {
 
 export default function App() {
   const { lang, setLang, t } = useI18n();
+  const [regulationCode, setRegulationCode] = useState<RegulationCode>(DEFAULT_REGULATION_CODE);
+  const currentReg = useMemo(() => getRegulationDefinition(regulationCode), [regulationCode]);
+
   const [snapshot, setSnapshot] = useState<RegulationSnapshot | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -41,8 +48,10 @@ export default function App() {
     let active = true;
     setLoading(true);
     setError(false);
+    setSelectedId(null);
+    setTournamentFilter("all");
 
-    fetch(`${import.meta.env.BASE_URL}data/regulations/M-C.json`)
+    fetch(`${import.meta.env.BASE_URL}data/regulations/${currentReg.snapshotFile}`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json() as Promise<RegulationSnapshot>;
@@ -64,7 +73,7 @@ export default function App() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [currentReg]);
 
   const normalizedQuery = query.trim().toLowerCase();
 
@@ -134,11 +143,30 @@ export default function App() {
               <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-500/15 text-orange-300 border border-orange-500/30">
                 {t.wipBadge}
               </span>
-              <span className="text-xs font-mono text-slate-400">REG M-C</span>
+              <span className="text-xs font-mono text-slate-400">REG {currentReg.code}</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mt-1">{t.appName}</h1>
             <p className="text-sm text-slate-400">{t.subtitle}</p>
           </div>
+
+          <div className="flex flex-wrap items-center gap-2.5">
+            <label className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs font-semibold text-slate-200">
+              <span className="text-slate-400">
+                {lang === "es" ? "Regulación" : "Regulation"}
+              </span>
+              <select
+                value={currentReg.code}
+                onChange={(e) => setRegulationCode(e.target.value as RegulationCode)}
+                className="bg-slate-950 text-slate-100 focus:outline-none cursor-pointer"
+                aria-label={lang === "es" ? "Selector de regulación" : "Regulation selector"}
+              >
+                {REGULATIONS.map((reg) => (
+                  <option key={reg.code} value={reg.code}>
+                    {reg.shortLabel[lang]}
+                  </option>
+                ))}
+              </select>
+            </label>
 
           <div
             className="inline-flex rounded-lg border border-slate-700 bg-slate-950 p-1 text-xs font-semibold"
@@ -167,6 +195,7 @@ export default function App() {
             >
               EN
             </button>
+          </div>
           </div>
         </div>
       </header>

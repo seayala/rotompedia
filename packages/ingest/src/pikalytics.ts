@@ -133,7 +133,12 @@ function parseMatchups(md: string): TypeMatchups | undefined {
 }
 
 export async function fetchPikalyticsTeamUsage(formatCode: string, maxCores = 60) {
-  const md = await fetchText(`${BASE}/team-usage/${formatCode}`);
+  let md = "";
+  try {
+    md = await fetchText(`${BASE}/team-usage/${formatCode}`);
+  } catch {
+    return { sampleTeams: 0, dataDate: null, cores: [] };
+  }
   const sampleMatch = md.match(/\|\s*\*\*Source Teams\*\*\s*\|\s*(\d+)\s*\|/);
   const dateMatch = md.match(/\|\s*\*\*Data Date\*\*\s*\|\s*([^\s|]+)\s*\|/);
 

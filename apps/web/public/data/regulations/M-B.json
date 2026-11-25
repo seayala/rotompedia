@@ -1,0 +1,6090 @@
+{
+  "meta": {
+    "code": "M-B",
+    "name": "Pokémon Champions VGC 2026 — Regulation M-B",
+    "pikalyticsFormat": "gen9championsvgc2026regmb",
+    "generatedAt": "2026-11-25T11:15:09.191Z",
+    "sources": {
+      "limitlessTournaments": 1,
+      "limitlessTeams": 14,
+      "pikalyticsSampleTeams": 0,
+      "pikalyticsDataDate": null
+    }
+  },
+  "pokemon": [
+    {
+      "id": "sneasler",
+      "name": "Sneasler",
+      "usage": 0,
+      "winRate": 50.164,
+      "tournamentAppearances": 7,
+      "moves": [
+        {
+          "name": "Close Combat",
+          "usage": 99.3
+        },
+        {
+          "name": "Fake Out",
+          "usage": 94.4
+        },
+        {
+          "name": "Dire Claw",
+          "usage": 93.6
+        },
+        {
+          "name": "Protect",
+          "usage": 59.3
+        },
+        {
+          "name": "Coaching",
+          "usage": 21.7
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 7.8
+        },
+        {
+          "name": "Gunk Shot",
+          "usage": 3.6
+        },
+        {
+          "name": "Feint",
+          "usage": 3.5
+        },
+        {
+          "name": "Throat Chop",
+          "usage": 3.2
+        },
+        {
+          "name": "Rock Tomb",
+          "usage": 2.4
+        }
+      ],
+      "items": [
+        {
+          "name": "White Herb",
+          "usage": 71.1
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 26
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.6
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.4
+        },
+        {
+          "name": "Black Belt",
+          "usage": 0.4
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.2
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 0.2
+        },
+        {
+          "name": "King's Rock",
+          "usage": 0.2
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Unburden",
+          "usage": 88.7
+        },
+        {
+          "name": "Poison Touch",
+          "usage": 11.2
+        },
+        {
+          "name": "Pressure",
+          "usage": 0.1
+        }
+      ],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 4,
+          "usage": 57.1
+        },
+        {
+          "name": "Jolly",
+          "count": 3,
+          "usage": 42.9
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 80,
+        "atk": 130,
+        "def": 60,
+        "spa": 40,
+        "spd": 80,
+        "spe": 120,
+        "bst": 510
+      },
+      "matchups": {
+        "weakTo": [
+          "Psychic (4x)",
+          "Ground (2x)",
+          "Flying (2x)"
+        ],
+        "resists": [
+          "Bug (1/4x)",
+          "Grass (1/2x)",
+          "Fighting (1/2x)",
+          "Poison (1/2x)",
+          "Rock (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "raichu",
+      "name": "Raichu",
+      "usage": 0,
+      "winRate": 48.674,
+      "tournamentAppearances": 5,
+      "moves": [
+        {
+          "name": "Fake Out",
+          "usage": 71.6
+        },
+        {
+          "name": "Protect",
+          "usage": 66.4
+        },
+        {
+          "name": "Zap Cannon",
+          "usage": 60.4
+        },
+        {
+          "name": "Focus Blast",
+          "usage": 56.3
+        },
+        {
+          "name": "Volt Switch",
+          "usage": 30.3
+        },
+        {
+          "name": "Charm",
+          "usage": 14.8
+        },
+        {
+          "name": "Encore",
+          "usage": 14.4
+        },
+        {
+          "name": "Grass Knot",
+          "usage": 12.1
+        },
+        {
+          "name": "Volt Tackle",
+          "usage": 10.6
+        },
+        {
+          "name": "Nuzzle",
+          "usage": 10.4
+        }
+      ],
+      "items": [
+        {
+          "name": "Raichunite Y",
+          "usage": 60.5
+        },
+        {
+          "name": "Raichunite X",
+          "usage": 18.2
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 14.7
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 3.8
+        },
+        {
+          "name": "Magnet",
+          "usage": 0.7
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Light Clay",
+          "usage": 0.4
+        },
+        {
+          "name": "Focus Band",
+          "usage": 0.3
+        },
+        {
+          "name": "King's Rock",
+          "usage": 0.3
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Lightning Rod",
+          "usage": 98.3
+        },
+        {
+          "name": "Static",
+          "usage": 1.7
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 4,
+          "usage": 80
+        },
+        {
+          "name": "Jolly",
+          "count": 1,
+          "usage": 20
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 60,
+        "atk": 90,
+        "def": 55,
+        "spa": 90,
+        "spd": 80,
+        "spe": 110,
+        "bst": 485
+      },
+      "matchups": {
+        "weakTo": [
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Electric (1/2x)",
+          "Flying (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "kingambit",
+      "name": "Kingambit",
+      "usage": 0,
+      "winRate": 51.467,
+      "tournamentAppearances": 5,
+      "moves": [
+        {
+          "name": "Sucker Punch",
+          "usage": 99.5
+        },
+        {
+          "name": "Kowtow Cleave",
+          "usage": 97.9
+        },
+        {
+          "name": "Iron Head",
+          "usage": 73.5
+        },
+        {
+          "name": "Protect",
+          "usage": 68.6
+        },
+        {
+          "name": "Low Kick",
+          "usage": 43.7
+        },
+        {
+          "name": "Swords Dance",
+          "usage": 15
+        },
+        {
+          "name": "Brick Break",
+          "usage": 1.1
+        },
+        {
+          "name": "Quick Guard",
+          "usage": 0.2
+        },
+        {
+          "name": "Low Sweep",
+          "usage": 0.1
+        },
+        {
+          "name": "Assurance",
+          "usage": 0.1
+        }
+      ],
+      "items": [
+        {
+          "name": "Chople Berry",
+          "usage": 42.9
+        },
+        {
+          "name": "Black Glasses",
+          "usage": 31.8
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 12.8
+        },
+        {
+          "name": "Life Orb",
+          "usage": 5.7
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 4.8
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.4
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.3
+        },
+        {
+          "name": "Muscle Band",
+          "usage": 0.3
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.3
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Defiant",
+          "usage": 96.1
+        },
+        {
+          "name": "Supreme Overlord",
+          "usage": 3.9
+        }
+      ],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 5,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 100,
+        "atk": 135,
+        "def": 120,
+        "spa": 60,
+        "spd": 85,
+        "spe": 50,
+        "bst": 550
+      },
+      "matchups": {
+        "weakTo": [
+          "Fighting (4x)",
+          "Fire (2x)",
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Normal (1/2x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Flying (1/2x)",
+          "Rock (1/2x)",
+          "Ghost (1/2x)",
+          "Dragon (1/2x)",
+          "Dark (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Poison (0x)",
+          "Psychic (0x)"
+        ]
+      }
+    },
+    {
+      "id": "garchomp",
+      "name": "Garchomp",
+      "usage": 0,
+      "winRate": 48.897,
+      "tournamentAppearances": 4,
+      "moves": [
+        {
+          "name": "Dragon Claw",
+          "usage": 89.4
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 82
+        },
+        {
+          "name": "Earthquake",
+          "usage": 80.7
+        },
+        {
+          "name": "Protect",
+          "usage": 70.2
+        },
+        {
+          "name": "Stomping Tantrum",
+          "usage": 40.3
+        },
+        {
+          "name": "Poison Jab",
+          "usage": 18.3
+        },
+        {
+          "name": "Rock Tomb",
+          "usage": 8
+        },
+        {
+          "name": "Scale Shot",
+          "usage": 3.1
+        },
+        {
+          "name": "Swords Dance",
+          "usage": 2.5
+        },
+        {
+          "name": "Dragon Tail",
+          "usage": 2
+        }
+      ],
+      "items": [
+        {
+          "name": "Life Orb",
+          "usage": 51.5
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 13.6
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 12.7
+        },
+        {
+          "name": "Roseli Berry",
+          "usage": 10.8
+        },
+        {
+          "name": "Soft Sand",
+          "usage": 3.6
+        },
+        {
+          "name": "White Herb",
+          "usage": 1.3
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 1.1
+        },
+        {
+          "name": "Haban Berry",
+          "usage": 1.1
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.9
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.9
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Rough Skin",
+          "usage": 98.5
+        },
+        {
+          "name": "Sand Veil",
+          "usage": 1.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 2,
+          "usage": 50
+        },
+        {
+          "name": "Adamant",
+          "count": 2,
+          "usage": 50
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 108,
+        "atk": 130,
+        "def": 95,
+        "spa": 80,
+        "spd": 85,
+        "spe": 102,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Ice (4x)",
+          "Dragon (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Poison (1/2x)",
+          "Rock (1/2x)"
+        ],
+        "immuneTo": [
+          "Electric (0x)"
+        ]
+      }
+    },
+    {
+      "id": "incineroar",
+      "name": "Incineroar",
+      "usage": 0,
+      "winRate": 48.22,
+      "tournamentAppearances": 4,
+      "moves": [
+        {
+          "name": "Fake Out",
+          "usage": 99.9
+        },
+        {
+          "name": "Parting Shot",
+          "usage": 96.8
+        },
+        {
+          "name": "Flare Blitz",
+          "usage": 92.6
+        },
+        {
+          "name": "Throat Chop",
+          "usage": 53.7
+        },
+        {
+          "name": "Darkest Lariat",
+          "usage": 29.4
+        },
+        {
+          "name": "Protect",
+          "usage": 9.5
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 3.5
+        },
+        {
+          "name": "Taunt",
+          "usage": 3.4
+        },
+        {
+          "name": "Helping Hand",
+          "usage": 3.2
+        },
+        {
+          "name": "Snarl",
+          "usage": 2.4
+        }
+      ],
+      "items": [
+        {
+          "name": "Sitrus Berry",
+          "usage": 59.8
+        },
+        {
+          "name": "Chople Berry",
+          "usage": 15
+        },
+        {
+          "name": "Passho Berry",
+          "usage": 12
+        },
+        {
+          "name": "Leftovers",
+          "usage": 4
+        },
+        {
+          "name": "Charcoal",
+          "usage": 3.7
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 2.6
+        },
+        {
+          "name": "White Herb",
+          "usage": 1
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.7
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Intimidate",
+          "usage": 99.8
+        },
+        {
+          "name": "Blaze",
+          "usage": 0.2
+        }
+      ],
+      "natures": [
+        {
+          "name": "Careful",
+          "count": 3,
+          "usage": 75
+        },
+        {
+          "name": "Impish",
+          "count": 1,
+          "usage": 25
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 95,
+        "atk": 115,
+        "def": 90,
+        "spa": 80,
+        "spd": 90,
+        "spe": 60,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (2x)",
+          "Fighting (2x)",
+          "Ground (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Ghost (1/2x)",
+          "Dark (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Psychic (0x)"
+        ]
+      }
+    },
+    {
+      "id": "rillaboom",
+      "name": "Rillaboom",
+      "usage": 0,
+      "winRate": null,
+      "tournamentAppearances": 4,
+      "moves": [],
+      "items": [],
+      "abilities": [],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 4,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 100,
+        "atk": 125,
+        "def": 90,
+        "spa": 60,
+        "spd": 70,
+        "spe": 85,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Ice (2x)",
+          "Poison (2x)",
+          "Flying (2x)",
+          "Bug (2x)"
+        ],
+        "resists": [
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Grass (1/2x)",
+          "Ground (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "delphox",
+      "name": "Delphox",
+      "usage": 0,
+      "winRate": 51.76,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 98.6
+        },
+        {
+          "name": "Heat Wave",
+          "usage": 98.6
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 74
+        },
+        {
+          "name": "Psychic",
+          "usage": 52.5
+        },
+        {
+          "name": "Psyshock",
+          "usage": 46.1
+        },
+        {
+          "name": "Encore",
+          "usage": 12.5
+        },
+        {
+          "name": "Substitute",
+          "usage": 6.2
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 3.1
+        },
+        {
+          "name": "Calm Mind",
+          "usage": 1.5
+        },
+        {
+          "name": "Flamethrower",
+          "usage": 1.1
+        }
+      ],
+      "items": [
+        {
+          "name": "Delphoxite",
+          "usage": 99.9
+        },
+        {
+          "name": "Pyroarite",
+          "usage": 0.1
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Blaze",
+          "usage": 93.2
+        },
+        {
+          "name": "Magician",
+          "usage": 6.8
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 3,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 75,
+        "atk": 69,
+        "def": 72,
+        "spa": 114,
+        "spd": 100,
+        "spe": 104,
+        "bst": 534
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (2x)",
+          "Ground (2x)",
+          "Rock (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Fighting (1/2x)",
+          "Psychic (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "gholdengo",
+      "name": "Gholdengo",
+      "usage": 0,
+      "winRate": 46.362,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Make It Rain",
+          "usage": 99
+        },
+        {
+          "name": "Shadow Ball",
+          "usage": 99
+        },
+        {
+          "name": "Protect",
+          "usage": 70.9
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 58.5
+        },
+        {
+          "name": "Power Gem",
+          "usage": 27.1
+        },
+        {
+          "name": "Trick",
+          "usage": 17.3
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 11.4
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 5.8
+        },
+        {
+          "name": "Flash Cannon",
+          "usage": 3.5
+        },
+        {
+          "name": "Thunder",
+          "usage": 1.7
+        }
+      ],
+      "items": [
+        {
+          "name": "Life Orb",
+          "usage": 37.9
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 27.1
+        },
+        {
+          "name": "Metal Coat",
+          "usage": 11.3
+        },
+        {
+          "name": "Leftovers",
+          "usage": 7.3
+        },
+        {
+          "name": "White Herb",
+          "usage": 6.5
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 2.8
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 2.6
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 1.4
+        },
+        {
+          "name": "Wise Glasses",
+          "usage": 0.8
+        },
+        {
+          "name": "Kasib Berry",
+          "usage": 0.5
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Good as Gold",
+          "usage": 100
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 3,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 87,
+        "atk": 60,
+        "def": 95,
+        "spa": 133,
+        "spd": 91,
+        "spe": 84,
+        "bst": 550
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Ground (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Bug (1/4x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Flying (1/2x)",
+          "Psychic (1/2x)",
+          "Rock (1/2x)",
+          "Dragon (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)",
+          "Poison (0x)"
+        ]
+      }
+    },
+    {
+      "id": "sinistcha",
+      "name": "Sinistcha",
+      "usage": 0,
+      "winRate": 51.545,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Rage Powder",
+          "usage": 99.2
+        },
+        {
+          "name": "Matcha Gotcha",
+          "usage": 98.8
+        },
+        {
+          "name": "Life Dew",
+          "usage": 58.7
+        },
+        {
+          "name": "Trick Room",
+          "usage": 58.6
+        },
+        {
+          "name": "Protect",
+          "usage": 54.5
+        },
+        {
+          "name": "Strength Sap",
+          "usage": 15.1
+        },
+        {
+          "name": "Shadow Ball",
+          "usage": 8.8
+        },
+        {
+          "name": "Imprison",
+          "usage": 2.2
+        },
+        {
+          "name": "Psych Up",
+          "usage": 1.1
+        },
+        {
+          "name": "Leaf Storm",
+          "usage": 0.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Sitrus Berry",
+          "usage": 35.2
+        },
+        {
+          "name": "Kasib Berry",
+          "usage": 30.4
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 14.3
+        },
+        {
+          "name": "Leftovers",
+          "usage": 6.7
+        },
+        {
+          "name": "Coba Berry",
+          "usage": 5.1
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 4
+        },
+        {
+          "name": "Big Root",
+          "usage": 1.4
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.9
+        },
+        {
+          "name": "Bright Powder",
+          "usage": 0.8
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 0.4
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Hospitality",
+          "usage": 99.5
+        },
+        {
+          "name": "Heatproof",
+          "usage": 0.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Bold",
+          "count": 2,
+          "usage": 66.7
+        },
+        {
+          "name": "Relaxed",
+          "count": 1,
+          "usage": 33.3
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 71,
+        "atk": 60,
+        "def": 106,
+        "spa": 121,
+        "spd": 80,
+        "spe": 70,
+        "bst": 508
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Ice (2x)",
+          "Flying (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Grass (1/2x)",
+          "Ground (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)"
+        ]
+      }
+    },
+    {
+      "id": "basculegion",
+      "name": "Basculegion",
+      "usage": 0,
+      "winRate": 51.141,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Last Respects",
+          "usage": 100
+        },
+        {
+          "name": "Aqua Jet",
+          "usage": 94.9
+        },
+        {
+          "name": "Wave Crash",
+          "usage": 82.3
+        },
+        {
+          "name": "Protect",
+          "usage": 53.8
+        },
+        {
+          "name": "Flip Turn",
+          "usage": 43.1
+        },
+        {
+          "name": "Liquidation",
+          "usage": 17
+        },
+        {
+          "name": "Psychic Fangs",
+          "usage": 4.7
+        },
+        {
+          "name": "Head Smash",
+          "usage": 0.6
+        },
+        {
+          "name": "Soak",
+          "usage": 0.6
+        },
+        {
+          "name": "Waterfall",
+          "usage": 0.6
+        }
+      ],
+      "items": [
+        {
+          "name": "Choice Scarf",
+          "usage": 44.7
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 19.6
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 17.6
+        },
+        {
+          "name": "Life Orb",
+          "usage": 11.8
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 4.7
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 0.6
+        },
+        {
+          "name": "Kasib Berry",
+          "usage": 0.3
+        },
+        {
+          "name": "Spell Tag",
+          "usage": 0.3
+        },
+        {
+          "name": "Muscle Band",
+          "usage": 0.2
+        },
+        {
+          "name": "Iron Ball",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Adaptability",
+          "usage": 93.2
+        },
+        {
+          "name": "Swift Swim",
+          "usage": 6.8
+        },
+        {
+          "name": "Mold Breaker",
+          "usage": 0
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 2,
+          "usage": 66.7
+        },
+        {
+          "name": "Adamant",
+          "count": 1,
+          "usage": 33.3
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 120,
+        "atk": 112,
+        "def": 65,
+        "spa": 80,
+        "spd": 75,
+        "spe": 78,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Grass (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Bug (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)"
+        ]
+      }
+    },
+    {
+      "id": "pelipper",
+      "name": "Pelipper",
+      "usage": 0,
+      "winRate": 49.02,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Hurricane",
+          "usage": 98.9
+        },
+        {
+          "name": "Weather Ball",
+          "usage": 87.7
+        },
+        {
+          "name": "Tailwind",
+          "usage": 86.5
+        },
+        {
+          "name": "Wide Guard",
+          "usage": 51.2
+        },
+        {
+          "name": "Protect",
+          "usage": 42.5
+        },
+        {
+          "name": "Muddy Water",
+          "usage": 6.6
+        },
+        {
+          "name": "Rain Dance",
+          "usage": 6.1
+        },
+        {
+          "name": "Helping Hand",
+          "usage": 5.2
+        },
+        {
+          "name": "U-turn",
+          "usage": 4.2
+        },
+        {
+          "name": "Ice Beam",
+          "usage": 3.4
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 45.3
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 31.4
+        },
+        {
+          "name": "Damp Rock",
+          "usage": 13.1
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 4.1
+        },
+        {
+          "name": "Life Orb",
+          "usage": 2.4
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 0.6
+        },
+        {
+          "name": "Wacan Berry",
+          "usage": 0.6
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.5
+        },
+        {
+          "name": "Sharp Beak",
+          "usage": 0.5
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.4
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Drizzle",
+          "usage": 100
+        },
+        {
+          "name": "Keen Eye",
+          "usage": 0
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 2,
+          "usage": 66.7
+        },
+        {
+          "name": "Bold",
+          "count": 1,
+          "usage": 33.3
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 60,
+        "atk": 50,
+        "def": 100,
+        "spa": 95,
+        "spd": 70,
+        "spe": 65,
+        "bst": 440
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (4x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Fighting (1/2x)",
+          "Bug (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Ground (0x)"
+        ]
+      }
+    },
+    {
+      "id": "archaludon",
+      "name": "Archaludon",
+      "usage": 0,
+      "winRate": 48.714,
+      "tournamentAppearances": 3,
+      "moves": [
+        {
+          "name": "Electro Shot",
+          "usage": 96.7
+        },
+        {
+          "name": "Flash Cannon",
+          "usage": 95.2
+        },
+        {
+          "name": "Protect",
+          "usage": 94.3
+        },
+        {
+          "name": "Dragon Pulse",
+          "usage": 73.5
+        },
+        {
+          "name": "Draco Meteor",
+          "usage": 21.2
+        },
+        {
+          "name": "Aura Sphere",
+          "usage": 12.7
+        },
+        {
+          "name": "Snarl",
+          "usage": 2.4
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 2.3
+        },
+        {
+          "name": "Steel Beam",
+          "usage": 0.3
+        },
+        {
+          "name": "Substitute",
+          "usage": 0.3
+        }
+      ],
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 88.6
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 2.4
+        },
+        {
+          "name": "White Herb",
+          "usage": 2
+        },
+        {
+          "name": "Chople Berry",
+          "usage": 1.8
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 1.7
+        },
+        {
+          "name": "Life Orb",
+          "usage": 1.4
+        },
+        {
+          "name": "Magnet",
+          "usage": 0.4
+        },
+        {
+          "name": "Wise Glasses",
+          "usage": 0.3
+        },
+        {
+          "name": "Scope Lens",
+          "usage": 0.3
+        },
+        {
+          "name": "Dragon Fang",
+          "usage": 0.3
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Stamina",
+          "usage": 93.4
+        },
+        {
+          "name": "Sturdy",
+          "usage": 5.3
+        },
+        {
+          "name": "Stalwart",
+          "usage": 1.3
+        }
+      ],
+      "natures": [
+        {
+          "name": "Calm",
+          "count": 2,
+          "usage": 66.7
+        },
+        {
+          "name": "Bold",
+          "count": 1,
+          "usage": 33.3
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 90,
+        "atk": 105,
+        "def": 130,
+        "spa": 125,
+        "spd": 65,
+        "spe": 85,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Fighting (2x)",
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Normal (1/2x)",
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Flying (1/2x)",
+          "Psychic (1/2x)",
+          "Bug (1/2x)",
+          "Rock (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Poison (0x)"
+        ]
+      }
+    },
+    {
+      "id": "indeedee-f",
+      "name": "Indeedee ♀",
+      "usage": 0,
+      "winRate": null,
+      "tournamentAppearances": 2,
+      "moves": [],
+      "items": [],
+      "abilities": [],
+      "natures": [
+        {
+          "name": "Bold",
+          "count": 1,
+          "usage": 50
+        },
+        {
+          "name": "Relaxed",
+          "count": 1,
+          "usage": 50
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 70,
+        "atk": 55,
+        "def": 65,
+        "spa": 95,
+        "spd": 105,
+        "spe": 85,
+        "bst": 475
+      },
+      "matchups": {
+        "weakTo": [
+          "Bug (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Psychic (1/2x)"
+        ],
+        "immuneTo": [
+          "Ghost (0x)"
+        ]
+      }
+    },
+    {
+      "id": "whimsicott",
+      "name": "Whimsicott",
+      "usage": 0,
+      "winRate": 49.598,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Tailwind",
+          "usage": 98.5
+        },
+        {
+          "name": "Moonblast",
+          "usage": 92
+        },
+        {
+          "name": "Encore",
+          "usage": 74.1
+        },
+        {
+          "name": "Protect",
+          "usage": 56.5
+        },
+        {
+          "name": "Charm",
+          "usage": 28
+        },
+        {
+          "name": "Sunny Day",
+          "usage": 11.9
+        },
+        {
+          "name": "Fake Tears",
+          "usage": 8.6
+        },
+        {
+          "name": "Tickle",
+          "usage": 5.6
+        },
+        {
+          "name": "Energy Ball",
+          "usage": 4.6
+        },
+        {
+          "name": "Taunt",
+          "usage": 3.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 75.5
+        },
+        {
+          "name": "Fairy Feather",
+          "usage": 11.4
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 3.6
+        },
+        {
+          "name": "Coba Berry",
+          "usage": 2.7
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 1.9
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 1.4
+        },
+        {
+          "name": "Kebia Berry",
+          "usage": 1.3
+        },
+        {
+          "name": "Babiri Berry",
+          "usage": 0.8
+        },
+        {
+          "name": "Light Clay",
+          "usage": 0.4
+        },
+        {
+          "name": "Heat Rock",
+          "usage": 0.3
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Prankster",
+          "usage": 99.4
+        },
+        {
+          "name": "Chlorophyll",
+          "usage": 0.5
+        },
+        {
+          "name": "Infiltrator",
+          "usage": 0
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 60,
+        "atk": 67,
+        "def": 85,
+        "spa": 77,
+        "spd": 75,
+        "spe": 116,
+        "bst": 480
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (4x)",
+          "Fire (2x)",
+          "Ice (2x)",
+          "Flying (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Grass (1/2x)",
+          "Fighting (1/2x)",
+          "Ground (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
+      "id": "staraptor",
+      "name": "Staraptor",
+      "usage": 0,
+      "winRate": 49.191,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Close Combat",
+          "usage": 98.2
+        },
+        {
+          "name": "Protect",
+          "usage": 90.2
+        },
+        {
+          "name": "Brave Bird",
+          "usage": 81.2
+        },
+        {
+          "name": "Roost",
+          "usage": 71.5
+        },
+        {
+          "name": "Dual Wingbeat",
+          "usage": 19.4
+        },
+        {
+          "name": "Tailwind",
+          "usage": 11.4
+        },
+        {
+          "name": "U-turn",
+          "usage": 6.2
+        },
+        {
+          "name": "Final Gambit",
+          "usage": 6.2
+        },
+        {
+          "name": "Blaze Kick",
+          "usage": 5
+        },
+        {
+          "name": "Quick Attack",
+          "usage": 4.1
+        }
+      ],
+      "items": [
+        {
+          "name": "Staraptite",
+          "usage": 94.5
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 5.4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.1
+        },
+        {
+          "name": "Skarmorite",
+          "usage": 0
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0
+        },
+        {
+          "name": "White Herb",
+          "usage": 0
+        },
+        {
+          "name": "Lopunnite",
+          "usage": 0
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Intimidate",
+          "usage": 97.1
+        },
+        {
+          "name": "Reckless",
+          "usage": 2.9
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 85,
+        "atk": 120,
+        "def": 70,
+        "spa": 50,
+        "spd": 60,
+        "spe": 100,
+        "bst": 485
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Ice (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Grass (1/2x)",
+          "Bug (1/2x)"
+        ],
+        "immuneTo": [
+          "Ground (0x)",
+          "Ghost (0x)"
+        ]
+      }
+    },
+    {
+      "id": "salamence",
+      "name": "Salamence",
+      "usage": 0,
+      "winRate": null,
+      "tournamentAppearances": 2,
+      "moves": [],
+      "items": [],
+      "abilities": [],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 95,
+        "atk": 135,
+        "def": 80,
+        "spa": 110,
+        "spd": 80,
+        "spe": 100,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Ice (4x)",
+          "Rock (2x)",
+          "Dragon (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Fighting (1/2x)",
+          "Bug (1/2x)"
+        ],
+        "immuneTo": [
+          "Ground (0x)"
+        ]
+      }
+    },
+    {
+      "id": "tyranitar",
+      "name": "Tyranitar",
+      "usage": 0,
+      "winRate": 48.074,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Rock Slide",
+          "usage": 98.8
+        },
+        {
+          "name": "Knock Off",
+          "usage": 92.9
+        },
+        {
+          "name": "Protect",
+          "usage": 91.9
+        },
+        {
+          "name": "Low Kick",
+          "usage": 43.5
+        },
+        {
+          "name": "Dragon Dance",
+          "usage": 31
+        },
+        {
+          "name": "Ice Punch",
+          "usage": 17
+        },
+        {
+          "name": "High Horsepower",
+          "usage": 6.3
+        },
+        {
+          "name": "Crunch",
+          "usage": 6
+        },
+        {
+          "name": "Brick Break",
+          "usage": 2.5
+        },
+        {
+          "name": "Earthquake",
+          "usage": 1.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Tyranitarite",
+          "usage": 69.9
+        },
+        {
+          "name": "Chople Berry",
+          "usage": 7.2
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 5.8
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 4.7
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 2.6
+        },
+        {
+          "name": "Quick Claw",
+          "usage": 1.4
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.9
+        },
+        {
+          "name": "White Herb",
+          "usage": 0.6
+        },
+        {
+          "name": "Smooth Rock",
+          "usage": 0.6
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sand Stream",
+          "usage": 99.7
+        },
+        {
+          "name": "Unnerve",
+          "usage": 0.3
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 1,
+          "usage": 50
+        },
+        {
+          "name": "Adamant",
+          "count": 1,
+          "usage": 50
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 100,
+        "atk": 134,
+        "def": 110,
+        "spa": 95,
+        "spd": 100,
+        "spe": 61,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Fighting (4x)",
+          "Water (2x)",
+          "Grass (2x)",
+          "Ground (2x)",
+          "Bug (2x)",
+          "Steel (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Normal (1/2x)",
+          "Fire (1/2x)",
+          "Poison (1/2x)",
+          "Flying (1/2x)",
+          "Ghost (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Psychic (0x)"
+        ]
+      }
+    },
+    {
+      "id": "excadrill",
+      "name": "Excadrill",
+      "usage": 0,
+      "winRate": 49.038,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Iron Head",
+          "usage": 96.8
+        },
+        {
+          "name": "Protect",
+          "usage": 93.7
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 82.4
+        },
+        {
+          "name": "Earthquake",
+          "usage": 63.7
+        },
+        {
+          "name": "High Horsepower",
+          "usage": 52.2
+        },
+        {
+          "name": "Swords Dance",
+          "usage": 6.6
+        },
+        {
+          "name": "Rock Tomb",
+          "usage": 3.1
+        },
+        {
+          "name": "Drill Run",
+          "usage": 1
+        },
+        {
+          "name": "Megahorn",
+          "usage": 0.2
+        },
+        {
+          "name": "Brick Break",
+          "usage": 0.2
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 74.4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 10.5
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 4.9
+        },
+        {
+          "name": "Excadrite",
+          "usage": 4.1
+        },
+        {
+          "name": "Soft Sand",
+          "usage": 2.5
+        },
+        {
+          "name": "King's Rock",
+          "usage": 2.2
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "White Herb",
+          "usage": 0.2
+        },
+        {
+          "name": "Metal Coat",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sand Rush",
+          "usage": 84.4
+        },
+        {
+          "name": "Mold Breaker",
+          "usage": 15.1
+        },
+        {
+          "name": "Sand Force",
+          "usage": 0.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 110,
+        "atk": 135,
+        "def": 60,
+        "spa": 50,
+        "spd": 65,
+        "spe": 88,
+        "bst": 508
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Water (2x)",
+          "Fighting (2x)",
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Rock (1/4x)",
+          "Normal (1/2x)",
+          "Flying (1/2x)",
+          "Psychic (1/2x)",
+          "Bug (1/2x)",
+          "Dragon (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": [
+          "Electric (0x)",
+          "Poison (0x)"
+        ]
+      }
+    },
+    {
+      "id": "corviknight",
+      "name": "Corviknight",
+      "usage": 0,
+      "winRate": 48.809,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Brave Bird",
+          "usage": 85.4
+        },
+        {
+          "name": "Tailwind",
+          "usage": 61
+        },
+        {
+          "name": "Iron Head",
+          "usage": 56.9
+        },
+        {
+          "name": "Bulk Up",
+          "usage": 56.2
+        },
+        {
+          "name": "Roost",
+          "usage": 51.5
+        },
+        {
+          "name": "Body Press",
+          "usage": 44.9
+        },
+        {
+          "name": "Protect",
+          "usage": 20.8
+        },
+        {
+          "name": "Iron Defense",
+          "usage": 17
+        },
+        {
+          "name": "Fly",
+          "usage": 1.6
+        },
+        {
+          "name": "Agility",
+          "usage": 1.6
+        }
+      ],
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 71.3
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 13.2
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 11.3
+        },
+        {
+          "name": "Life Orb",
+          "usage": 1
+        },
+        {
+          "name": "Muscle Band",
+          "usage": 0.9
+        },
+        {
+          "name": "Roseli Berry",
+          "usage": 0.7
+        },
+        {
+          "name": "Bright Powder",
+          "usage": 0.6
+        },
+        {
+          "name": "Metal Coat",
+          "usage": 0.2
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.2
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Mirror Armor",
+          "usage": 97.9
+        },
+        {
+          "name": "Unnerve",
+          "usage": 2.1
+        }
+      ],
+      "natures": [
+        {
+          "name": "Careful",
+          "count": 1,
+          "usage": 50
+        },
+        {
+          "name": "Serious",
+          "count": 1,
+          "usage": 50
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 98,
+        "atk": 87,
+        "def": 105,
+        "spa": 53,
+        "spd": 85,
+        "spe": 67,
+        "bst": 495
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Electric (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Bug (1/4x)",
+          "Normal (1/2x)",
+          "Flying (1/2x)",
+          "Psychic (1/2x)",
+          "Dragon (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": [
+          "Poison (0x)",
+          "Ground (0x)"
+        ]
+      }
+    },
+    {
+      "id": "floette-eternal",
+      "name": "Eternal Flower Floette",
+      "usage": 0,
+      "winRate": 52.528,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 99.8
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 97.1
+        },
+        {
+          "name": "Moonblast",
+          "usage": 79
+        },
+        {
+          "name": "Light of Ruin",
+          "usage": 58
+        },
+        {
+          "name": "Calm Mind",
+          "usage": 42.7
+        },
+        {
+          "name": "Draining Kiss",
+          "usage": 19.3
+        },
+        {
+          "name": "Psychic",
+          "usage": 2.6
+        },
+        {
+          "name": "Grass Knot",
+          "usage": 0.3
+        },
+        {
+          "name": "Giga Drain",
+          "usage": 0.3
+        },
+        {
+          "name": "Energy Ball",
+          "usage": 0.2
+        }
+      ],
+      "items": [
+        {
+          "name": "Floettite",
+          "usage": 99.4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.4
+        },
+        {
+          "name": "Fairy Feather",
+          "usage": 0.1
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Flower Veil",
+          "usage": 98.9
+        },
+        {
+          "name": "Symbiosis",
+          "usage": 1.1
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 74,
+        "atk": 65,
+        "def": 67,
+        "spa": 125,
+        "spd": 128,
+        "spe": 92,
+        "bst": 551
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Fighting (1/2x)",
+          "Bug (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
+      "id": "charizard",
+      "name": "Charizard",
+      "usage": 0,
+      "winRate": 50.583,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 98.4
+        },
+        {
+          "name": "Heat Wave",
+          "usage": 95.4
+        },
+        {
+          "name": "Solar Beam",
+          "usage": 92.2
+        },
+        {
+          "name": "Weather Ball",
+          "usage": 83.9
+        },
+        {
+          "name": "Air Slash",
+          "usage": 6
+        },
+        {
+          "name": "Dragon Dance",
+          "usage": 4.2
+        },
+        {
+          "name": "Flare Blitz",
+          "usage": 3.4
+        },
+        {
+          "name": "Dragon Claw",
+          "usage": 3.2
+        },
+        {
+          "name": "Ancient Power",
+          "usage": 2.8
+        },
+        {
+          "name": "Overheat",
+          "usage": 2.2
+        }
+      ],
+      "items": [
+        {
+          "name": "Charizardite Y",
+          "usage": 95.4
+        },
+        {
+          "name": "Charizardite X",
+          "usage": 3.9
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.2
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.1
+        },
+        {
+          "name": "Charcoal",
+          "usage": 0
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Blaze",
+          "usage": 80.5
+        },
+        {
+          "name": "Solar Power",
+          "usage": 19.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 2,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 78,
+        "atk": 84,
+        "def": 78,
+        "spa": 109,
+        "spd": 85,
+        "spe": 100,
+        "bst": 534
+      },
+      "matchups": {
+        "weakTo": [
+          "Rock (4x)",
+          "Water (2x)",
+          "Electric (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Bug (1/4x)",
+          "Fire (1/2x)",
+          "Fighting (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": [
+          "Ground (0x)"
+        ]
+      }
+    },
+    {
+      "id": "froslass",
+      "name": "Froslass",
+      "usage": 0,
+      "winRate": 48.635,
+      "tournamentAppearances": 2,
+      "moves": [
+        {
+          "name": "Blizzard",
+          "usage": 98.9
+        },
+        {
+          "name": "Protect",
+          "usage": 96.3
+        },
+        {
+          "name": "Shadow Ball",
+          "usage": 86
+        },
+        {
+          "name": "Aurora Veil",
+          "usage": 80.2
+        },
+        {
+          "name": "Rain Dance",
+          "usage": 10.6
+        },
+        {
+          "name": "Nasty Plot",
+          "usage": 4.1
+        },
+        {
+          "name": "Taunt",
+          "usage": 3.7
+        },
+        {
+          "name": "Weather Ball",
+          "usage": 3.7
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 2.8
+        },
+        {
+          "name": "Substitute",
+          "usage": 2.6
+        }
+      ],
+      "items": [
+        {
+          "name": "Froslassite",
+          "usage": 99.6
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.2
+        },
+        {
+          "name": "Never-Melt Ice",
+          "usage": 0.1
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Cursed Body",
+          "usage": 79
+        },
+        {
+          "name": "Snow Cloak",
+          "usage": 21
+        }
+      ],
+      "natures": [
+        {
+          "name": "Timid",
+          "count": 1,
+          "usage": 50
+        },
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 50
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 70,
+        "atk": 80,
+        "def": 70,
+        "spa": 80,
+        "spd": 70,
+        "spe": 110,
+        "bst": 480
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Rock (2x)",
+          "Ghost (2x)",
+          "Dark (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Bug (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)"
+        ]
+      }
+    },
+    {
+      "id": "armarouge",
+      "name": "Armarouge",
+      "usage": 0,
+      "winRate": 45.98,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Psychic",
+          "usage": 61.3
+        },
+        {
+          "name": "Trick Room",
+          "usage": 53.2
+        },
+        {
+          "name": "Heat Wave",
+          "usage": 51.1
+        },
+        {
+          "name": "Protect",
+          "usage": 45.7
+        },
+        {
+          "name": "Armor Cannon",
+          "usage": 43
+        },
+        {
+          "name": "Wide Guard",
+          "usage": 42.5
+        },
+        {
+          "name": "Aura Sphere",
+          "usage": 21
+        },
+        {
+          "name": "Expanding Force",
+          "usage": 20.4
+        },
+        {
+          "name": "Destiny Bond",
+          "usage": 10.8
+        },
+        {
+          "name": "Flamethrower",
+          "usage": 10.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Sitrus Berry",
+          "usage": 31.2
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 15.6
+        },
+        {
+          "name": "Iron Ball",
+          "usage": 12.9
+        },
+        {
+          "name": "Colbur Berry",
+          "usage": 8.6
+        },
+        {
+          "name": "White Herb",
+          "usage": 8.1
+        },
+        {
+          "name": "Wise Glasses",
+          "usage": 5.9
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 4.8
+        },
+        {
+          "name": "Leftovers",
+          "usage": 4.3
+        },
+        {
+          "name": "Life Orb",
+          "usage": 3.8
+        },
+        {
+          "name": "Twisted Spoon",
+          "usage": 2.7
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Flash Fire",
+          "usage": 94.1
+        },
+        {
+          "name": "Weak Armor",
+          "usage": 5.9
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 85,
+        "atk": 60,
+        "def": 100,
+        "spa": 125,
+        "spd": 80,
+        "spe": 75,
+        "bst": 525
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (2x)",
+          "Ground (2x)",
+          "Rock (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Grass (1/2x)",
+          "Ice (1/2x)",
+          "Fighting (1/2x)",
+          "Psychic (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "kommo-o",
+      "name": "Kommo-o",
+      "usage": 0,
+      "winRate": 50.046,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Clanging Scales",
+          "usage": 95.7
+        },
+        {
+          "name": "Protect",
+          "usage": 94.9
+        },
+        {
+          "name": "Clangorous Soul",
+          "usage": 83.2
+        },
+        {
+          "name": "Aura Sphere",
+          "usage": 79.2
+        },
+        {
+          "name": "Drain Punch",
+          "usage": 9.8
+        },
+        {
+          "name": "Flash Cannon",
+          "usage": 7.4
+        },
+        {
+          "name": "Vacuum Wave",
+          "usage": 4.8
+        },
+        {
+          "name": "Body Press",
+          "usage": 4.1
+        },
+        {
+          "name": "Iron Defense",
+          "usage": 3.9
+        },
+        {
+          "name": "Helping Hand",
+          "usage": 3.4
+        }
+      ],
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 71.2
+        },
+        {
+          "name": "Dragon Fang",
+          "usage": 14.1
+        },
+        {
+          "name": "Life Orb",
+          "usage": 6.9
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 2.4
+        },
+        {
+          "name": "Payapa Berry",
+          "usage": 2.2
+        },
+        {
+          "name": "Haban Berry",
+          "usage": 1.5
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 1.4
+        },
+        {
+          "name": "Wise Glasses",
+          "usage": 0.2
+        },
+        {
+          "name": "Roseli Berry",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Soundproof",
+          "usage": 80.6
+        },
+        {
+          "name": "Overcoat",
+          "usage": 14.9
+        },
+        {
+          "name": "Bulletproof",
+          "usage": 4.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 75,
+        "atk": 110,
+        "def": 125,
+        "spa": 100,
+        "spd": 105,
+        "spe": 85,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Fairy (4x)",
+          "Ice (2x)",
+          "Flying (2x)",
+          "Psychic (2x)",
+          "Dragon (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Grass (1/2x)",
+          "Bug (1/2x)",
+          "Rock (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "gardevoir",
+      "name": "Gardevoir",
+      "usage": 0,
+      "winRate": 46.422,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Hyper Voice",
+          "usage": 89.6
+        },
+        {
+          "name": "Protect",
+          "usage": 88.8
+        },
+        {
+          "name": "Psychic",
+          "usage": 47.8
+        },
+        {
+          "name": "Psyshock",
+          "usage": 42.4
+        },
+        {
+          "name": "Trick Room",
+          "usage": 41.6
+        },
+        {
+          "name": "Vacuum Wave",
+          "usage": 17.3
+        },
+        {
+          "name": "Calm Mind",
+          "usage": 15.9
+        },
+        {
+          "name": "Moonblast",
+          "usage": 11.2
+        },
+        {
+          "name": "Aura Sphere",
+          "usage": 7.7
+        },
+        {
+          "name": "Dazzling Gleam",
+          "usage": 7.5
+        }
+      ],
+      "items": [
+        {
+          "name": "Gardevoirite",
+          "usage": 89.9
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 7.3
+        },
+        {
+          "name": "Shell Bell",
+          "usage": 0.9
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.9
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.8
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Trace",
+          "usage": 72.5
+        },
+        {
+          "name": "Telepathy",
+          "usage": 25.8
+        },
+        {
+          "name": "Synchronize",
+          "usage": 1.7
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 68,
+        "atk": 65,
+        "def": 65,
+        "spa": 125,
+        "spd": 115,
+        "spe": 80,
+        "bst": 518
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (2x)",
+          "Ghost (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Fighting (1/4x)",
+          "Psychic (1/2x)"
+        ],
+        "immuneTo": [
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
+      "id": "absol",
+      "name": "Absol",
+      "usage": 0,
+      "winRate": 43.551,
+      "record": {
+        "wins": 287,
+        "losses": 372
+      },
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 100
+        },
+        {
+          "name": "Close Combat",
+          "usage": 100
+        },
+        {
+          "name": "Sucker Punch",
+          "usage": 100
+        },
+        {
+          "name": "Night Slash",
+          "usage": 88.9
+        },
+        {
+          "name": "Swords Dance",
+          "usage": 11.1
+        }
+      ],
+      "items": [
+        {
+          "name": "Scope Lens",
+          "usage": 100
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Super Luck",
+          "usage": 100
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 65,
+        "atk": 130,
+        "def": 60,
+        "spa": 75,
+        "spd": 60,
+        "spe": 75,
+        "bst": 465
+      },
+      "matchups": {
+        "weakTo": [
+          "Fighting (2x)",
+          "Bug (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Ghost (1/2x)",
+          "Dark (1/2x)"
+        ],
+        "immuneTo": [
+          "Psychic (0x)"
+        ]
+      }
+    },
+    {
+      "id": "samurott-hisuian",
+      "name": "Hisuian Samurott",
+      "usage": 0,
+      "winRate": 51.923,
+      "record": {
+        "wins": 27,
+        "losses": 25
+      },
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Sacred Sword",
+          "usage": 75.1
+        },
+        {
+          "name": "Aqua Cutter",
+          "usage": 70.3
+        },
+        {
+          "name": "Ceaseless Edge",
+          "usage": 52.6
+        },
+        {
+          "name": "Night Slash",
+          "usage": 49.8
+        },
+        {
+          "name": "Protect",
+          "usage": 48.8
+        },
+        {
+          "name": "Sucker Punch",
+          "usage": 47.8
+        },
+        {
+          "name": "Flip Turn",
+          "usage": 26.8
+        },
+        {
+          "name": "Detect",
+          "usage": 13.9
+        },
+        {
+          "name": "Razor Shell",
+          "usage": 8.6
+        },
+        {
+          "name": "Taunt",
+          "usage": 2.9
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 31.1
+        },
+        {
+          "name": "Life Orb",
+          "usage": 21.1
+        },
+        {
+          "name": "Black Glasses",
+          "usage": 18.7
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 15.8
+        },
+        {
+          "name": "Scope Lens",
+          "usage": 6.7
+        },
+        {
+          "name": "Muscle Band",
+          "usage": 4.3
+        },
+        {
+          "name": "Leftovers",
+          "usage": 1.9
+        },
+        {
+          "name": "White Herb",
+          "usage": 0.5
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sharpness",
+          "usage": 100
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 90,
+        "atk": 108,
+        "def": 80,
+        "spa": 100,
+        "spd": 65,
+        "spe": 85,
+        "bst": 528
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Grass (2x)",
+          "Fighting (2x)",
+          "Bug (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Ghost (1/2x)",
+          "Dark (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Psychic (0x)"
+        ]
+      }
+    },
+    {
+      "id": "rotom-wash",
+      "name": "Wash Rotom",
+      "usage": 0,
+      "winRate": 46.97,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Hydro Pump",
+          "usage": 96.4
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 77.9
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 71.5
+        },
+        {
+          "name": "Protect",
+          "usage": 54.2
+        },
+        {
+          "name": "Volt Switch",
+          "usage": 41.2
+        },
+        {
+          "name": "Electroweb",
+          "usage": 22.8
+        },
+        {
+          "name": "Light Screen",
+          "usage": 11
+        },
+        {
+          "name": "Discharge",
+          "usage": 8.9
+        },
+        {
+          "name": "Eerie Impulse",
+          "usage": 5.4
+        },
+        {
+          "name": "Trick",
+          "usage": 5.3
+        }
+      ],
+      "items": [
+        {
+          "name": "Sitrus Berry",
+          "usage": 39.1
+        },
+        {
+          "name": "Leftovers",
+          "usage": 29.7
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 21.6
+        },
+        {
+          "name": "Magnet",
+          "usage": 4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 2.3
+        },
+        {
+          "name": "Wide Lens",
+          "usage": 1.2
+        },
+        {
+          "name": "Rindo Berry",
+          "usage": 0.7
+        },
+        {
+          "name": "Quick Claw",
+          "usage": 0.5
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.4
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Levitate",
+          "usage": 100
+        }
+      ],
+      "natures": [
+        {
+          "name": "Bold",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 50,
+        "atk": 65,
+        "def": 107,
+        "spa": 105,
+        "spd": 107,
+        "spe": 86,
+        "bst": 520
+      },
+      "matchups": {
+        "weakTo": [
+          "Grass (2x)",
+          "Ground (2x)"
+        ],
+        "resists": [
+          "Steel (1/4x)",
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Flying (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "volcarona",
+      "name": "Volcarona",
+      "usage": 0,
+      "winRate": 47.697,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Heat Wave",
+          "usage": 65.5
+        },
+        {
+          "name": "Quiver Dance",
+          "usage": 65.2
+        },
+        {
+          "name": "Protect",
+          "usage": 61.8
+        },
+        {
+          "name": "Rage Powder",
+          "usage": 51.9
+        },
+        {
+          "name": "Bug Buzz",
+          "usage": 37.9
+        },
+        {
+          "name": "Fiery Dance",
+          "usage": 24.6
+        },
+        {
+          "name": "Giga Drain",
+          "usage": 18.6
+        },
+        {
+          "name": "Struggle Bug",
+          "usage": 17.6
+        },
+        {
+          "name": "Tailwind",
+          "usage": 15
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 10.1
+        }
+      ],
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 45.2
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 33.3
+        },
+        {
+          "name": "Charti Berry",
+          "usage": 5.1
+        },
+        {
+          "name": "Charcoal",
+          "usage": 4.8
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 3.9
+        },
+        {
+          "name": "Silver Powder",
+          "usage": 3.4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 3.1
+        },
+        {
+          "name": "Passho Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 0.5
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Flame Body",
+          "usage": 99.3
+        },
+        {
+          "name": "Swarm",
+          "usage": 0.7
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 85,
+        "atk": 60,
+        "def": 65,
+        "spa": 135,
+        "spd": 105,
+        "spe": 100,
+        "bst": 550
+      },
+      "matchups": {
+        "weakTo": [
+          "Rock (4x)",
+          "Water (2x)",
+          "Flying (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Ice (1/2x)",
+          "Fighting (1/2x)",
+          "Bug (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "swampert",
+      "name": "Swampert",
+      "usage": 0,
+      "winRate": 44.848,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 94.2
+        },
+        {
+          "name": "Wave Crash",
+          "usage": 88.2
+        },
+        {
+          "name": "Earthquake",
+          "usage": 66.2
+        },
+        {
+          "name": "Ice Punch",
+          "usage": 57
+        },
+        {
+          "name": "High Horsepower",
+          "usage": 37.2
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 12.2
+        },
+        {
+          "name": "Flip Turn",
+          "usage": 8.7
+        },
+        {
+          "name": "Liquidation",
+          "usage": 7.7
+        },
+        {
+          "name": "Knock Off",
+          "usage": 7.2
+        },
+        {
+          "name": "Bulk Up",
+          "usage": 4.9
+        }
+      ],
+      "items": [
+        {
+          "name": "Swampertite",
+          "usage": 98.5
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.7
+        },
+        {
+          "name": "Rindo Berry",
+          "usage": 0.3
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 0.2
+        },
+        {
+          "name": "Leftovers",
+          "usage": 0.2
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 0
+        },
+        {
+          "name": "White Herb",
+          "usage": 0
+        },
+        {
+          "name": "Black Belt",
+          "usage": 0
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Torrent",
+          "usage": 53.6
+        },
+        {
+          "name": "Damp",
+          "usage": 46.4
+        }
+      ],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 100,
+        "atk": 110,
+        "def": 90,
+        "spa": 85,
+        "spd": 90,
+        "spe": 60,
+        "bst": 535
+      },
+      "matchups": {
+        "weakTo": [
+          "Grass (4x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Poison (1/2x)",
+          "Rock (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Electric (0x)"
+        ]
+      }
+    },
+    {
+      "id": "venusaur",
+      "name": "Venusaur",
+      "usage": 0,
+      "winRate": 50.011,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Sludge Bomb",
+          "usage": 95.4
+        },
+        {
+          "name": "Protect",
+          "usage": 83
+        },
+        {
+          "name": "Earth Power",
+          "usage": 73.5
+        },
+        {
+          "name": "Giga Drain",
+          "usage": 57.3
+        },
+        {
+          "name": "Sleep Powder",
+          "usage": 46.3
+        },
+        {
+          "name": "Energy Ball",
+          "usage": 22.5
+        },
+        {
+          "name": "Leaf Storm",
+          "usage": 6.1
+        },
+        {
+          "name": "Leech Seed",
+          "usage": 3.9
+        },
+        {
+          "name": "Weather Ball",
+          "usage": 3
+        },
+        {
+          "name": "Solar Beam",
+          "usage": 2.7
+        }
+      ],
+      "items": [
+        {
+          "name": "Venusaurite",
+          "usage": 47.3
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 18.7
+        },
+        {
+          "name": "Life Orb",
+          "usage": 10
+        },
+        {
+          "name": "Wide Lens",
+          "usage": 9.6
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 3.7
+        },
+        {
+          "name": "Leftovers",
+          "usage": 2.4
+        },
+        {
+          "name": "Miracle Seed",
+          "usage": 2.4
+        },
+        {
+          "name": "Occa Berry",
+          "usage": 2
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 1.7
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 0.8
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Chlorophyll",
+          "usage": 98.6
+        },
+        {
+          "name": "Overgrow",
+          "usage": 1.4
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 80,
+        "atk": 82,
+        "def": 83,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80,
+        "bst": 525
+      },
+      "matchups": {
+        "weakTo": [
+          "Fire (2x)",
+          "Ice (2x)",
+          "Flying (2x)",
+          "Psychic (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Water (1/2x)",
+          "Electric (1/2x)",
+          "Fighting (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "grimmsnarl",
+      "name": "Grimmsnarl",
+      "usage": 0,
+      "winRate": 48.689,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Light Screen",
+          "usage": 87
+        },
+        {
+          "name": "Parting Shot",
+          "usage": 82.8
+        },
+        {
+          "name": "Reflect",
+          "usage": 81.8
+        },
+        {
+          "name": "Spirit Break",
+          "usage": 61.9
+        },
+        {
+          "name": "Fake Out",
+          "usage": 27.1
+        },
+        {
+          "name": "Scary Face",
+          "usage": 22
+        },
+        {
+          "name": "Foul Play",
+          "usage": 12.9
+        },
+        {
+          "name": "Fake Tears",
+          "usage": 7.8
+        },
+        {
+          "name": "Sucker Punch",
+          "usage": 4.9
+        },
+        {
+          "name": "Taunt",
+          "usage": 2.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Light Clay",
+          "usage": 83
+        },
+        {
+          "name": "Roseli Berry",
+          "usage": 9.3
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 3
+        },
+        {
+          "name": "Leftovers",
+          "usage": 2
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 0.7
+        },
+        {
+          "name": "Black Glasses",
+          "usage": 0.5
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 0.4
+        },
+        {
+          "name": "Life Orb",
+          "usage": 0.3
+        },
+        {
+          "name": "Babiri Berry",
+          "usage": 0.2
+        },
+        {
+          "name": "Iron Ball",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Prankster",
+          "usage": 99.6
+        },
+        {
+          "name": "Frisk",
+          "usage": 0.3
+        },
+        {
+          "name": "Pickpocket",
+          "usage": 0.1
+        }
+      ],
+      "natures": [
+        {
+          "name": "Careful",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 95,
+        "atk": 120,
+        "def": 65,
+        "spa": 95,
+        "spd": 75,
+        "spe": 60,
+        "bst": 510
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (2x)",
+          "Steel (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Dark (1/4x)",
+          "Ghost (1/2x)"
+        ],
+        "immuneTo": [
+          "Psychic (0x)",
+          "Dragon (0x)"
+        ]
+      }
+    },
+    {
+      "id": "dragonite",
+      "name": "Dragonite",
+      "usage": 0,
+      "winRate": 51.847,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 67.6
+        },
+        {
+          "name": "Dragon Pulse",
+          "usage": 46.6
+        },
+        {
+          "name": "Hurricane",
+          "usage": 45.5
+        },
+        {
+          "name": "Extreme Speed",
+          "usage": 39.1
+        },
+        {
+          "name": "Tailwind",
+          "usage": 36.5
+        },
+        {
+          "name": "Draco Meteor",
+          "usage": 27.3
+        },
+        {
+          "name": "Thunderbolt",
+          "usage": 20.7
+        },
+        {
+          "name": "Dragon Claw",
+          "usage": 17.9
+        },
+        {
+          "name": "Thunder",
+          "usage": 14.4
+        },
+        {
+          "name": "Heat Wave",
+          "usage": 13.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Dragoninite",
+          "usage": 67.7
+        },
+        {
+          "name": "Dragon Fang",
+          "usage": 13.6
+        },
+        {
+          "name": "Life Orb",
+          "usage": 4.7
+        },
+        {
+          "name": "Leftovers",
+          "usage": 2.3
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 1.9
+        },
+        {
+          "name": "Muscle Band",
+          "usage": 1.8
+        },
+        {
+          "name": "Sharp Beak",
+          "usage": 1.4
+        },
+        {
+          "name": "Yache Berry",
+          "usage": 1.4
+        },
+        {
+          "name": "Roseli Berry",
+          "usage": 1.2
+        },
+        {
+          "name": "Silk Scarf",
+          "usage": 1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Multiscale",
+          "usage": 72.8
+        },
+        {
+          "name": "Inner Focus",
+          "usage": 27.2
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 91,
+        "atk": 134,
+        "def": 95,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80,
+        "bst": 600
+      },
+      "matchups": {
+        "weakTo": [
+          "Ice (4x)",
+          "Rock (2x)",
+          "Dragon (2x)",
+          "Fairy (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Fighting (1/2x)",
+          "Bug (1/2x)"
+        ],
+        "immuneTo": [
+          "Ground (0x)"
+        ]
+      }
+    },
+    {
+      "id": "scovillain",
+      "name": "Scovillain",
+      "usage": 0,
+      "winRate": 50.139,
+      "record": {
+        "wins": 362,
+        "losses": 360
+      },
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Protect",
+          "usage": 98.9
+        },
+        {
+          "name": "Rage Powder",
+          "usage": 96.5
+        },
+        {
+          "name": "Overheat",
+          "usage": 77.7
+        },
+        {
+          "name": "Leech Seed",
+          "usage": 53.6
+        },
+        {
+          "name": "Giga Drain",
+          "usage": 36
+        },
+        {
+          "name": "Flamethrower",
+          "usage": 14.4
+        },
+        {
+          "name": "Leaf Storm",
+          "usage": 9.5
+        },
+        {
+          "name": "Temper Flare",
+          "usage": 3.4
+        },
+        {
+          "name": "Super Fang",
+          "usage": 3
+        },
+        {
+          "name": "Fire Blast",
+          "usage": 2.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Scovillainite",
+          "usage": 99.3
+        },
+        {
+          "name": "Kebia Berry",
+          "usage": 0.3
+        },
+        {
+          "name": "Sceptilite",
+          "usage": 0.3
+        },
+        {
+          "name": "Focus Band",
+          "usage": 0.1
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Moody",
+          "usage": 88.2
+        },
+        {
+          "name": "Chlorophyll",
+          "usage": 9.6
+        },
+        {
+          "name": "Insomnia",
+          "usage": 2.2
+        }
+      ],
+      "natures": [
+        {
+          "name": "Bold",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 65,
+        "atk": 108,
+        "def": 65,
+        "spa": 108,
+        "spd": 65,
+        "spe": 75,
+        "bst": 486
+      },
+      "matchups": {
+        "weakTo": [
+          "Poison (2x)",
+          "Flying (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Grass (1/4x)",
+          "Electric (1/2x)",
+          "Steel (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "lycanroc-dusk",
+      "name": "Lycanroc Dusk",
+      "usage": 0,
+      "winRate": 46.657,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Accelerock",
+          "usage": 100
+        },
+        {
+          "name": "Protect",
+          "usage": 94.6
+        },
+        {
+          "name": "Close Combat",
+          "usage": 94.6
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 93.7
+        },
+        {
+          "name": "Drill Run",
+          "usage": 4.8
+        },
+        {
+          "name": "Iron Head",
+          "usage": 3.9
+        },
+        {
+          "name": "Sucker Punch",
+          "usage": 3
+        },
+        {
+          "name": "Roar",
+          "usage": 1.5
+        },
+        {
+          "name": "Throat Chop",
+          "usage": 1.5
+        },
+        {
+          "name": "Psychic Fangs",
+          "usage": 1.5
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 84.5
+        },
+        {
+          "name": "Hard Stone",
+          "usage": 7.5
+        },
+        {
+          "name": "Life Orb",
+          "usage": 5.1
+        },
+        {
+          "name": "Expert Belt",
+          "usage": 3
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Tough Claws",
+          "usage": 100
+        }
+      ],
+      "natures": [
+        {
+          "name": "Jolly",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 75,
+        "atk": 117,
+        "def": 65,
+        "spa": 55,
+        "spd": 65,
+        "spe": 110,
+        "bst": 487
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (2x)",
+          "Grass (2x)",
+          "Fighting (2x)",
+          "Ground (2x)",
+          "Steel (2x)"
+        ],
+        "resists": [
+          "Normal (1/2x)",
+          "Fire (1/2x)",
+          "Poison (1/2x)",
+          "Flying (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "golisopod",
+      "name": "Golisopod",
+      "usage": 0,
+      "winRate": null,
+      "tournamentAppearances": 1,
+      "moves": [],
+      "items": [],
+      "abilities": [],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 75,
+        "atk": 125,
+        "def": 140,
+        "spa": 60,
+        "spd": 90,
+        "spe": 40,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Flying (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Fighting (1/2x)",
+          "Ground (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "basculegion-f",
+      "name": "Basculegion ♀",
+      "usage": 0,
+      "winRate": 52.6,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Muddy Water",
+          "usage": 74.4
+        },
+        {
+          "name": "Shadow Ball",
+          "usage": 72.1
+        },
+        {
+          "name": "Protect",
+          "usage": 68.6
+        },
+        {
+          "name": "Aqua Jet",
+          "usage": 41.9
+        },
+        {
+          "name": "Ice Beam",
+          "usage": 33.7
+        },
+        {
+          "name": "Last Respects",
+          "usage": 27.9
+        },
+        {
+          "name": "Icy Wind",
+          "usage": 22.9
+        },
+        {
+          "name": "Flip Turn",
+          "usage": 14.3
+        },
+        {
+          "name": "Wave Crash",
+          "usage": 12.4
+        },
+        {
+          "name": "Hex",
+          "usage": 8.5
+        }
+      ],
+      "items": [
+        {
+          "name": "Choice Scarf",
+          "usage": 32.9
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 25.6
+        },
+        {
+          "name": "Life Orb",
+          "usage": 21.7
+        },
+        {
+          "name": "Focus Sash",
+          "usage": 15.5
+        },
+        {
+          "name": "Leftovers",
+          "usage": 2.3
+        },
+        {
+          "name": "Wacan Berry",
+          "usage": 1.9
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Adaptability",
+          "usage": 75.2
+        },
+        {
+          "name": "Swift Swim",
+          "usage": 24.8
+        }
+      ],
+      "natures": [
+        {
+          "name": "Modest",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 120,
+        "atk": 92,
+        "def": 65,
+        "spa": 100,
+        "spd": 75,
+        "spe": 78,
+        "bst": 530
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Grass (2x)",
+          "Ghost (2x)",
+          "Dark (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Bug (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": [
+          "Normal (0x)",
+          "Fighting (0x)"
+        ]
+      }
+    },
+    {
+      "id": "arcanine-hisui",
+      "name": "Hisuian Arcanine",
+      "usage": 0,
+      "winRate": 49.33,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "usage": 99.2
+        },
+        {
+          "name": "Extreme Speed",
+          "usage": 81.3
+        },
+        {
+          "name": "Protect",
+          "usage": 79.3
+        },
+        {
+          "name": "Head Smash",
+          "usage": 62.5
+        },
+        {
+          "name": "Rock Slide",
+          "usage": 45.9
+        },
+        {
+          "name": "Wild Charge",
+          "usage": 6.7
+        },
+        {
+          "name": "Close Combat",
+          "usage": 6.5
+        },
+        {
+          "name": "Will-O-Wisp",
+          "usage": 5.4
+        },
+        {
+          "name": "Psychic Fangs",
+          "usage": 3.3
+        },
+        {
+          "name": "Snarl",
+          "usage": 2.7
+        }
+      ],
+      "items": [
+        {
+          "name": "Focus Sash",
+          "usage": 56
+        },
+        {
+          "name": "Choice Scarf",
+          "usage": 16.1
+        },
+        {
+          "name": "Life Orb",
+          "usage": 7.8
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 7.1
+        },
+        {
+          "name": "Chople Berry",
+          "usage": 5.2
+        },
+        {
+          "name": "Charcoal",
+          "usage": 3.3
+        },
+        {
+          "name": "White Herb",
+          "usage": 2.3
+        },
+        {
+          "name": "Shuca Berry",
+          "usage": 1.9
+        },
+        {
+          "name": "Lum Berry",
+          "usage": 0.4
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Rock Head",
+          "usage": 72.5
+        },
+        {
+          "name": "Intimidate",
+          "usage": 27.5
+        }
+      ],
+      "natures": [
+        {
+          "name": "Adamant",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 95,
+        "atk": 115,
+        "def": 80,
+        "spa": 95,
+        "spd": 80,
+        "spe": 90,
+        "bst": 555
+      },
+      "matchups": {
+        "weakTo": [
+          "Water (4x)",
+          "Ground (4x)",
+          "Fighting (2x)",
+          "Rock (2x)"
+        ],
+        "resists": [
+          "Fire (1/4x)",
+          "Normal (1/2x)",
+          "Ice (1/2x)",
+          "Poison (1/2x)",
+          "Flying (1/2x)",
+          "Bug (1/2x)",
+          "Fairy (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    },
+    {
+      "id": "milotic",
+      "name": "Milotic",
+      "usage": 0,
+      "winRate": 47.682,
+      "tournamentAppearances": 1,
+      "moves": [
+        {
+          "name": "Scald",
+          "usage": 58.6
+        },
+        {
+          "name": "Protect",
+          "usage": 54.1
+        },
+        {
+          "name": "Recover",
+          "usage": 45
+        },
+        {
+          "name": "Muddy Water",
+          "usage": 42
+        },
+        {
+          "name": "Coil",
+          "usage": 39.4
+        },
+        {
+          "name": "Icy Wind",
+          "usage": 38.7
+        },
+        {
+          "name": "Hypnosis",
+          "usage": 38.2
+        },
+        {
+          "name": "Life Dew",
+          "usage": 33.5
+        },
+        {
+          "name": "Ice Beam",
+          "usage": 32.5
+        },
+        {
+          "name": "Psych Up",
+          "usage": 4.8
+        }
+      ],
+      "items": [
+        {
+          "name": "Leftovers",
+          "usage": 74.5
+        },
+        {
+          "name": "Sitrus Berry",
+          "usage": 18.2
+        },
+        {
+          "name": "Mystic Water",
+          "usage": 2
+        },
+        {
+          "name": "Life Orb",
+          "usage": 1.5
+        },
+        {
+          "name": "Shell Bell",
+          "usage": 1.3
+        },
+        {
+          "name": "Wacan Berry",
+          "usage": 0.7
+        },
+        {
+          "name": "Mental Herb",
+          "usage": 0.7
+        },
+        {
+          "name": "Rindo Berry",
+          "usage": 0.5
+        },
+        {
+          "name": "Bright Powder",
+          "usage": 0.2
+        },
+        {
+          "name": "Wise Glasses",
+          "usage": 0.2
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Competitive",
+          "usage": 99.1
+        },
+        {
+          "name": "Cute Charm",
+          "usage": 0.7
+        },
+        {
+          "name": "Marvel Scale",
+          "usage": 0.3
+        }
+      ],
+      "natures": [
+        {
+          "name": "Calm",
+          "count": 1,
+          "usage": 100
+        }
+      ],
+      "teammates": [],
+      "baseStats": {
+        "hp": 95,
+        "atk": 60,
+        "def": 79,
+        "spa": 100,
+        "spd": 125,
+        "spe": 81,
+        "bst": 540
+      },
+      "matchups": {
+        "weakTo": [
+          "Electric (2x)",
+          "Grass (2x)"
+        ],
+        "resists": [
+          "Fire (1/2x)",
+          "Water (1/2x)",
+          "Ice (1/2x)",
+          "Steel (1/2x)"
+        ],
+        "immuneTo": []
+      }
+    }
+  ],
+  "cores": [],
+  "teams": [
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "redvgc",
+      "playerDisplayName": "Jarred Perico",
+      "country": "PH",
+      "placing": null,
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "armarouge",
+          "name": "Armarouge",
+          "item": "Focus Sash",
+          "ability": "Weak Armor",
+          "nature": "Modest",
+          "moves": [
+            "Armor Cannon",
+            "Expanding Force",
+            "Wide Guard",
+            "Protect"
+          ]
+        },
+        {
+          "id": "indeedee-f",
+          "name": "Indeedee ♀",
+          "item": "Rocky Helmet",
+          "ability": "Psychic Surge",
+          "nature": "Bold",
+          "moves": [
+            "Psychic",
+            "Helping Hand",
+            "Follow Me",
+            "Protect"
+          ]
+        },
+        {
+          "id": "kommo-o",
+          "name": "Kommo-o",
+          "item": "Life Orb",
+          "ability": "Soundproof",
+          "nature": "Modest",
+          "moves": [
+            "Clanging Scales",
+            "Flamethrower",
+            "Aura Sphere",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "Psychic Seed",
+          "ability": "Unburden",
+          "nature": "Adamant",
+          "moves": [
+            "Dire Claw",
+            "Close Combat",
+            "Rock Slide",
+            "Protect"
+          ]
+        },
+        {
+          "id": "gardevoir",
+          "name": "Gardevoir",
+          "item": "Gardevoirite",
+          "ability": "Synchronize",
+          "nature": "Modest",
+          "moves": [
+            "Hyper Voice",
+            "Expanding Force",
+            "Thunderbolt",
+            "Protect"
+          ]
+        },
+        {
+          "id": "absol",
+          "name": "Absol",
+          "item": "Absolite Z",
+          "ability": "Justified",
+          "nature": "Jolly",
+          "moves": [
+            "Night Slash",
+            "Psycho Cut",
+            "Close Combat",
+            "Detect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "joshuaw0110",
+      "playerDisplayName": "Jesús Flores Lopéz",
+      "country": "MX",
+      "placing": null,
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "delphox",
+          "name": "Delphox",
+          "item": "Delphoxite",
+          "ability": "Blaze",
+          "nature": "Timid",
+          "moves": [
+            "Protect",
+            "Heat Wave",
+            "Psychic",
+            "Grass Knot"
+          ]
+        },
+        {
+          "id": "whimsicott",
+          "name": "Whimsicott",
+          "item": "Focus Sash",
+          "ability": "Prankster",
+          "nature": "Timid",
+          "moves": [
+            "Protect",
+            "Tailwind",
+            "Sunny Day",
+            "Moonblast"
+          ]
+        },
+        {
+          "id": "gholdengo",
+          "name": "Gholdengo",
+          "item": "Leftovers",
+          "ability": "Good as Gold",
+          "nature": "Modest",
+          "moves": [
+            "Make It Rain",
+            "Shadow Punch",
+            "Nasty Plot",
+            "Protect"
+          ]
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "item": "Life Orb",
+          "ability": "Rough Skin",
+          "nature": "Jolly",
+          "moves": [
+            "Dragon Claw",
+            "Rock Slide",
+            "Protect",
+            "Stomping Tantrum"
+          ]
+        },
+        {
+          "id": "staraptor",
+          "name": "Staraptor",
+          "item": "Staraptite",
+          "ability": "Intimidate",
+          "nature": "Jolly",
+          "moves": [
+            "Close Combat",
+            "Brave Bird",
+            "Protect",
+            "Roost"
+          ]
+        },
+        {
+          "id": "samurott-hisui",
+          "name": "Hisuian Samurott",
+          "item": "Choice Scarf",
+          "ability": "Sharpness",
+          "nature": "Jolly",
+          "moves": [
+            "Night Slash",
+            "Flip Turn",
+            "Razor Shell",
+            "Sacred Sword"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "jurassicjoints",
+      "playerDisplayName": "James Johnson",
+      "country": "HK",
+      "placing": null,
+      "record": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "item": "Salamencite",
+          "ability": "Intimidate",
+          "nature": "Timid",
+          "moves": [
+            "Hyper Voice",
+            "Protect",
+            "Draco Meteor",
+            "Flamethrower"
+          ]
+        },
+        {
+          "id": "rotom-wash",
+          "name": "Wash Rotom",
+          "item": "Sitrus Berry",
+          "ability": "Levitate",
+          "nature": "Bold",
+          "moves": [
+            "Hydro Pump",
+            "Thunderbolt",
+            "Protect",
+            "Will-O-Wisp"
+          ]
+        },
+        {
+          "id": "sinistcha",
+          "name": "Sinistcha",
+          "item": "Kasib Berry",
+          "ability": "Hospitality",
+          "nature": "Bold",
+          "moves": [
+            "Matcha Gotcha",
+            "Rage Powder",
+            "Protect",
+            "Shadow Ball"
+          ]
+        },
+        {
+          "id": "tyranitar",
+          "name": "Tyranitar",
+          "item": "Tyranitarite",
+          "ability": "Sand Stream",
+          "nature": "Jolly",
+          "moves": [
+            "Rock Slide",
+            "Knock Off",
+            "Protect",
+            "Low Kick"
+          ]
+        },
+        {
+          "id": "excadrill",
+          "name": "Excadrill",
+          "item": "Focus Sash",
+          "ability": "Sand Rush",
+          "nature": "Adamant",
+          "moves": [
+            "Iron Head",
+            "Protect",
+            "High Horsepower",
+            "Rock Slide"
+          ]
+        },
+        {
+          "id": "corviknight",
+          "name": "Corviknight",
+          "item": "Leftovers",
+          "ability": "Mirror Armor",
+          "nature": "Careful",
+          "moves": [
+            "Brave Bird",
+            "Roost",
+            "Bulk Up",
+            "Tailwind"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "maggrosbeat",
+      "playerDisplayName": "Hugo GILBERT",
+      "country": "FR",
+      "placing": 1,
+      "record": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "item": "Choice Scarf",
+          "ability": "Adaptability",
+          "nature": "Jolly",
+          "moves": [
+            "Flip Turn",
+            "Wave Crash",
+            "Last Respects",
+            "Aqua Jet"
+          ]
+        },
+        {
+          "id": "floette-eternal",
+          "name": "Eternal Flower Floette",
+          "item": "Floettite",
+          "ability": "Flower Veil",
+          "nature": "Modest",
+          "moves": [
+            "Protect",
+            "Dazzling Gleam",
+            "Calm Mind",
+            "Moonblast"
+          ]
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "item": "Sitrus Berry",
+          "ability": "Intimidate",
+          "nature": "Careful",
+          "moves": [
+            "Fake Out",
+            "Flare Blitz",
+            "Parting Shot",
+            "Throat Chop"
+          ]
+        },
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "item": "Raichunite Y",
+          "ability": "Lightning Rod",
+          "nature": "Timid",
+          "moves": [
+            "Protect",
+            "Focus Blast",
+            "Zap Cannon",
+            "Fake Out"
+          ]
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "item": "Life Orb",
+          "ability": "Grassy Surge",
+          "nature": "Adamant",
+          "moves": [
+            "Fake Out",
+            "Grassy Glide",
+            "Wood Hammer",
+            "High Horsepower"
+          ]
+        },
+        {
+          "id": "volcarona",
+          "name": "Volcarona",
+          "item": "Leftovers",
+          "ability": "Flame Body",
+          "nature": "Modest",
+          "moves": [
+            "Protect",
+            "Heat Wave",
+            "Quiver Dance",
+            "Struggle Bug"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "tubaninja2236",
+      "playerDisplayName": "Johnas Lara",
+      "country": "US",
+      "placing": 2,
+      "record": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "swampert",
+          "name": "Swampert",
+          "item": "Swampertite",
+          "ability": "Damp",
+          "nature": "Adamant",
+          "moves": [
+            "Protect",
+            "Ice Punch",
+            "Earthquake",
+            "Wave Crash"
+          ]
+        },
+        {
+          "id": "venusaur",
+          "name": "Venusaur",
+          "item": "Venusaurite",
+          "ability": "Chlorophyll",
+          "nature": "Modest",
+          "moves": [
+            "Protect",
+            "Earth Power",
+            "Sludge Bomb",
+            "Leaf Storm"
+          ]
+        },
+        {
+          "id": "pelipper",
+          "name": "Pelipper",
+          "item": "Focus Sash",
+          "ability": "Drizzle",
+          "nature": "Modest",
+          "moves": [
+            "Wide Guard",
+            "Tailwind",
+            "Hurricane",
+            "Weather Ball"
+          ]
+        },
+        {
+          "id": "archaludon",
+          "name": "Archaludon",
+          "item": "Leftovers",
+          "ability": "Stamina",
+          "nature": "Bold",
+          "moves": [
+            "Protect",
+            "Snarl",
+            "Dragon Pulse",
+            "Electro Shot"
+          ]
+        },
+        {
+          "id": "grimmsnarl",
+          "name": "Grimmsnarl",
+          "item": "Light Clay",
+          "ability": "Prankster",
+          "nature": "Careful",
+          "moves": [
+            "Reflect",
+            "Light Screen",
+            "Parting Shot",
+            "Spirit Break"
+          ]
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "item": "Choice Scarf",
+          "ability": "Rough Skin",
+          "nature": "Adamant",
+          "moves": [
+            "Rock Slide",
+            "Stomping Tantrum",
+            "Earthquake",
+            "Dragon Claw"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "zelinkavg",
+      "playerDisplayName": "Andres Ramirez",
+      "country": "CA",
+      "placing": 3,
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "sinistcha",
+          "name": "Sinistcha",
+          "item": "Occa Berry",
+          "ability": "Hospitality",
+          "nature": "Bold",
+          "moves": [
+            "Matcha Gotcha",
+            "Rage Powder",
+            "Trick Room",
+            "Protect"
+          ]
+        },
+        {
+          "id": "delphox",
+          "name": "Delphox",
+          "item": "Delphoxite",
+          "ability": "Blaze",
+          "nature": "Timid",
+          "moves": [
+            "Heat Wave",
+            "Psychic",
+            "Nasty Plot",
+            "Protect"
+          ]
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "item": "Sitrus Berry",
+          "ability": "Intimidate",
+          "nature": "Careful",
+          "moves": [
+            "Fake Out",
+            "Flare Blitz",
+            "Throat Chop",
+            "Parting Shot"
+          ]
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "item": "Life Orb",
+          "ability": "Defiant",
+          "nature": "Adamant",
+          "moves": [
+            "Kowtow Cleave",
+            "Sucker Punch",
+            "Swords Dance",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "Focus Sash",
+          "ability": "Poison Touch",
+          "nature": "Jolly",
+          "moves": [
+            "Fake Out",
+            "Poison Jab",
+            "Close Combat",
+            "Quick Guard"
+          ]
+        },
+        {
+          "id": "floette-eternal",
+          "name": "Eternal Flower Floette",
+          "item": "Floettite",
+          "ability": "Flower Veil",
+          "nature": "Modest",
+          "moves": [
+            "Dazzling Gleam",
+            "Moonblast",
+            "Protect",
+            "Calm Mind"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "jumpe1",
+      "playerDisplayName": "Nicolás Fantini",
+      "country": "AR",
+      "placing": 4,
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "charizard",
+          "name": "Charizard",
+          "item": "Charizardite Y",
+          "ability": "Blaze",
+          "nature": "Modest",
+          "moves": [
+            "Protect",
+            "Solar Beam",
+            "Heat Wave",
+            "Weather Ball"
+          ]
+        },
+        {
+          "id": "whimsicott",
+          "name": "Whimsicott",
+          "item": "Focus Sash",
+          "ability": "Prankster",
+          "nature": "Timid",
+          "moves": [
+            "Protect",
+            "Tailwind",
+            "Encore",
+            "Moonblast"
+          ]
+        },
+        {
+          "id": "froslass",
+          "name": "Froslass",
+          "item": "Froslassite",
+          "ability": "Cursed Body",
+          "nature": "Timid",
+          "moves": [
+            "Protect",
+            "Aurora Veil",
+            "Shadow Ball",
+            "Blizzard"
+          ]
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "item": "Chople Berry",
+          "ability": "Defiant",
+          "nature": "Adamant",
+          "moves": [
+            "Iron Head",
+            "Kowtow Cleave",
+            "Sucker Punch",
+            "Low Kick"
+          ]
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "item": "Life Orb",
+          "ability": "Rough Skin",
+          "nature": "Jolly",
+          "moves": [
+            "Protect",
+            "Dragon Claw",
+            "Earthquake",
+            "Rock Slide"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "White Herb",
+          "ability": "Unburden",
+          "nature": "Adamant",
+          "moves": [
+            "Protect",
+            "Close Combat",
+            "Dire Claw",
+            "Rock Tomb"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "mayuki",
+      "playerDisplayName": "Mayuki Okuno",
+      "country": "JP",
+      "placing": 5,
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "dragonite",
+          "name": "Dragonite",
+          "item": "Dragoninite",
+          "ability": "Multiscale",
+          "nature": "Modest",
+          "moves": [
+            "Dragon Pulse",
+            "Flamethrower",
+            "Tailwind",
+            "Protect"
+          ]
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "item": "Occa Berry",
+          "ability": "Defiant",
+          "nature": "Adamant",
+          "moves": [
+            "Kowtow Cleave",
+            "Sucker Punch",
+            "Iron Head",
+            "Protect"
+          ]
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "item": "Life Orb",
+          "ability": "Adaptability",
+          "nature": "Jolly",
+          "moves": [
+            "Wave Crash",
+            "Last Respects",
+            "Aqua Jet",
+            "Protect"
+          ]
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "item": "Sitrus Berry",
+          "ability": "Grassy Surge",
+          "nature": "Adamant",
+          "moves": [
+            "Wood Hammer",
+            "Grassy Glide",
+            "Taunt",
+            "Fake Out"
+          ]
+        },
+        {
+          "id": "delphox",
+          "name": "Delphox",
+          "item": "Delphoxite",
+          "ability": "Blaze",
+          "nature": "Timid",
+          "moves": [
+            "Heat Wave",
+            "Psychic",
+            "Encore",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "Focus Sash",
+          "ability": "Poison Touch",
+          "nature": "Jolly",
+          "moves": [
+            "Close Combat",
+            "Dire Claw",
+            "Fake Out",
+            "Protect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "sater",
+      "playerDisplayName": "Jesus Funes",
+      "country": "AR",
+      "placing": 6,
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "froslass",
+          "name": "Froslass",
+          "item": "Froslassite",
+          "ability": "Cursed Body",
+          "nature": "Modest",
+          "moves": [
+            "Blizzard",
+            "Shadow Ball",
+            "Aurora Veil",
+            "Protect"
+          ]
+        },
+        {
+          "id": "scovillain",
+          "name": "Scovillain",
+          "item": "Scovillainite",
+          "ability": "Chlorophyll",
+          "nature": "Bold",
+          "moves": [
+            "Overheat",
+            "Leech Seed",
+            "Rage Powder",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "White Herb",
+          "ability": "Unburden",
+          "nature": "Adamant",
+          "moves": [
+            "Fake Out",
+            "Dire Claw",
+            "Close Combat",
+            "Protect"
+          ]
+        },
+        {
+          "id": "basculegion",
+          "name": "Basculegion",
+          "item": "Choice Scarf",
+          "ability": "Adaptability",
+          "nature": "Adamant",
+          "moves": [
+            "Aqua Jet",
+            "Wave Crash",
+            "Last Respects",
+            "Flip Turn"
+          ]
+        },
+        {
+          "id": "lycanroc-dusk",
+          "name": "Lycanroc Dusk",
+          "item": "Focus Sash",
+          "ability": "Tough Claws",
+          "nature": "Jolly",
+          "moves": [
+            "Accelerock",
+            "Rock Slide",
+            "Close Combat",
+            "Protect"
+          ]
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "item": "Chople Berry",
+          "ability": "Defiant",
+          "nature": "Adamant",
+          "moves": [
+            "Kowtow Cleave",
+            "Sucker Punch",
+            "Low Kick",
+            "Protect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "dplays99",
+      "playerDisplayName": "Darius Benoit",
+      "country": "CA",
+      "placing": 7,
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "item": "Raichunite X",
+          "ability": "Electric Surge",
+          "nature": "Jolly",
+          "moves": [
+            "Volt Tackle",
+            "Volt Switch",
+            "Feint",
+            "Fake Out"
+          ]
+        },
+        {
+          "id": "golisopod",
+          "name": "Golisopod",
+          "item": "Golisopite",
+          "ability": "Emergency Exit",
+          "nature": "Adamant",
+          "moves": [
+            "Leech Life",
+            "Iron Head",
+            "Sucker Punch",
+            "Protect"
+          ]
+        },
+        {
+          "id": "archaludon",
+          "name": "Archaludon",
+          "item": "Leftovers",
+          "ability": "Stamina",
+          "nature": "Calm",
+          "moves": [
+            "Electro Shot",
+            "Dragon Pulse",
+            "Snarl",
+            "Protect"
+          ]
+        },
+        {
+          "id": "pelipper",
+          "name": "Pelipper",
+          "item": "Sitrus Berry",
+          "ability": "Drizzle",
+          "nature": "Bold",
+          "moves": [
+            "Weather Ball",
+            "Hurricane",
+            "Tailwind",
+            "Helping Hand"
+          ]
+        },
+        {
+          "id": "basculegion-f",
+          "name": "Basculegion ♀",
+          "item": "Focus Sash",
+          "ability": "Swift Swim",
+          "nature": "Modest",
+          "moves": [
+            "Muddy Water",
+            "Shadow Ball",
+            "Ice Beam",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "Electric Seed",
+          "ability": "Unburden",
+          "nature": "Jolly",
+          "moves": [
+            "Dire Claw",
+            "Close Combat",
+            "Fake Out",
+            "Protect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "mariosr",
+      "playerDisplayName": "Mario Solano",
+      "country": "DO",
+      "placing": 8,
+      "record": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "staraptor",
+          "name": "Staraptor",
+          "item": "Staraptite",
+          "ability": "Intimidate",
+          "nature": "Jolly",
+          "moves": [
+            "Close Combat",
+            "Brave Bird",
+            "Tailwind",
+            "Protect"
+          ]
+        },
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "item": "Raichunite Y",
+          "ability": "Lightning Rod",
+          "nature": "Timid",
+          "moves": [
+            "Zap Cannon",
+            "Focus Blast",
+            "Fake Out",
+            "Protect"
+          ]
+        },
+        {
+          "id": "arcanine-hisui",
+          "name": "Hisuian Arcanine",
+          "item": "Focus Sash",
+          "ability": "Rock Head",
+          "nature": "Adamant",
+          "moves": [
+            "Flare Blitz",
+            "Extreme Speed",
+            "Head Smash",
+            "Protect"
+          ]
+        },
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "item": "Miracle Seed",
+          "ability": "Grassy Surge",
+          "nature": "Adamant",
+          "moves": [
+            "Wood Hammer",
+            "Grassy Glide",
+            "High Horsepower",
+            "Fake Out"
+          ]
+        },
+        {
+          "id": "milotic",
+          "name": "Milotic",
+          "item": "Leftovers",
+          "ability": "Competitive",
+          "nature": "Calm",
+          "moves": [
+            "Muddy Water",
+            "Coil",
+            "Hypnosis",
+            "Protect"
+          ]
+        },
+        {
+          "id": "gholdengo",
+          "name": "Gholdengo",
+          "item": "Life Orb",
+          "ability": "Good as Gold",
+          "nature": "Modest",
+          "moves": [
+            "Shadow Ball",
+            "Make It Rain",
+            "Nasty Plot",
+            "Protect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "galaxyzinho222",
+      "playerDisplayName": "Felipe Cavalheiro",
+      "country": "BR",
+      "placing": 9,
+      "record": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "item": "Sitrus Berry",
+          "ability": "Intimidate",
+          "nature": "Careful",
+          "moves": [
+            "Parting Shot",
+            "Throat Chop",
+            "Flare Blitz",
+            "Fake Out"
+          ]
+        },
+        {
+          "id": "kingambit",
+          "name": "Kingambit",
+          "item": "Chople Berry",
+          "ability": "Defiant",
+          "nature": "Adamant",
+          "moves": [
+            "Sucker Punch",
+            "Kowtow Cleave",
+            "Iron Head",
+            "Protect"
+          ]
+        },
+        {
+          "id": "charizard",
+          "name": "Charizard",
+          "item": "Charizardite Y",
+          "ability": "Solar Power",
+          "nature": "Modest",
+          "moves": [
+            "Heat Crash",
+            "Weather Ball",
+            "Ancient Power",
+            "Protect"
+          ]
+        },
+        {
+          "id": "garchomp",
+          "name": "Garchomp",
+          "item": "Lum Berry",
+          "ability": "Rough Skin",
+          "nature": "Adamant",
+          "moves": [
+            "Stomping Tantrum",
+            "Dragon Claw",
+            "Rock Slide",
+            "Protect"
+          ]
+        },
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "item": "Raichunite Y",
+          "ability": "Lightning Rod",
+          "nature": "Timid",
+          "moves": [
+            "Focus Blast",
+            "Fake Out",
+            "Zap Cannon",
+            "Protect"
+          ]
+        },
+        {
+          "id": "indeedee-f",
+          "name": "Indeedee ♀",
+          "item": "Colbur Berry",
+          "ability": "Psychic Surge",
+          "nature": "Relaxed",
+          "moves": [
+            "Follow Me",
+            "Trick Room",
+            "Psychic",
+            "Helping Hand"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "rafa_pokecentral",
+      "playerDisplayName": "Rafa PokeCentral",
+      "country": "BR",
+      "placing": 10,
+      "record": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "rillaboom",
+          "name": "Rillaboom",
+          "item": "Life Orb",
+          "ability": "Grassy Surge",
+          "nature": "Adamant",
+          "moves": [
+            "Fake Out",
+            "Grassy Glide",
+            "Wood Hammer",
+            "High Horsepower"
+          ]
+        },
+        {
+          "id": "salamence",
+          "name": "Salamence",
+          "item": "Salamencite",
+          "ability": "Intimidate",
+          "nature": "Timid",
+          "moves": [
+            "Hyper Voice",
+            "Flamethrower",
+            "Tailwind",
+            "Protect"
+          ]
+        },
+        {
+          "id": "pelipper",
+          "name": "Pelipper",
+          "item": "Focus Sash",
+          "ability": "Drizzle",
+          "nature": "Modest",
+          "moves": [
+            "Hurricane",
+            "Weather Ball",
+            "Tailwind",
+            "Protect"
+          ]
+        },
+        {
+          "id": "sneasler",
+          "name": "Sneasler",
+          "item": "White Herb",
+          "ability": "Unburden",
+          "nature": "Adamant",
+          "moves": [
+            "Close Combat",
+            "Dire Claw",
+            "Fake Out",
+            "Protect"
+          ]
+        },
+        {
+          "id": "raichu",
+          "name": "Raichu",
+          "item": "Raichunite Y",
+          "ability": "Lightning Rod",
+          "nature": "Timid",
+          "moves": [
+            "Focus Blast",
+            "Zap Cannon",
+            "Fake Out",
+            "Protect"
+          ]
+        },
+        {
+          "id": "archaludon",
+          "name": "Archaludon",
+          "item": "Leftovers",
+          "ability": "Stamina",
+          "nature": "Calm",
+          "moves": [
+            "Electro Shot",
+            "Dragon Pulse",
+            "Flash Cannon",
+            "Protect"
+          ]
+        }
+      ]
+    },
+    {
+      "tournamentId": "6ae2177222fd412b92a4ea35",
+      "tournamentName": "Cusca Champions Weekly ⚡ #19 (PCVGC)",
+      "tournamentCategory": "circuit",
+      "date": "2026-11-22T01:00:00.000Z",
+      "player": "gobinfr",
+      "playerDisplayName": "Gobin Hill",
+      "country": "US",
+      "placing": 11,
+      "record": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 0
+      },
+      "pokemon": [
+        {
+          "id": "tyranitar",
+          "name": "Tyranitar",
+          "item": "Tyranitarite",
+          "ability": "Sand Stream",
+          "nature": "Adamant",
+          "moves": [
+            "Rock Slide",
+            "High Horsepower",
+            "Knock Off",
+            "Protect"
+          ]
+        },
+        {
+          "id": "excadrill",
+          "name": "Excadrill",
+          "item": "Focus Sash",
+          "ability": "Sand Rush",
+          "nature": "Adamant",
+          "moves": [
+            "High Horsepower",
+            "Iron Head",
+            "Rock Slide",
+            "Protect"
+          ]
+        },
+        {
+          "id": "incineroar",
+          "name": "Incineroar",
+          "item": "Chople Berry",
+          "ability": "Intimidate",
+          "nature": "Impish",
+          "moves": [
+            "Darkest Lariat",
+            "Fake Out",
+            "Flare Blitz",
+            "Parting Shot"
+          ]
+        },
+        {
+          "id": "sinistcha",
+          "name": "Sinistcha",
+          "item": "Rocky Helmet",
+          "ability": "Hospitality",
+          "nature": "Relaxed",
+          "moves": [
+            "Matcha Gotcha",
+            "Strength Sap",
+            "Rage Powder",
+            "Protect"
+          ]
+        },
+        {
+          "id": "corviknight",
+          "name": "Corviknight",
+          "item": "Sitrus Berry",
+          "ability": "Mirror Armor",
+          "nature": "Serious",
+          "moves": [
+            "Iron Head",
+            "Body Press",
+            "Tailwind",
+            "Protect"
+          ]
+        },
+        {
+          "id": "gholdengo",
+          "name": "Gholdengo",
+          "item": "Life Orb",
+          "ability": "Good as Gold",
+          "nature": "Modest",
+          "moves": [
+            "Shadow Ball",
+            "Make It Rain",
+            "Nasty Plot",
+            "Protect"
+          ]
+        }
+      ]
+    }
+  ]
+}
