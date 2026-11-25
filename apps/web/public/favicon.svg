@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Contorno exterior negro -->
+  <circle cx="64" cy="68" r="46" fill="none" stroke="#111111" stroke-width="6" />
+
+  <!-- Ojo izquierdo -->
+  <ellipse cx="42" cy="48" rx="16" ry="26" transform="rotate(-12 42 48)" fill="#ffffff" stroke="#111111" stroke-width="5" />
+  <ellipse cx="43" cy="48" rx="8.5" ry="17" transform="rotate(-12 43 48)" fill="#67e8f9" />
+  <line x1="27" y1="49" x2="57" y2="47" stroke="#111111" stroke-width="3.5" />
+
+  <!-- Ojo derecho -->
+  <ellipse cx="86" cy="48" rx="16" ry="26" transform="rotate(12 86 48)" fill="#ffffff" stroke="#111111" stroke-width="5" />
+  <ellipse cx="85" cy="48" rx="8.5" ry="17" transform="rotate(12 85 48)" fill="#67e8f9" />
+  <line x1="71" y1="47" x2="101" y2="49" stroke="#111111" stroke-width="3.5" />
+
+  <!-- Sonrisa blanca en tres piezas -->
+  <path d="M46 74 Q53 77 59 77 L58 88 Q51 87 45 83 Z" fill="#ffffff" stroke="#111111" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M62 77.5 L66 77.5 L66 88.5 L62 88.5 Z" fill="#ffffff" stroke="#111111" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M69 77 Q75 77 82 74 L83 83 Q77 87 70 88 Z" fill="#ffffff" stroke="#111111" stroke-width="2.5" stroke-linejoin="round" />
+</svg>
