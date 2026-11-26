@@ -147,10 +147,10 @@ async function main() {
     }
   }
 
-  const pikaMap = await fetchPikalyticsRoster(reg.pikalyticsFormat, rankedSpecies, 80);
+  const pikaMap = await fetchPikalyticsRoster(reg.pikalyticsFormat, rankedSpecies);
 
   const pokemon: PokemonMetaStats[] = [];
-  for (const name of rankedSpecies.slice(0, 80)) {
+  for (const name of rankedSpecies) {
     const key = name.toLowerCase();
     const app = appearances.get(key);
     const pika = pikaMap.get(key);

@@ -28,6 +28,18 @@ function inferTeamCategory(tm: TournamentTeam): TournamentCategory {
   return "circuit";
 }
 
+function formatLastUpdatedDate(isoDate: string | undefined | null, lang: "es" | "en"): string | null {
+  if (!isoDate) return null;
+  const parsed = new Date(isoDate);
+  if (Number.isNaN(parsed.getTime())) return isoDate;
+  return new Intl.DateTimeFormat(lang === "es" ? "es-ES" : "en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(parsed);
+}
+
 function countUniqueTournaments(teams: readonly { tournamentId?: string | null; tournamentName?: string | null }[]): number {
   const ids = new Set<string>();
   for (const tm of teams) {
@@ -613,68 +625,78 @@ export default function App() {
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-500/15 text-orange-300 border border-orange-500/30">
                   {t.wipBadge}
                 </span>
-                <span className="text-xs font-mono text-slate-400">REG {currentReg.code}</span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mt-0.5">{t.appName}</h1>
               <p className="text-sm text-slate-400">{t.subtitle}</p>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5">
-            <label className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs font-semibold text-slate-200">
-              <span className="text-slate-400">
-                {lang === "es" ? "Regulación" : "Regulation"}
-              </span>
-              <select
-                value={currentReg.code}
-                onChange={(e) => setRegulationCode(e.target.value as RegulationCode)}
-                className="bg-slate-950 text-slate-100 focus:outline-none cursor-pointer"
-                aria-label={lang === "es" ? "Selector de regulación" : "Regulation selector"}
-              >
-                {REGULATIONS.map((reg) => {
-                  const isUpcoming = reg.status === "upcoming";
-                  const baseLabel = reg.shortLabel[lang].replace(/\s*\((Próx\.|Soon)\)/i, "").trim();
-                  return (
-                    <option
-                      key={reg.code}
-                      value={reg.code}
-                      disabled={isUpcoming}
-                    >
-                      {isUpcoming ? `${baseLabel} — Soon` : reg.shortLabel[lang]}
-                    </option>
-                  );
-                })}
-              </select>
-            </label>
+          <div className="flex flex-col items-start sm:items-end gap-1.5">
+            <div className="flex flex-wrap items-center gap-2.5">
+              <label className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-950 px-2.5 py-1.5 text-xs font-semibold text-slate-200">
+                <span className="text-slate-400">
+                  {lang === "es" ? "Regulación" : "Regulation"}
+                </span>
+                <select
+                  value={currentReg.code}
+                  onChange={(e) => setRegulationCode(e.target.value as RegulationCode)}
+                  className="bg-slate-950 text-slate-100 focus:outline-none cursor-pointer"
+                  aria-label={lang === "es" ? "Selector de regulación" : "Regulation selector"}
+                >
+                  {REGULATIONS.map((reg) => {
+                    const isUpcoming = reg.status === "upcoming";
+                    const baseLabel = reg.shortLabel[lang].replace(/\s*\((Próx\.|Soon)\)/i, "").trim();
+                    return (
+                      <option
+                        key={reg.code}
+                        value={reg.code}
+                        disabled={isUpcoming}
+                      >
+                        {isUpcoming ? `${baseLabel} — Soon` : reg.shortLabel[lang]}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
 
-          <div
-            className="inline-flex rounded-lg border border-slate-700 bg-slate-950 p-1 text-xs font-semibold"
-            role="group"
-            aria-label="Language selector"
-          >
-            <button
-              type="button"
-              onClick={() => setLang("es")}
-              className={`px-3 py-1.5 rounded-md transition ${
-                lang === "es"
-                  ? "bg-orange-500 text-slate-950"
-                  : "text-slate-300 hover:text-white"
-              }`}
-            >
-              ES
-            </button>
-            <button
-              type="button"
-              onClick={() => setLang("en")}
-              className={`px-3 py-1.5 rounded-md transition ${
-                lang === "en"
-                  ? "bg-orange-500 text-slate-950"
-                  : "text-slate-300 hover:text-white"
-              }`}
-            >
-              EN
-            </button>
-          </div>
+              <div
+                className="inline-flex rounded-lg border border-slate-700 bg-slate-950 p-1 text-xs font-semibold"
+                role="group"
+                aria-label="Language selector"
+              >
+                <button
+                  type="button"
+                  onClick={() => setLang("es")}
+                  className={`px-3 py-1.5 rounded-md transition ${
+                    lang === "es"
+                      ? "bg-orange-500 text-slate-950"
+                      : "text-slate-300 hover:text-white"
+                  }`}
+                >
+                  ES
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLang("en")}
+                  className={`px-3 py-1.5 rounded-md transition ${
+                    lang === "en"
+                      ? "bg-orange-500 text-slate-950"
+                      : "text-slate-300 hover:text-white"
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+
+            {snapshot?.meta?.generatedAt && (
+              <span className="text-xs text-slate-400">
+                {lang === "es" ? "Actualizado:" : "Updated:"}{" "}
+                <span className="text-slate-300">
+                  {formatLastUpdatedDate(snapshot.meta.generatedAt, lang)}
+                </span>
+              </span>
+            )}
           </div>
         </div>
       </header>

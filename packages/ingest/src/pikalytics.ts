@@ -217,9 +217,13 @@ export async function fetchPikalyticsPokemon(
 export async function fetchPikalyticsRoster(
   formatCode: string,
   speciesList: string[],
-  maxSpecies = 80
+  maxSpecies?: number
 ) {
-  const unique = Array.from(new Set(speciesList)).slice(0, maxSpecies);
+  const deduped = Array.from(new Set(speciesList));
+  const unique =
+    typeof maxSpecies === "number" && maxSpecies > 0
+      ? deduped.slice(0, maxSpecies)
+      : deduped;
   console.log(`Pikalytics: consultando ${unique.length} especies para ${formatCode}...`);
   const results = new Map<string, Omit<PokemonMetaStats, "tournamentAppearances" | "natures">>();
 
