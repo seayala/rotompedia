@@ -1195,34 +1195,34 @@ export default function App() {
                   <p className="text-sm text-slate-400">{t.noResults}</p>
                 ) : (
                   filteredCores.map((core, i) => (
-                    <div
-                      key={`${core.pokemon.join("-")}-${i}`}
-                      className="min-w-0 rounded-xl border border-slate-800 bg-slate-900/60 p-4 flex items-center justify-between gap-4"
-                    >
-                      <div className="min-w-0 flex-1">
-                        <div className="text-xs font-mono text-slate-400">#{i + 1}</div>
-                        <div className="mt-1.5 flex flex-wrap items-center gap-1 sm:gap-1.5">
-                          {core.pokemon.slice(0, 6).map((mon: string, mIdx: number) => (
-                            <span
-                              key={`${mon}-${mIdx}`}
-                              title={mon}
-                              aria-label={mon}
-                              className="inline-flex items-center justify-center shrink-0"
-                            >
-                              <PokemonSprite name={mon} eager sizeClass="w-10 h-10 sm:w-[52px] sm:h-[52px]" />
-                            </span>
-                          ))}
+                      <div
+                        key={`${core.pokemon.join("-")}-${i}`}
+                        className="min-w-0 rounded-xl border border-slate-800 bg-slate-900/60 p-3.5 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4"
+                      >
+                        <div className="min-w-0 flex-1">
+                          <div className="text-xs font-mono text-slate-400">#{i + 1}</div>
+                          <div className="mt-1.5 grid grid-cols-6 sm:flex sm:flex-wrap items-center gap-1 sm:gap-1.5 w-full sm:w-auto">
+                            {core.pokemon.slice(0, 6).map((mon: string, mIdx: number) => (
+                              <span
+                                key={`${mon}-${mIdx}`}
+                                title={mon}
+                                aria-label={mon}
+                                className="inline-flex items-center justify-center min-w-0"
+                              >
+                                <PokemonSprite name={mon} eager sizeClass="w-9 h-9 sm:w-[52px] sm:h-[52px]" />
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex items-center justify-between sm:block sm:text-right font-mono text-xs shrink-0 sm:pl-2 border-t border-slate-800/70 pt-2 sm:border-0 sm:pt-0">
+                          <div className="text-orange-300 font-semibold whitespace-nowrap">{core.uses} uses</div>
+                          {core.winRate != null ? (
+                            <div className={`${winRateColorClass(core.winRate)} whitespace-nowrap`}>
+                              {`${core.winRate.toFixed(1)}% WR`}
+                            </div>
+                          ) : null}
                         </div>
                       </div>
-                      <div className="text-right font-mono text-xs shrink-0 pl-2">
-                        <div className="text-orange-300 font-semibold">{core.uses} uses</div>
-                        {core.winRate != null ? (
-                          <div className={winRateColorClass(core.winRate)}>
-                            {`${core.winRate.toFixed(1)}% WR`}
-                          </div>
-                        ) : null}
-                      </div>
-                    </div>
                   ))
                 )}
               </section>
