@@ -1032,7 +1032,7 @@ export default function App() {
                 </div>
 
                 {/* Panel lateral de detalle */}
-                <div className="lg:col-span-5 lg:sticky lg:top-6 rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-3">
+                <div className="order-first lg:order-none lg:col-span-5 lg:sticky lg:top-6 rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-3">
                   {selectedMon ? (
                     <>
                       <div className="flex items-center justify-between gap-3 border-b border-slate-800 pb-3">
