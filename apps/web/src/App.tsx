@@ -460,6 +460,97 @@ function RotomNetworkBackground() {
 
   return <canvas id="rotom-net" aria-hidden="true" />;
 }
+function winRateColorClass(wr: number | null | undefined): string {
+  if (wr === null || wr === undefined || Number.isNaN(wr)) return "text-slate-400";
+  return wr >= 50 ? "text-emerald-300/85" : "text-rose-300/80";
+}
+
+const TYPE_META: Record<
+  string,
+  { bg: string; border: string; text: string; glyph: string }
+> = {
+  normal: { bg: "bg-stone-700/80", border: "border-stone-500/50", text: "text-stone-100", glyph: "●" },
+  fire: { bg: "bg-orange-950/85", border: "border-orange-500/50", text: "text-orange-200", glyph: "🔥" },
+  water: { bg: "bg-sky-950/85", border: "border-sky-500/50", text: "text-sky-200", glyph: "💧" },
+  electric: { bg: "bg-amber-950/85", border: "border-amber-400/50", text: "text-amber-200", glyph: "⚡" },
+  grass: { bg: "bg-emerald-950/85", border: "border-emerald-500/50", text: "text-emerald-200", glyph: "🌿" },
+  ice: { bg: "bg-cyan-950/85", border: "border-cyan-400/50", text: "text-cyan-200", glyph: "❄" },
+  fighting: { bg: "bg-rose-950/85", border: "border-rose-500/50", text: "text-rose-200", glyph: "🥊" },
+  poison: { bg: "bg-purple-950/85", border: "border-purple-400/50", text: "text-purple-200", glyph: "☠" },
+  ground: { bg: "bg-amber-900/75", border: "border-amber-600/50", text: "text-amber-100", glyph: "⛰" },
+  flying: { bg: "bg-indigo-950/85", border: "border-indigo-400/50", text: "text-indigo-200", glyph: "🕊" },
+  psychic: { bg: "bg-pink-950/85", border: "border-pink-400/50", text: "text-pink-200", glyph: "🔮" },
+  bug: { bg: "bg-lime-950/85", border: "border-lime-500/50", text: "text-lime-200", glyph: "🐛" },
+  rock: { bg: "bg-yellow-950/80", border: "border-yellow-600/50", text: "text-yellow-200", glyph: "🪨" },
+  ghost: { bg: "bg-violet-950/85", border: "border-violet-500/50", text: "text-violet-200", glyph: "👻" },
+  dragon: { bg: "bg-blue-950/85", border: "border-indigo-500/50", text: "text-blue-200", glyph: "🐉" },
+  dark: { bg: "bg-zinc-900/90", border: "border-zinc-600/50", text: "text-zinc-200", glyph: "🌑" },
+  steel: { bg: "bg-slate-800/90", border: "border-slate-500/50", text: "text-slate-200", glyph: "⚙" },
+  fairy: { bg: "bg-fuchsia-950/85", border: "border-fuchsia-400/50", text: "text-fuchsia-200", glyph: "✦" },
+};
+
+function TypeIconBadge({ label }: { label: string }) {
+  const match = label.match(/^([^(]+?)(?:\s*\(([^)]+)\))?$/);
+  const rawName = (match?.[1] ?? label).trim();
+  const mult = (match?.[2] ?? "").trim();
+  const key = rawName.toLowerCase().replace(/[^a-z]/g, "");
+  const meta = TYPE_META[key] ?? {
+    bg: "bg-slate-800/90",
+    border: "border-slate-700/80",
+    text: "text-slate-200",
+    glyph: "•",
+  };
+
+  return (
+    <span
+      title={label}
+      aria-label={label}
+      className={`inline-flex items-center gap-1 px-2 py-1 rounded border text-[11px] leading-none ${meta.bg} ${meta.border} ${meta.text}`}
+    >
+      <svg
+        viewBox="0 0 16 16"
+        className="w-3.5 h-3.5 shrink-0"
+        aria-hidden="true"
+      >
+        <circle cx="8" cy="8" r="7" fill="currentColor" fillOpacity="0.22" />
+        <text
+          x="8"
+          y="11.2"
+          textAnchor="middle"
+          fontSize="9"
+          fill="currentColor"
+        >
+          {meta.glyph}
+        </text>
+      </svg>
+      {mult ? (
+        <span className="font-mono text-[10px] font-semibold opacity-95">{mult}</span>
+      ) : (
+        <span className="sr-only">{rawName}</span>
+      )}
+    </span>
+  );
+}
+
+function formatTeamPokePaste(tm: any): string {
+  const lines: string[] = [];
+  lines.push(`=== ${tm.tournamentName} — ${tm.playerDisplayName} (#${tm.placing ?? "?"}) ===`);
+  lines.push("");
+  for (const m of tm.pokemon ?? []) {
+    const header = m.item ? `${m.name} @ ${m.item}` : `${m.name}`;
+    lines.push(header);
+    if (m.ability) lines.push(`Ability: ${m.ability}`);
+    if (m.teraType) lines.push(`Tera Type: ${m.teraType}`);
+    if (Array.isArray(m.moves) && m.moves.length > 0) {
+      for (const mv of m.moves) {
+        if (mv) lines.push(`- ${mv}`);
+      }
+    }
+    lines.push("");
+  }
+  return lines.join("\n").trim();
+}
+
 export default function App() {
   const { lang, setLang, t } = useI18n();
   const [regulationCode, setRegulationCode] = useState<RegulationCode>(DEFAULT_REGULATION_CODE);
@@ -472,6 +563,8 @@ export default function App() {
   const [tab, setTab] = useState<Tab>("usage");
   const [tournamentFilter, setTournamentFilter] = useState<TournamentFilter>("all");
   const [selectedTournamentId, setSelectedTournamentId] = useState<string | null>(null);
+  const [highlightedPasteTeamKey, setHighlightedPasteTeamKey] = useState<string | null>(null);
+  const [copiedPasteTeamKey, setCopiedPasteTeamKey] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
@@ -735,31 +828,33 @@ export default function App() {
 
         {!loading && !error && snapshot && (
           <>
-            {/* KPIs del snapshot */}
-            <section className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
-                <div className="text-xs text-slate-400">{t.tournaments}</div>
-                <div className="text-2xl font-bold mt-1 text-orange-400">
-                  {snapshot.meta.sources.limitlessTournaments}
+            <div className="flex flex-col lg:flex-row items-start gap-5">
+              {/* KPIs del snapshot en lateral izquierdo */}
+              <aside className="grid grid-cols-2 lg:grid-cols-1 gap-3 lg:w-44 shrink-0 self-start">
+                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+                  <div className="text-[11px] text-slate-400">{t.tournaments}</div>
+                  <div className="text-xl font-bold mt-1 text-orange-400">
+                    {snapshot.meta.sources.limitlessTournaments}
+                  </div>
                 </div>
-              </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
-                <div className="text-xs text-slate-400">{t.teamsAnalyzed}</div>
-                <div className="text-2xl font-bold mt-1">
-                  {snapshot.meta.sources.limitlessTeams.toLocaleString()}
+                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+                  <div className="text-[11px] text-slate-400">{t.teamsAnalyzed}</div>
+                  <div className="text-xl font-bold mt-1">
+                    {snapshot.meta.sources.limitlessTeams.toLocaleString()}
+                  </div>
                 </div>
-              </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
-                <div className="text-xs text-slate-400">{t.trackedPokemon}</div>
-                <div className="text-2xl font-bold mt-1">{snapshot.pokemon.length}</div>
-              </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-4">
-                <div className="text-xs text-slate-400">{t.topCores}</div>
-                <div className="text-2xl font-bold mt-1">{snapshot.cores.length}</div>
-              </div>
-            </section>
+                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+                  <div className="text-[11px] text-slate-400">{t.trackedPokemon}</div>
+                  <div className="text-xl font-bold mt-1">{snapshot.pokemon.length}</div>
+                </div>
+                <div className="rounded-xl border border-slate-800 bg-slate-900/60 p-3.5">
+                  <div className="text-[11px] text-slate-400">{t.topCores}</div>
+                  <div className="text-xl font-bold mt-1">{snapshot.cores.length}</div>
+                </div>
+              </aside>
 
-            {/* Pestañas + Buscador */}
+              <div className="flex-1 min-w-0 w-full space-y-6">
+{/* Pestañas + Buscador */}
             <section className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="inline-flex rounded-xl border border-slate-800 bg-slate-900/80 p-1">
                 <button
@@ -849,7 +944,7 @@ export default function App() {
                                 <td className="py-2.5 px-3 text-right font-mono">
                                   {mon.usage.toFixed(1)}%
                                 </td>
-                                <td className="py-2.5 px-3 text-right font-mono text-slate-300">
+                                <td className={`py-2.5 px-3 text-right font-mono ${winRateColorClass(mon.winRate)}`}>
                                   {mon.winRate !== null ? `${mon.winRate.toFixed(1)}%` : "—"}
                                 </td>
                                 <td className="py-2.5 px-3 text-right font-mono text-slate-400">
@@ -875,9 +970,11 @@ export default function App() {
                             <h2 className="text-xl font-bold">{selectedMon.name}</h2>
                           <p className="text-xs text-slate-400 font-mono">
                             {t.colUsage}: {selectedMon.usage.toFixed(2)}%
-                            {selectedMon.winRate !== null
-                              ? ` · WR: ${selectedMon.winRate.toFixed(2)}%`
-                              : ""}
+                            {selectedMon.winRate !== null ? (
+                              <span className={winRateColorClass(selectedMon.winRate)}>
+                                {` · WR: ${selectedMon.winRate.toFixed(2)}%`}
+                              </span>
+                            ) : null}
                           </p>
                           </div>
                         </div>
@@ -893,36 +990,48 @@ export default function App() {
                           <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                             {lang === "es" ? "Matchups defensivos" : "Defensive matchups"}
                           </h3>
-                          <div className="space-y-1 text-xs">
-                            <div className="flex items-start justify-between gap-2">
+                          <div className="space-y-2 text-xs">
+                            <div className="flex items-center justify-between gap-2">
                               <span className="text-red-300/90 shrink-0">
                                 {lang === "es" ? "Débil ante" : "Weak to"}
                               </span>
-                              <span className="text-right text-slate-200">
-                                {selectedMon.matchups.weakTo.length > 0
-                                  ? selectedMon.matchups.weakTo.join(", ")
-                                  : "—"}
-                              </span>
+                              <div className="flex flex-wrap justify-end gap-1.5">
+                                {selectedMon.matchups.weakTo.length > 0 ? (
+                                  selectedMon.matchups.weakTo.map((tp: string) => (
+                                    <TypeIconBadge key={`w-${tp}`} label={tp} />
+                                  ))
+                                ) : (
+                                  <span className="text-slate-400">—</span>
+                                )}
+                              </div>
                             </div>
-                            <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center justify-between gap-2 border-t border-slate-800/70 pt-2">
                               <span className="text-emerald-300/90 shrink-0">
                                 {lang === "es" ? "Resiste" : "Resists"}
                               </span>
-                              <span className="text-right text-slate-200">
-                                {selectedMon.matchups.resists.length > 0
-                                  ? selectedMon.matchups.resists.join(", ")
-                                  : "—"}
-                              </span>
+                              <div className="flex flex-wrap justify-end gap-1.5">
+                                {selectedMon.matchups.resists.length > 0 ? (
+                                  selectedMon.matchups.resists.map((tp: string) => (
+                                    <TypeIconBadge key={`r-${tp}`} label={tp} />
+                                  ))
+                                ) : (
+                                  <span className="text-slate-400">—</span>
+                                )}
+                              </div>
                             </div>
-                            <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center justify-between gap-2 border-t border-slate-800/70 pt-2">
                               <span className="text-sky-300/90 shrink-0">
                                 {lang === "es" ? "Inmune a" : "Immune to"}
                               </span>
-                              <span className="text-right text-slate-200">
-                                {selectedMon.matchups.immuneTo.length > 0
-                                  ? selectedMon.matchups.immuneTo.join(", ")
-                                  : "—"}
-                              </span>
+                              <div className="flex flex-wrap justify-end gap-1.5">
+                                {selectedMon.matchups.immuneTo.length > 0 ? (
+                                  selectedMon.matchups.immuneTo.map((tp: string) => (
+                                    <TypeIconBadge key={`i-${tp}`} label={tp} />
+                                  ))
+                                ) : (
+                                  <span className="text-slate-400">—</span>
+                                )}
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -979,7 +1088,11 @@ export default function App() {
                         <div className="text-orange-300 font-semibold">{core.uses} uses</div>
                         <div className="text-slate-400">
                           {core.usage.toFixed(1)}%
-                          {core.winRate != null ? ` · ${core.winRate.toFixed(1)}% WR` : ""}
+                          {core.winRate != null ? (
+                            <span className={winRateColorClass(core.winRate)}>
+                              {` · ${core.winRate.toFixed(1)}% WR`}
+                            </span>
+                          ) : null}
                         </div>
                       </div>
                     </div>
@@ -1089,9 +1202,30 @@ export default function App() {
                       <div className="space-y-3">
                         {filteredTeams.map((tm, idx) => {
                           const cat = inferTeamCategory(tm);
+                          const teamKey = `${tm.tournamentId}-${tm.player}-${idx}`;
+                          const isTop8 = tm.placing !== null && tm.placing >= 1 && tm.placing <= 8;
+                          const isPasteCardActive = highlightedPasteTeamKey === teamKey;
+                          const isCopied = copiedPasteTeamKey === teamKey;
+                          const pasteText = isTop8 ? formatTeamPokePaste(tm) : "";
+
+                          const handleCopyPaste = async () => {
+                            if (!pasteText) return;
+                            try {
+                              if (navigator?.clipboard?.writeText) {
+                                await navigator.clipboard.writeText(pasteText);
+                              }
+                              setCopiedPasteTeamKey(teamKey);
+                              setTimeout(() => {
+                                setCopiedPasteTeamKey((prev) => (prev === teamKey ? null : prev));
+                              }, 1800);
+                            } catch {
+                              setCopiedPasteTeamKey(null);
+                            }
+                          };
+
                           return (
                             <div
-                              key={`${tm.tournamentId}-${tm.player}-${idx}`}
+                              key={teamKey}
                               className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-2.5"
                             >
                               <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
@@ -1104,35 +1238,77 @@ export default function App() {
                                   <span className="font-semibold text-sm text-slate-100">
                                     {tm.playerDisplayName}
                                   </span>
-                                  <span className="font-mono text-slate-400">
-                                    ({tm.record.wins}W-{tm.record.losses}L-{tm.record.ties}T)
-                                  </span>
+                                  {cat !== "major" && (
+                                    <span className="font-mono text-slate-400">
+                                      ({tm.record.wins}W-{tm.record.losses}L-{tm.record.ties}T)
+                                    </span>
+                                  )}
                                   <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">
                                     {categoryBadgeLabel(cat)}
                                   </span>
                                 </div>
-                                <span className="text-slate-400">{tm.tournamentName}</span>
+                                <div className="flex items-center gap-2.5">
+                                  <span className="text-slate-400">{tm.tournamentName}</span>
+                                  {isTop8 && (
+                                    <button
+                                      type="button"
+                                      onClick={() =>
+                                        setHighlightedPasteTeamKey((prev) =>
+                                          prev === teamKey ? null : teamKey
+                                        )
+                                      }
+                                      className={`px-2.5 py-1 rounded-lg border text-[11px] font-mono font-medium transition ${
+                                        isPasteCardActive
+                                          ? "border-orange-400/70 bg-orange-500/20 text-orange-200"
+                                          : "border-orange-500/35 bg-orange-500/10 text-orange-300 hover:border-orange-400/60 hover:bg-orange-500/15"
+                                      }`}
+                                    >
+                                      PokePaste
+                                    </button>
+                                  )}
+                                </div>
                               </div>
 
-                              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
-                                {tm.pokemon.map((m, mIdx) => (
+                              <div className="flex items-center justify-between gap-2 sm:gap-3 w-full py-1">
+                                {tm.pokemon.map((m: any, mIdx: number) => (
                                   <div
                                     key={`${m.id}-${mIdx}`}
-                                    className="rounded-lg border border-slate-800/90 bg-slate-950/70 px-2.5 py-2 text-xs"
+                                    className="relative flex-1 flex items-center justify-center h-20 min-w-[64px] select-none"
                                   >
-                                    <div className="flex items-center gap-2 min-w-0">
-                                      <PokemonSprite name={m.name} sizeClass="w-7 h-7" />
-                                      <div className="font-medium text-slate-200 truncate">{m.name}</div>
+                                    <div className="relative inline-flex items-center justify-center w-16 h-16">
+                                      <PokemonSprite name={m.name} sizeClass="w-16 h-16" />
+                                      {m.item ? (
+                                        <span className="mt-0.5 max-w-[76px] truncate rounded bg-slate-800/90 border border-slate-700/70 px-1.5 py-0.5 text-[10px] font-mono text-slate-300">
+                                          {m.item}
+                                        </span>
+                                      ) : null}
                                     </div>
-                                    <div className="text-slate-400 truncate mt-0.5">{m.item ?? "—"}</div>
-                                    {m.nature && (
-                                      <div className="text-[11px] font-mono text-orange-300/80 truncate">
-                                        {m.nature}
-                                      </div>
-                                    )}
                                   </div>
                                 ))}
                               </div>
+
+                              {isTop8 && isPasteCardActive && (
+                                <div className="space-y-1.5">
+                                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                                    <span>PokePaste (Top 8)</span>
+                                    <button
+                                      type="button"
+                                      onClick={handleCopyPaste}
+                                      className="font-mono text-orange-300 hover:text-orange-200"
+                                    >
+                                      {isCopied
+                                        ? (lang === "es" ? "¡Copiado!" : "Copied!")
+                                        : (lang === "es" ? "Copiar PokePaste" : "Copy PokePaste")}
+                                    </button>
+                                  </div>
+                                  <pre
+                                    onClick={handleCopyPaste}
+                                    className="max-h-64 overflow-auto cursor-pointer rounded-lg border border-orange-500/30 bg-slate-950/90 p-3 text-[11px] font-mono text-slate-200 whitespace-pre-wrap hover:border-orange-400/50 transition"
+                                  >
+                                    {pasteText}
+                                  </pre>
+                                </div>
+                              )}
                             </div>
                           );
                         })}
@@ -1142,6 +1318,8 @@ export default function App() {
                 )}
               </section>
             )}
+              </div>
+            </div>
           </>
         )}
       </main>
