@@ -1111,6 +1111,7 @@ export default function App() {
 
                       <DetailList
                         title={lang === "es" ? "Objetos comunes" : "Common items"}
+                        kind="item"
                         items={selectedMon.items.slice(0, 5)}
                       />
                       <DetailList
@@ -1131,7 +1132,16 @@ export default function App() {
                       />
                       <DetailList
                         title={lang === "es" ? "Compañeros frecuentes" : "Common teammates"}
+                        kind="pokemon"
                         items={selectedMon.teammates.slice(0, 5)}
+                        onSelectPokemon={(mateName) => {
+                          const target = snapshot.pokemon.find(
+                            (p: any) => p.name.toLowerCase() === mateName.toLowerCase()
+                          );
+                          if (target) {
+                            setSelectedId(target.id);
+                          }
+                        }}
                       />
                     </>
                   ) : (
@@ -1184,6 +1194,11 @@ export default function App() {
             {/* Vista 3: Equipos de torneo */}
             {tab === "teams" && (
               <section className="space-y-4">
+                <p className="text-xs text-slate-400">
+                  {lang === "es"
+                    ? "Disponibles los pokepaste de los equipos del Top 8 de cada torneo."
+                    : "PokePaste available for Top 8 teams in each tournament."}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
@@ -1332,18 +1347,34 @@ export default function App() {
                                   {isTop8 && (
                                     <button
                                       type="button"
-                                      onClick={() =>
-                                        setHighlightedPasteTeamKey((prev) =>
-                                          prev === teamKey ? null : teamKey
-                                        )
-                                      }
+                                      onClick={async () => {
+                                        const willOpen = highlightedPasteTeamKey !== teamKey;
+                                        setHighlightedPasteTeamKey(willOpen ? teamKey : null);
+                                        if (willOpen && pasteText) {
+                                          try {
+                                            if (navigator?.clipboard?.writeText) {
+                                              await navigator.clipboard.writeText(pasteText);
+                                            }
+                                            setCopiedPasteTeamKey(teamKey);
+                                            setTimeout(() => {
+                                              setCopiedPasteTeamKey((prev) =>
+                                                prev === teamKey ? null : prev
+                                              );
+                                            }, 2000);
+                                          } catch {
+                                            setCopiedPasteTeamKey(null);
+                                          }
+                                        }
+                                      }}
                                       className={`px-2.5 py-1 rounded-lg border text-[11px] font-mono font-medium transition ${
-                                        isPasteCardActive
+                                        isPasteCardActive || isCopied
                                           ? "border-orange-400/70 bg-orange-500/20 text-orange-200"
                                           : "border-orange-500/35 bg-orange-500/10 text-orange-300 hover:border-orange-400/60 hover:bg-orange-500/15"
                                       }`}
                                     >
-                                      PokePaste
+                                      {isCopied
+                                        ? (lang === "es" ? "PokePaste · Copiado" : "PokePaste · Copied")
+                                        : "PokePaste"}
                                     </button>
                                   )}
                                 </div>
@@ -1358,9 +1389,10 @@ export default function App() {
                                     <div className="relative inline-flex items-center justify-center w-16 h-16">
                                       <PokemonSprite name={m.name} sizeClass="w-16 h-16" />
                                       {m.item ? (
-                                        <span className="mt-0.5 max-w-[76px] truncate rounded bg-slate-800/90 border border-slate-700/70 px-1.5 py-0.5 text-[10px] font-mono text-slate-300">
-                                          {m.item}
-                                        </span>
+                                        <ItemSpriteIcon
+                                          name={String(m.item)}
+                                          className="absolute bottom-0 right-0 w-6 h-6 object-contain drop-shadow pointer-events-none"
+                                        />
                                       ) : null}
                                     </div>
                                   </div>
@@ -1371,15 +1403,11 @@ export default function App() {
                                 <div className="space-y-1.5">
                                   <div className="flex items-center justify-between text-[11px] text-slate-400">
                                     <span>PokePaste (Top 8)</span>
-                                    <button
-                                      type="button"
-                                      onClick={handleCopyPaste}
-                                      className="font-mono text-orange-300 hover:text-orange-200"
-                                    >
+                                    <span className="font-mono text-emerald-300/90">
                                       {isCopied
-                                        ? (lang === "es" ? "¡Copiado!" : "Copied!")
-                                        : (lang === "es" ? "Copiar PokePaste" : "Copy PokePaste")}
-                                    </button>
+                                        ? (lang === "es" ? "Copiado al portapapeles" : "Copied to clipboard")
+                                        : ""}
+                                    </span>
                                   </div>
                                   <pre
                                     onClick={handleCopyPaste}
@@ -1411,24 +1439,146 @@ export default function App() {
   );
 }
 
+const ITEM_SLUG_ALIASES: Record<string, string[]> = {
+  "king-s-rock": ["kings-rock"],
+  "kings-rock": ["kings-rock", "king-s-rock"],
+  "miracleseed": ["miracle-seed"],
+  "miracle-seed": ["miracle-seed", "miracleseed"],
+  "mysticwater": ["mystic-water"],
+  "mystic-water": ["mystic-water", "mysticwater"],
+  "sharpbeak": ["sharp-beak"],
+  "sharp-beak": ["sharp-beak", "sharpbeak"],
+  "culbur-berry": ["colbur-berry"],
+  "frosslasite": ["froslassite"],
+  "leek": ["leek", "stick"],
+};
+
+function getItemSpriteCandidates(rawItem: string): string[] {
+  const clean = String(rawItem ?? "").trim();
+  if (!clean) return [];
+  const lower = clean.toLowerCase();
+  if (lower === "nothing" || lower === "other" || lower === "none") return [];
+
+  const slug = lower
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  if (!slug) return [];
+
+  const candidates = new Set<string>([slug, slug.replace(/-/g, "")]);
+  const aliases = ITEM_SLUG_ALIASES[slug] ?? [];
+  for (const alias of aliases) {
+    candidates.add(alias);
+    candidates.add(alias.replace(/-/g, ""));
+  }
+
+  const rawBase = String(import.meta.env.BASE_URL ?? "/");
+  const normalizedBase = rawBase.endsWith("/") ? rawBase : `${rawBase}/`;
+
+  const urls: string[] = [];
+  for (const c of candidates) {
+    if (c) urls.push(`${normalizedBase}items/${c}.png`);
+  }
+  return urls;
+}
+
+function ItemSpriteIcon({
+  name,
+  className = "w-5 h-5 object-contain shrink-0",
+}: {
+  name: string;
+  className?: string;
+}) {
+  const candidates = getItemSpriteCandidates(name);
+  const [idx, setIdx] = useState(0);
+  const [exhausted, setExhausted] = useState(false);
+
+  if (candidates.length === 0 || exhausted) return null;
+  const currentSrc = candidates[Math.min(idx, candidates.length - 1)];
+
+  return (
+    <img
+      key={`${name}-${currentSrc}`}
+      src={currentSrc}
+      alt={name}
+      title={name}
+      loading="lazy"
+      onError={() => {
+        if (idx + 1 < candidates.length) {
+          setIdx((prev) => prev + 1);
+        } else {
+          setExhausted(true);
+        }
+      }}
+      className={className}
+    />
+  );
+}
+
 function DetailList({
   title,
   items,
+  kind = "generic",
+  onSelectPokemon,
 }: {
   title: string;
   items: { name: string; usage: number }[];
+  kind?: "item" | "pokemon" | "generic";
+  onSelectPokemon?: (name: string) => void;
 }) {
   if (items.length === 0) return null;
+  const maxUsage = Math.max(...items.map((x) => x.usage), 1);
+
+  const renderLeadingVisual = (name: string) => {
+    if (kind === "pokemon") {
+      return (
+        <span className="inline-flex items-center justify-center w-6 h-6 shrink-0">
+          <PokemonSprite name={name} sizeClass="w-6 h-6" />
+        </span>
+      );
+    }
+    if (kind === "item") {
+      return <ItemSpriteIcon name={name} className="w-5 h-5 object-contain shrink-0" />;
+    }
+    return null;
+  };
+
   return (
-    <div className="space-y-1.5">
+    <div className="space-y-2">
       <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">{title}</h3>
-      <ul className="space-y-1">
-        {items.map((entry) => (
-          <li key={entry.name} className="flex items-center justify-between text-xs">
-            <span className="text-slate-200">{entry.name}</span>
-            <span className="font-mono text-slate-400">{entry.usage.toFixed(1)}%</span>
-          </li>
-        ))}
+      <ul className="space-y-1.5">
+        {items.map((entry) => {
+          const pctWidth = Math.min(100, Math.max(4, (entry.usage / maxUsage) * 100));
+          const isClickableMon = kind === "pokemon" && typeof onSelectPokemon === "function";
+          return (
+            <li
+              key={entry.name}
+              onClick={isClickableMon ? () => onSelectPokemon(entry.name) : undefined}
+              className={`flex items-center justify-between gap-3 text-xs rounded-md px-1.5 py-1 transition ${
+                isClickableMon
+                  ? "cursor-pointer hover:bg-slate-800/70"
+                  : "hover:bg-slate-900/50"
+              }`}
+            >
+              <div className="flex items-center gap-2 min-w-0">
+                {renderLeadingVisual(entry.name)}
+                <span className="text-slate-200 truncate">{entry.name}</span>
+              </div>
+              <div className="flex items-center gap-2.5 shrink-0">
+                <div className="w-14 h-1.5 rounded-full bg-slate-800 overflow-hidden hidden sm:block">
+                  <div
+                    className="h-full rounded-full bg-orange-400/70"
+                    style={{ width: `${pctWidth}%` }}
+                  />
+                </div>
+                <span className="font-mono text-slate-300 w-12 text-right">
+                  {entry.usage.toFixed(1)}%
+                </span>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
