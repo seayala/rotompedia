@@ -175,16 +175,33 @@ function normalizePokemonKey(name: string): string {
   const base = raw
     .replace(/^female\s+/, "")
     .replace(/[♀]/g, "")
-    .replace(/['’]/g, "-")
+    .replace(/['’.]/g, "")
     .replace(/\s*\((hisuian|galarian|alolan|paldean)\)\s*/g, "-$1")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
   return hasFemaleMarker && !base.endsWith("-f") ? `${base}-f` : base;
 }
 
+const EXTRA_SPRITE_SLUGS: Record<string, string> = {
+  "sirfetch": "sirfetchd",
+  "sirfetchd": "sirfetchd",
+  "paldean-tauros": "tauros-paldeacombat",
+  "paldean-tauros-combat-breed": "tauros-paldeacombat",
+  "paldean-tauros-blaze-breed": "tauros-paldeablaze",
+  "paldean-tauros-aqua-breed": "tauros-paldeaaqua",
+  "tauros-paldea-blaze": "tauros-paldeablaze",
+  "tauros-paldea-aqua": "tauros-paldeaaqua",
+  "tauros-paldea-combat": "tauros-paldeacombat",
+  "galarian-stunfisk": "stunfisk-galar",
+  "stunfisk-galar": "stunfisk-galar",
+  "hisuian-avalugg": "avalugg-hisui",
+  "avalugg-hisui": "avalugg-hisui",
+};
+
 function getPokemonSpriteCandidates(name: string): string[] {
   const clean = normalizePokemonKey(name);
-  const mapped = SPRITE_SPECIAL_SLUGS[clean] ?? clean;
+  const extra = EXTRA_SPRITE_SLUGS[clean];
+  const mapped = extra ?? SPRITE_SPECIAL_SLUGS[clean] ?? clean;
   const noHyphenMapped = mapped.replace(/-/g, "");
   const fallbackSpecies = BASE_SPECIES_FALLBACKS[clean];
   const lastWord = clean.split("-").pop() || clean;

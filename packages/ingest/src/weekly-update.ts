@@ -1,13 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import {
-  REGULATIONS,
+import {REGULATIONS,
   type PokemonMetaStats,
   type RegulationSnapshot,
   type TournamentTeam,
-  type WeightedEntry,
-} from "@rotompedia/core";
+  type WeightedEntry, normalizeSpeciesKey } from "@rotompedia/core";
 import { classifyTournament, fetchLimitlessRegulation } from "./limitless.js";
 import {
   fetchLimitlessVgcMajors,
@@ -15,6 +13,21 @@ import {
   parseTournamentDateToIso,
 } from "./limitless-vgc-majors.js";
 import { fetchPikalyticsRoster, fetchPikalyticsTeamUsage } from "./pikalytics.js";
+
+
+const canonicalSpeciesKey = (raw: string): string => {
+  const k = normalizeSpeciesKey(raw) || raw.trim().toLowerCase();
+  if (k === "sirfetch") return "sirfetchd";
+  return k;
+};
+
+const isMegaSpecies = (raw: string): boolean => {
+  const s = raw.trim().toLowerCase();
+  return (
+    /^mega(?:-|\s|$)/.test(s) ||
+    /(?:-|\s)mega(?:-x|-y|-z)?(?:$|\s|-)/.test(s)
+  );
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -86,9 +99,10 @@ function buildPokemonStats(
     { name: string; count: number; natures: Map<string, number> }
   >();
 
+
   for (const team of teams) {
     for (const mon of team.pokemon) {
-      const key = mon.name.toLowerCase();
+      const key = canonicalSpeciesKey(mon.name);
       const entry = appearances.get(key) ?? {
         name: mon.name,
         count: 0,
@@ -108,7 +122,7 @@ function buildPokemonStats(
 
   for (const core of teamUsage.cores) {
     for (const p of core.pokemon) {
-      if (!rankedSpecies.some((s) => s.toLowerCase() === p.toLowerCase())) {
+      if (!rankedSpecies.some((s) => canonicalSpeciesKey(s) === canonicalSpeciesKey(p))) {
         rankedSpecies.push(p);
       }
     }
@@ -116,9 +130,10 @@ function buildPokemonStats(
 
   const pokemon: PokemonMetaStats[] = [];
   for (const name of rankedSpecies) {
-    const key = name.toLowerCase();
-    const app = appearances.get(key);
-    const pika = pikaMap.get(key);
+    const key = canonicalSpeciesKey(name);
+    if (isMegaSpecies(name)) continue;
+    const app = appearances.get(key) ?? appearances.get(name.toLowerCase());
+    const pika = pikaMap.get(key) ?? pikaMap.get(name.toLowerCase());
     if (!app && !pika) continue;
 
     const totalNat = app
@@ -139,13 +154,19 @@ function buildPokemonStats(
         ? Number(((app.count / teams.length) * 100).toFixed(2))
         : 0;
 
+    const displayCandidate = pika?.name ?? app?.name ?? name;
+    if (isMegaSpecies(displayCandidate)) continue;
+    const finalUsage = pika?.usage ?? fallbackUsage;
+    const finalAppearances = app?.count ?? 0;
+    if (finalAppearances === 0 && finalUsage === 0) continue;
+
     pokemon.push({
       id: pika?.id ?? key.replace(/\s+/g, "-"),
-      name: pika?.name ?? app?.name ?? name,
-      usage: pika?.usage ?? fallbackUsage,
+      name: displayCandidate,
+      usage: finalUsage,
       winRate: pika?.winRate ?? null,
       record: pika?.record,
-      tournamentAppearances: app?.count ?? 0,
+      tournamentAppearances: finalAppearances,
       moves: pika?.moves ?? [],
       items: pika?.items ?? [],
       abilities: pika?.abilities ?? [],
@@ -155,6 +176,30 @@ function buildPokemonStats(
       matchups: pika?.matchups,
     });
   }
+
+  const mergedPokemon = new Map<string, PokemonMetaStats>();
+  for (const item of pokemon) {
+    const cKey = canonicalSpeciesKey(item.name || item.id);
+    const prev = mergedPokemon.get(cKey);
+    if (!prev) {
+      mergedPokemon.set(cKey, { ...item, id: cKey });
+    } else {
+      const preferred =
+        item.name.includes("'") || item.natures.length > prev.natures.length
+          ? item
+          : prev;
+      mergedPokemon.set(cKey, {
+        ...prev,
+        ...preferred,
+        id: cKey,
+        usage: Math.max(prev.usage, item.usage),
+        tournamentAppearances: Math.max(prev.tournamentAppearances, item.tournamentAppearances),
+        natures: prev.natures.length >= item.natures.length ? prev.natures : item.natures,
+      });
+    }
+  }
+  pokemon.length = 0;
+  pokemon.push(...mergedPokemon.values());
 
   pokemon.sort((a, b) => b.usage - a.usage);
   return pokemon;
@@ -277,7 +322,7 @@ async function main() {
   const tempAppearances = new Map<string, { name: string; count: number }>();
   for (const team of finalTeams) {
     for (const mon of team.pokemon) {
-      const key = mon.name.toLowerCase();
+      const key = canonicalSpeciesKey(mon.name);
       const prev = tempAppearances.get(key) ?? { name: mon.name, count: 0 };
       prev.count += 1;
       tempAppearances.set(key, prev);

@@ -7,6 +7,8 @@ import {
   type PokemonMetaStats,
   type RegulationSnapshot,
   type WeightedEntry,
+  isSpeciesLegalInRegulation,
+  normalizeSpeciesKey,
 } from "@rotompedia/core";
 import { classifyTournament, fetchLimitlessRegulation } from "./limitless.js";
 import {
@@ -115,14 +117,38 @@ async function main() {
     ...circuitTeamsFiltered.filter((t) => !majorTournamentIds.has(String(t.tournamentId))),
   ];
 
+
+  const allowedTournamentNamesForReg: Record<string, string[]> = {
+    "M-A": ["new orleans", "indianapolis"],
+  };
+  const allowedNameFragments = allowedTournamentNamesForReg[reg.code] ?? null;
+
+  const filteredTeams = normalizedTeams
+    .filter((team) => {
+      if (!allowedNameFragments) return true;
+      const tName = (team.tournamentName ?? "").toLowerCase();
+      return allowedNameFragments.some((frag) => tName.includes(frag));
+    })
+    .map((team) => ({
+      ...team,
+      pokemon: team.pokemon.filter((mon) => isSpeciesLegalInRegulation(reg.code, mon.name)),
+    }))
+    .filter((team) => team.pokemon.length > 0);
+
   const uniqueTournamentIds = new Set(
-    normalizedTeams.map((t) => (t.tournamentId ?? t.tournamentName).trim()).filter(Boolean)
+    filteredTeams.map((t) => (t.tournamentId ?? t.tournamentName).trim()).filter(Boolean)
   );
 
   const appearances = new Map<string, { name: string; count: number; natures: Map<string, number> }>();
-  for (const team of normalizedTeams) {
+  const canonicalSpeciesKey = (raw: string): string => {
+    const k = normalizeSpeciesKey(raw);
+    if (k === "sirfetch") return "sirfetchd";
+    return k;
+  };
+
+  for (const team of filteredTeams) {
     for (const mon of team.pokemon) {
-      const key = mon.name.toLowerCase();
+      const key = canonicalSpeciesKey(mon.name);
       const entry = appearances.get(key) ?? {
         name: mon.name,
         count: 0,
@@ -141,7 +167,9 @@ async function main() {
     .map((e) => e.name);
   for (const core of teamUsage.cores) {
     for (const p of core.pokemon) {
-      if (!rankedSpecies.some((s) => s.toLowerCase() === p.toLowerCase())) {
+      if (!isSpeciesLegalInRegulation(reg.code, p)) continue;
+      const pKey = canonicalSpeciesKey(p);
+      if (!rankedSpecies.some((s) => canonicalSpeciesKey(s) === pKey)) {
         rankedSpecies.push(p);
       }
     }
@@ -149,12 +177,24 @@ async function main() {
 
   const pikaMap = await fetchPikalyticsRoster(reg.pikalyticsFormat, rankedSpecies);
 
+  const isMegaSpecies = (raw: string): boolean => {
+    const s = raw.trim().toLowerCase();
+    return (
+      /^mega(?:-|\s|$)/.test(s) ||
+      /(?:-|\s)mega(?:-x|-y|-z)?(?:$|\s|-)/.test(s)
+    );
+  };
+
   const pokemon: PokemonMetaStats[] = [];
   for (const name of rankedSpecies) {
-    const key = name.toLowerCase();
-    const app = appearances.get(key);
-    const pika = pikaMap.get(key);
+    if (isMegaSpecies(name)) continue;
+    if (!isSpeciesLegalInRegulation(reg.code, name)) continue;
+    const key = canonicalSpeciesKey(name);
+    const app = (appearances.get(key) ?? appearances.get(normalizeSpeciesKey(name)));
+    const pika = pikaMap.get(key) ?? pikaMap.get(name.toLowerCase());
     if (!app && !pika) continue;
+    const displayCandidate = pika?.name ?? app?.name ?? name;
+    if (isMegaSpecies(displayCandidate)) continue;
 
     const totalNat = app ? Array.from(app.natures.values()).reduce((a, b) => a + b, 0) : 0;
     const natures: WeightedEntry[] = app
@@ -168,14 +208,18 @@ async function main() {
       : [];
 
     const fallbackUsage =
-      normalizedTeams.length > 0 && app
-        ? Number(((app.count / normalizedTeams.length) * 100).toFixed(2))
+      filteredTeams.length > 0 && app
+        ? Number(((app.count / filteredTeams.length) * 100).toFixed(2))
         : 0;
+
+    const finalUsage = pika?.usage ?? fallbackUsage;
+    const finalAppearances = app?.count ?? 0;
+    if (finalAppearances === 0 && finalUsage === 0) continue;
 
     pokemon.push({
       id: pika?.id ?? key.replace(/\s+/g, "-"),
-      name: pika?.name ?? app?.name ?? name,
-      usage: pika?.usage ?? fallbackUsage,
+      name: displayCandidate,
+      usage: finalUsage,
       winRate: pika?.winRate ?? null,
       record: pika?.record,
       tournamentAppearances: app?.count ?? 0,
@@ -189,6 +233,30 @@ async function main() {
     });
   }
 
+  const mergedPokemon = new Map<string, PokemonMetaStats>();
+  for (const item of pokemon) {
+    const cKey = canonicalSpeciesKey(item.name || item.id);
+    const prev = mergedPokemon.get(cKey);
+    if (!prev) {
+      mergedPokemon.set(cKey, { ...item, id: cKey });
+    } else {
+      const preferred =
+        item.name.includes("'") || item.natures.length > prev.natures.length
+          ? item
+          : prev;
+      mergedPokemon.set(cKey, {
+        ...prev,
+        ...preferred,
+        id: cKey,
+        usage: Math.max(prev.usage, item.usage),
+        tournamentAppearances: Math.max(prev.tournamentAppearances, item.tournamentAppearances),
+        natures: prev.natures.length >= item.natures.length ? prev.natures : item.natures,
+      });
+    }
+  }
+  pokemon.length = 0;
+  pokemon.push(...mergedPokemon.values());
+
   pokemon.sort((a, b) => b.usage - a.usage);
 
   const snapshot: RegulationSnapshot = {
@@ -199,28 +267,28 @@ async function main() {
       generatedAt: new Date().toISOString(),
       sources: {
         limitlessTournaments: uniqueTournamentIds.size,
-        limitlessTeams: normalizedTeams.length,
+        limitlessTeams: filteredTeams.length,
         pikalyticsSampleTeams: teamUsage.sampleTeams,
         pikalyticsDataDate: teamUsage.dataDate,
       },
     },
     pokemon,
     cores: teamUsage.cores,
-    teams: normalizedTeams,
+    teams: filteredTeams,
   };
 
   const outPath = path.join(REPO_ROOT, "apps/web/public/data/regulations", reg.snapshotFile);
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, JSON.stringify(snapshot, null, 2), "utf8");
 
-  const byCat = normalizedTeams.reduce<Record<string, number>>((acc, t) => {
+  const byCat = filteredTeams.reduce<Record<string, number>>((acc, t) => {
     const k = t.tournamentCategory ?? "circuit";
     acc[k] = (acc[k] ?? 0) + 1;
     return acc;
   }, {});
 
   console.log(`\nSnapshot guardado en ${outPath}`);
-  console.log(`  Pokémon: ${pokemon.length} | Cores: ${teamUsage.cores.length} | Equipos: ${normalizedTeams.length}`);
+  console.log(`  Pokémon: ${pokemon.length} | Cores: ${teamUsage.cores.length} | Equipos: ${filteredTeams.length}`);
   console.log("  Equipos por categoría:", byCat);
 }
 
