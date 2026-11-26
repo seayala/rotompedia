@@ -1,10 +1,10 @@
-# RotomPedia (v1.1.0 — In Progress)
+# RotomPedia (v1.1.1 — In Progress)
 
 Static VGC meta and tournament team analyzer for **Pokémon Champions**, built with Vite, React, TypeScript, and Tailwind CSS, and deployed on GitHub Pages. Currently in active development toward v2 features.
 
 ## Overview
 
-RotomPedia (`v1.1.0`) helps competitive VGC players explore regulation snapshots without a backend database:
+RotomPedia (`v1.1.1`) helps competitive VGC players explore regulation snapshots without a backend database:
 
 - **Usage & Stats:** Pokémon usage rankings, static sprites with fallback resolution, and detailed side panels (`DetailList` with BST, defensive matchups, common items with local `ItemSpriteIcon` sprites, moves, abilities, natures, and teammates).
 - **Team Cores & Tournament Teams:** Highlighted cores and tournament rosters with tournament category filters and copyable PokéPaste support.

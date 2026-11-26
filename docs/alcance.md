@@ -1,20 +1,20 @@
 # RotomPedia: contexto, estado actual y alcance del proyecto
 
-Documento de contexto y seguimiento para continuar el desarrollo o mantener el registro en `docs/alcance.md`. Última actualización: 26 de noviembre de 2026 (`v1.1.0` — en construcción / *in progress*).
+Documento de contexto y seguimiento para continuar el desarrollo o mantener el registro en `docs/alcance.md`. Última actualización: 26 de noviembre de 2026 (`v1.1.1` — en construcción / *in progress*).
 
 ## 1. Qué es
 
-**RotomPedia** es una web visual para analizar el meta de **Pokémon Champions (VGC)**: qué se usa, qué arquetipos ganan, cómo se componen los equipos competitivos y cómo le va tu equipo frente al meta. El proyecto sigue en construcción activa (*in progress*), con la base de `v1.1.0` operativa y próximas fases planificadas.
+**RotomPedia** es una web visual para analizar el meta de **Pokémon Champions (VGC)**: qué se usa, qué arquetipos ganan, cómo se componen los equipos competitivos y cómo le va tu equipo frente al meta. El proyecto sigue en construcción activa (*in progress*), con la base de `v1.1.1` operativa y próximas fases planificadas.
 
 Idea diferenciadora: **"pega tu equipo, elige un rival del meta y te digo qué cuatro llevar y con qué dos abrir"**. Combina iconos locales de objetos, *sprites* estáticos con cadenas de *fallback*, interfaz con estética oscura VGC, logo de RotomDex y soporte bilingüe (`EN` por defecto y `ES`). Proyecto personal de fans, sin ánimo de lucro, pensado sobre todo como portfolio y uso propio.
 
 **Aviso de terminología:** el juego es VGC, no TCG. Donde la documentación de Limitless habla de "decklists" y "mazos" (porque su API es compartida por varios juegos), aquí son **equipos / teamlists** de seis Pokémon, exportables como pokepaste.
 
-## 2. Estado actual del proyecto (26 de noviembre de 2026 — v1.1.0 en construcción)
+## 2. Estado actual del proyecto (26 de noviembre de 2026 — v1.1.1 en construcción)
 
 * **Monorepo y frontend (`apps/web`):** construido con **Vite + React + TypeScript + Tailwind**, configurado con `base: '/rotompedia/'` para **GitHub Pages** y validado con `pnpm --filter web exec tsc --noEmit`, `build` y vista previa (`pnpm run preview`).
 
-* **Identidad visual, idioma y objetos (`v1.1.0`):** logo de **RotomDex** integrado en la cabecera, distintivo traducido (`v1.1 Meta Viewer · En construcción` en español / `v1.1 Meta Viewer · In progress` en inglés), estética oscura VGC, selector `ES` / `EN` con inglés por defecto, `DetailList` unificado para objetos y compañeros con barras de porcentaje e `ItemSpriteIcon` sirviendo **152 iconos de objetos en local** desde `apps/web/public/items/` resueltos con `import.meta.env.BASE_URL` y mapa de *aliases*.
+* **Identidad visual, idioma y objetos (`v1.1.1`):** logo de **RotomDex** integrado en la cabecera, distintivo traducido (`v1.1.1 Meta Viewer · En construcción` en español / `v1.1.1 Meta Viewer · In progress` en inglés), estética oscura VGC, selector `ES` / `EN` con inglés por defecto, `DetailList` unificado para objetos y compañeros con barras de porcentaje e `ItemSpriteIcon` sirviendo **152 iconos de objetos en local** desde `apps/web/public/items/` resueltos con `import.meta.env.BASE_URL` y mapa de *aliases*.
 
 * **Sprites de Pokémon:** `getPokemonSpriteCandidates` en `apps/web/src/App.tsx` resuelve formas regionales, Paradox, Ruinas, variantes de género/forma y caracteres especiales con *fallbacks* encadenados hacia *sprites* externos, manteniendo los *sprites* de Pokémon fuera del repositorio para no engordar Git ni el paquete estático.
 
@@ -79,7 +79,7 @@ Se ejecuta mediante **GitHub Actions**, manteniendo la web como aplicación pura
 
 ## 7. Alcance por versiones
 
-**v1.1.0: Meta viewer (en construcción / *in progress*)**
+**v1.1.1: Meta viewer (en construcción / *in progress*)**
 
 * Ranking de Pokémon por uso con *sprites* estáticos y *fallbacks*
 
@@ -87,7 +87,7 @@ Se ejecuta mediante **GitHub Actions**, manteniendo la web como aplicación pura
 
 * Cores de equipo y equipos de torneo, con filtros de categoría y **pokepaste copiable**
 
-* Selector de regulación (`M-C`, `M-A`, `M-B`, estructura para `M-D`), selector de idioma (`EN` por defecto / `ES`), distintivo traducido (`v1.1 Meta Viewer · En construcción` / `v1.1 Meta Viewer · In progress`) y estética VGC con logo de RotomDex
+* Selector de regulación (`M-C`, `M-A`, `M-B`, estructura para `M-D`), selector de idioma (`EN` por defecto / `ES`), distintivo traducido (`v1.1.1 Meta Viewer · En construcción` / `v1.1.1 Meta Viewer · In progress`) y estética VGC con logo de RotomDex
 
 * Actualización semanal automatizada vía GitHub Actions (`weekly-update.yml`), aviso legal de proyecto de fans en la web/`README.md` y despliegue público en GitHub Pages
 
@@ -116,7 +116,7 @@ Se ejecuta mediante **GitHub Actions**, manteniendo la web como aplicación pura
 **Fuera de alcance**
 Aprendizaje por refuerzo o simulación masiva con bots, entrenar un LLM propio, app móvil nativa, cuentas de usuario con backend, monetización o publicidad, scraping de RK9, ni almacenar todos los *sprites* de Pokémon en el repositorio.
 
-## 8. Próximos pasos tras v1.1.0
+## 8. Próximos pasos tras v1.1.1
 
 1. **Verificar la primera ejecución semanal del lunes:** comprobar que `weekly-update.yml` actualiza los *snapshots* de `M-C` sin incidencias y añadir *aliases* locales si aparecen objetos nuevos en los datos.
 

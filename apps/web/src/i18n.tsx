@@ -8,7 +8,7 @@ const translations = {
   es: {
     appName: "RotomPedia · Analizador Meta VGC",
     subtitle: "Estadísticas de uso, cores y equipos competitivos de Pokémon Champions VGC",
-    wipBadge: "v1.1 Meta Viewer · En construcción",
+    wipBadge: "v1.1.1 Meta Viewer · En construcción",
     loading: "Cargando snapshot de la regulación {reg}...",
     errorTitle: "No se pudo cargar el snapshot de datos",
     errorHint: "Comprueba que exista public/data/regulations/{file} tras ejecutar la ingesta.",
@@ -38,7 +38,7 @@ const translations = {
   en: {
     appName: "RotomPedia · VGC Meta Analyzer",
     subtitle: "Usage stats, team cores, and competitive rosters for Pokémon Champions VGC",
-    wipBadge: "v1.1 Meta Viewer · In progress",
+    wipBadge: "v1.1.1 Meta Viewer · In progress",
     loading: "Loading Regulation {reg} snapshot...",
     errorTitle: "Could not load data snapshot",
     errorHint: "Make sure public/data/regulations/{file} exists after running ingestion.",

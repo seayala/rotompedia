@@ -793,7 +793,7 @@ export default function App() {
       <RotomNetworkBackground />
       {/* Cabecera y selector de idioma */}
       <header className="border-b border-orange-500/20 bg-slate-900/75 backdrop-blur shadow-[0_1px_24px_rgba(249,115,22,0.08)]">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+        <div className="w-full max-w-[1640px] mx-auto px-2.5 sm:px-4 py-4 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <img
               src={`${import.meta.env.BASE_URL}rotomdex-logo.png`}
@@ -882,7 +882,7 @@ export default function App() {
       </header>
 
       {/* Contenido principal */}
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
+      <main className="flex-1 w-full max-w-[1640px] mx-auto px-2.5 sm:px-4 py-5 sm:py-6 space-y-6">
         {loading && (
           <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-8 text-center text-slate-300">
             {t.loading.replace("{reg}", currentReg.code)}
@@ -986,9 +986,9 @@ export default function App() {
                           <tr>
                             <th className="py-3 px-3">{t.colRank}</th>
                             <th className="py-3 px-3">{t.colPokemon}</th>
-                            <th className="py-3 px-3 text-right">{t.colUsage}</th>
-                            <th className="py-3 px-3 text-right">{t.colWinRate}</th>
-                            <th className="py-3 px-3 text-right">{t.colTourneyApps}</th>
+                            <th className="py-3 px-3 text-right w-24 sm:w-28">{t.colUsage}</th>
+                            <th className="py-3 px-3 text-right w-24 sm:w-28">{t.colWinRate}</th>
+                            <th className="py-3 px-3 text-right w-28 sm:w-32">{t.colTourneyApps}</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-800/60">
@@ -1007,9 +1007,9 @@ export default function App() {
                                 <td className="py-2.5 px-3 font-mono text-xs text-slate-400">
                                   {idx + 1}
                                 </td>
-                                <td className="py-2.5 px-3 font-medium">
+                                <td className="py-3 px-3 font-medium">
                                   <div className="flex items-center gap-2.5">
-                                    <PokemonSprite name={mon.name} sizeClass="w-8 h-8" />
+                                    <PokemonSprite name={mon.name} sizeClass="w-10 h-10 sm:w-11 sm:h-11" />
                                     <span>{mon.name}</span>
                                   </div>
                                 </td>
@@ -1032,7 +1032,7 @@ export default function App() {
                 </div>
 
                 {/* Panel lateral de detalle */}
-                <div className="lg:col-span-5 rounded-xl border border-slate-800 bg-slate-900/60 p-5 space-y-4">
+                <div className="lg:col-span-5 lg:sticky lg:top-6 rounded-xl border border-slate-800 bg-slate-900/60 p-4 space-y-3">
                   {selectedMon ? (
                     <>
                       <div className="flex items-center justify-between gap-3 border-b border-slate-800 pb-3">
@@ -1190,18 +1190,18 @@ export default function App() {
 
             {/* Vista 2: Cores */}
             {tab === "cores" && (
-              <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+              <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {filteredCores.length === 0 ? (
                   <p className="text-sm text-slate-400">{t.noResults}</p>
                 ) : (
                   filteredCores.map((core, i) => (
                     <div
                       key={`${core.pokemon.join("-")}-${i}`}
-                      className="min-w-0 rounded-xl border border-slate-800 bg-slate-900/60 p-5 flex items-center justify-between gap-5"
+                      className="min-w-0 rounded-xl border border-slate-800 bg-slate-900/60 p-4 flex items-center justify-between gap-4"
                     >
                       <div className="min-w-0 flex-1">
                         <div className="text-xs font-mono text-slate-400">#{i + 1}</div>
-                        <div className="mt-1.5 flex items-center gap-1">
+                        <div className="mt-1.5 flex flex-wrap items-center gap-1 sm:gap-1.5">
                           {core.pokemon.slice(0, 6).map((mon: string, mIdx: number) => (
                             <span
                               key={`${mon}-${mIdx}`}
@@ -1209,7 +1209,7 @@ export default function App() {
                               aria-label={mon}
                               className="inline-flex items-center justify-center shrink-0"
                             >
-                              <PokemonSprite name={mon} eager sizeClass="w-[52px] h-[52px]" />
+                              <PokemonSprite name={mon} eager sizeClass="w-10 h-10 sm:w-[52px] sm:h-[52px]" />
                             </span>
                           ))}
                         </div>
@@ -1331,7 +1331,7 @@ export default function App() {
                     {filteredTeams.length === 0 ? (
                       <p className="text-sm text-slate-400">{t.noResults}</p>
                     ) : (
-                      <div className="space-y-3">
+                      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
                         {filteredTeams.map((tm, idx) => {
                           const cat = inferTeamCategory(tm);
                           const teamKey = `${tm.tournamentId}-${tm.player}-${idx}`;
@@ -1363,8 +1363,18 @@ export default function App() {
                               <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
                                 <div className="flex flex-wrap items-center gap-2">
                                   {tm.placing !== null && (
-                                    <span className="font-mono px-2 py-0.5 rounded bg-orange-500/15 text-orange-300">
-                                      #{tm.placing}
+                                    <span
+                                      className={`shrink-0 font-mono font-bold text-xs sm:text-sm px-2.5 py-0.5 rounded-md border ${
+                                        tm.placing === 1
+                                          ? "bg-amber-400/20 text-amber-200 border-amber-400/60 shadow-[0_0_14px_rgba(251,191,36,0.22)]"
+                                          : tm.placing === 2
+                                          ? "bg-slate-300/15 text-slate-100 border-slate-300/45"
+                                          : tm.placing === 3
+                                          ? "bg-orange-700/25 text-orange-200 border-orange-500/50"
+                                          : "bg-indigo-500/15 text-indigo-200 border-indigo-400/35"
+                                      }`}
+                                    >
+                                      {`Top ${tm.placing}`}
                                     </span>
                                   )}
                                   <span className="font-semibold text-sm text-slate-100">
@@ -1417,14 +1427,14 @@ export default function App() {
                                 </div>
                               </div>
 
-                              <div className="flex items-center justify-between gap-2 sm:gap-3 w-full py-1">
+                              <div className="grid grid-cols-6 items-center gap-1.5 sm:gap-2 w-full py-1">
                                 {tm.pokemon.map((m: any, mIdx: number) => (
                                   <div
                                     key={`${m.id}-${mIdx}`}
-                                    className="relative flex-1 flex items-center justify-center h-20 min-w-[64px] select-none"
+                                    className="relative w-full h-16 sm:h-[72px] flex items-center justify-center select-none"
                                   >
                                     <div className="relative inline-flex items-center justify-center w-16 h-16">
-                                      <PokemonSprite name={m.name} sizeClass="w-16 h-16" />
+                                      <PokemonSprite name={m.name} sizeClass="w-14 h-14 sm:w-[68px] sm:h-[68px]" />
                                       {m.item ? (
                                         <ItemSpriteIcon
                                           name={String(m.item)}
@@ -1582,8 +1592,12 @@ function DetailList({
   };
 
   return (
-    <div className="space-y-2">
-      <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">{title}</h3>
+    <div className="space-y-2.5 border-t border-slate-800/70 pt-3.5 first:border-t-0 first:pt-0">
+      <div className="text-center">
+        <h3 className="inline-block text-xs font-semibold uppercase tracking-wider text-slate-400 border-b border-slate-700/80 pb-1">
+          {title}
+        </h3>
+      </div>
       <ul className="space-y-1.5">
         {items.map((entry) => {
           const pctWidth = Math.min(100, Math.max(4, (entry.usage / maxUsage) * 100));
@@ -1592,18 +1606,18 @@ function DetailList({
             <li
               key={entry.name}
               onClick={isClickableMon ? () => onSelectPokemon(entry.name) : undefined}
-              className={`flex items-center justify-between gap-3 text-xs rounded-md px-1.5 py-1 transition ${
+              className={`flex items-center justify-center gap-3 sm:gap-4 text-xs rounded-md px-2 py-1 transition ${
                 isClickableMon
                   ? "cursor-pointer hover:bg-slate-800/70"
                   : "hover:bg-slate-900/50"
               }`}
             >
-              <div className="flex items-center gap-2 min-w-0">
+              <div className="flex items-center gap-2 min-w-0 flex-1 max-w-[180px] sm:max-w-[200px]">
                 {renderLeadingVisual(entry.name)}
                 <span className="text-slate-200 truncate">{entry.name}</span>
               </div>
               <div className="flex items-center gap-2.5 shrink-0">
-                <div className="w-14 h-1.5 rounded-full bg-slate-800 overflow-hidden hidden sm:block">
+                <div className="w-16 sm:w-20 h-1.5 rounded-full bg-slate-800 overflow-hidden hidden sm:block">
                   <div
                     className="h-full rounded-full bg-orange-400/70"
                     style={{ width: `${pctWidth}%` }}
