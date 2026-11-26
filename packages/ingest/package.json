@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "@rotompedia/core": "workspace:*"
+  },
+  "scripts": {
+    "snapshot": "tsx src/build-snapshot.ts",
+    "weekly": "tsx src/weekly-update.ts"
   }
 }

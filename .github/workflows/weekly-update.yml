@@ -1,0 +1,58 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    # Cada lunes a las 09:00 UTC (10:00 CET / 11:00 CEST)
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+    inputs:
+      as_of_date:
+        description: "Fecha de referencia opcional (YYYY-MM-DD en UTC)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-data-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run weekly ingestion for active regulation
+        env:
+          AS_OF_DATE: ${{ inputs.as_of_date }}
+        run: pnpm --filter @rotompedia/ingest run weekly
+
+      - name: Commit and push updated snapshots if changed
+        run: |
+          git add apps/web/public/data/regulations
+          if git diff --cached --quiet; then
+            echo "No hay cambios en los snapshots; se omite el commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.gov"
+          git commit -m "chore(data): weekly meta update ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:main

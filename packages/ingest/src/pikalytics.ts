@@ -1,3 +1,4 @@
+import { filterLegalAbilities } from "@rotompedia/core";
 import type {
   BaseStats,
   PokemonMetaStats,
