@@ -272,12 +272,24 @@ function getPokemonSpriteCandidates(name: string): string[] {
 
   return Array.from(new Set(urls));
 }
+const preloadedSpriteUrls = new Set<string>();
+
+function preloadSpriteUrl(url: string) {
+  if (!url || typeof window === "undefined" || preloadedSpriteUrls.has(url)) return;
+  preloadedSpriteUrls.add(url);
+  const img = new Image();
+  img.decoding = "async";
+  img.src = url;
+}
+
 function PokemonSprite({
   name,
   sizeClass = "w-8 h-8",
+  eager = false,
 }: {
   name: string;
   sizeClass?: string;
+  eager?: boolean;
 }) {
   const candidates = useMemo(() => getPokemonSpriteCandidates(name), [name]);
   const [step, setStep] = useState(0);
@@ -298,8 +310,9 @@ function PokemonSprite({
   return (
     <img
       src={candidates[step]}
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
       alt={name}
-      loading="lazy"
       onError={() => setStep((prev) => prev + 1)}
       className={`${sizeClass} object-contain shrink-0 select-none`}
     />
@@ -675,6 +688,28 @@ export default function App() {
     });
   }, [snapshot, normalizedQuery]);
 
+  useEffect(() => {
+    if (!snapshot?.cores?.length) return;
+    const mons: string[] = [];
+    for (const core of snapshot.cores) {
+      for (const mon of core.pokemon.slice(0, 6)) {
+        mons.push(mon);
+      }
+    }
+    const ordered = [
+      ...mons.filter((m) => /mega/i.test(m)),
+      ...mons.filter((m) => !/mega/i.test(m)),
+    ];
+    const uniqueMons = Array.from(new Set(ordered));
+    const timer = window.setTimeout(() => {
+      for (const mon of uniqueMons) {
+        const cands = getPokemonSpriteCandidates(mon);
+        if (cands[0]) preloadSpriteUrl(cands[0]);
+      }
+    }, tab === "cores" ? 0 : 180);
+    return () => window.clearTimeout(timer);
+  }, [snapshot, tab]);
+
   const filteredCores = useMemo(() => {
     if (!snapshot) return [];
     if (!normalizedQuery) return snapshot.cores;
@@ -850,14 +885,16 @@ export default function App() {
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
         {loading && (
           <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-8 text-center text-slate-300">
-            {t.loading}
+            {t.loading.replace("{reg}", currentReg.code)}
           </div>
         )}
 
         {error && (
           <div className="rounded-xl border border-red-900/60 bg-red-950/30 p-6 space-y-1">
             <p className="font-semibold text-red-300">{t.errorTitle}</p>
-            <p className="text-sm text-red-200/80">{t.errorHint}</p>
+            <p className="text-sm text-red-200/80">
+              {t.errorHint.replace("{file}", currentReg.snapshotFile)}
+            </p>
           </div>
         )}
 
@@ -1172,7 +1209,7 @@ export default function App() {
                               aria-label={mon}
                               className="inline-flex items-center justify-center shrink-0"
                             >
-                              <PokemonSprite name={mon} sizeClass="w-[52px] h-[52px]" />
+                              <PokemonSprite name={mon} eager sizeClass="w-[52px] h-[52px]" />
                             </span>
                           ))}
                         </div>
