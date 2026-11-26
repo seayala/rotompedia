@@ -213,12 +213,48 @@ function getPokemonSpriteCandidates(name: string): string[] {
     mapped.endsWith("-m") ||
     clean === "basculegion";
 
+  const explicitMegaMap: Record<string, string[]> = {
+    "raichu-mega-x": ["raichu-megax", "raichumegax", "raichu-mega-x", "raichumega-x", "raichu-mega", "raichumega"],
+    "raichu-mega-y": ["raichu-megay", "raichumegay", "raichu-mega-y", "raichumega-y", "raichu-mega", "raichumega"],
+    "staraptor-mega": ["staraptor-mega", "staraptormega"],
+  };
+
+  const megaMatch = clean.match(/^(.+?)-mega(-([xyz]))?$/);
+  const megaSuffix = megaMatch?.[3] ?? "";
+  const megaBase = megaMatch?.[1] ?? clean.replace(/-mega(-[xyz])?$/, "");
+  const extraExplicit =
+    explicitMegaMap[clean] ?? explicitMegaMap[mapped] ?? [];
+
+  const megaVariants =
+    clean.includes("-mega") || mapped.includes("-mega") || extraExplicit.length > 0
+      ? [
+          ...extraExplicit,
+          mapped,
+          noHyphenMapped,
+          clean,
+          clean.replace(/-/g, ""),
+          megaSuffix ? `${megaBase}-mega${megaSuffix}` : "",
+          megaSuffix ? `${megaBase}mega${megaSuffix}` : "",
+          `${megaBase}-mega`,
+          `${megaBase}mega`,
+          megaBase,
+        ]
+      : [];
+
   const slugs = Array.from(
     new Set(
       (
         isVariantSpecific
-          ? [mapped, noHyphenMapped, clean, fallbackSpecies]
-          : [mapped, noHyphenMapped, clean, fallbackSpecies, lastWord, firstWord]
+          ? [...megaVariants, mapped, noHyphenMapped, clean, fallbackSpecies]
+          : [
+              ...megaVariants,
+              mapped,
+              noHyphenMapped,
+              clean,
+              fallbackSpecies,
+              lastWord,
+              firstWord,
+            ]
       ).filter((s): s is string => Boolean(s))
     )
   );
@@ -231,6 +267,7 @@ function getPokemonSpriteCandidates(name: string): string[] {
   for (const slug of slugs) {
     urls.push(`https://play.pokemonshowdown.com/sprites/dex/${slug}.png`);
     urls.push(`https://play.pokemonshowdown.com/sprites/gen5/${slug}.png`);
+    urls.push(`https://play.pokemonshowdown.com/sprites/ani/${slug}.gif`);
   }
 
   return Array.from(new Set(urls));
@@ -253,10 +290,8 @@ function PokemonSprite({
     return (
       <span
         aria-hidden="true"
-        className={`${sizeClass} inline-flex items-center justify-center rounded-md bg-slate-800/80 text-[10px] font-mono text-slate-400 shrink-0`}
-      >
-        ?
-      </span>
+        className={`${sizeClass} inline-block shrink-0`}
+      />
     );
   }
 
@@ -505,26 +540,26 @@ function TypeIconBadge({ label }: { label: string }) {
     <span
       title={label}
       aria-label={label}
-      className={`inline-flex items-center gap-1 px-2 py-1 rounded border text-[11px] leading-none ${meta.bg} ${meta.border} ${meta.text}`}
+      className={`inline-flex items-center gap-1.5 px-2 py-1 rounded border text-xs leading-none ${meta.bg} ${meta.border} ${meta.text}`}
     >
       <svg
         viewBox="0 0 16 16"
-        className="w-3.5 h-3.5 shrink-0"
+        className="w-4 h-4 shrink-0"
         aria-hidden="true"
       >
-        <circle cx="8" cy="8" r="7" fill="currentColor" fillOpacity="0.22" />
+        <circle cx="8" cy="8" r="7" fill="currentColor" fillOpacity="0.24" />
         <text
           x="8"
-          y="11.2"
+          y="11.5"
           textAnchor="middle"
-          fontSize="9"
+          fontSize="10"
           fill="currentColor"
         >
           {meta.glyph}
         </text>
       </svg>
       {mult ? (
-        <span className="font-mono text-[10px] font-semibold opacity-95">{mult}</span>
+        <span className="font-mono text-[11px] font-semibold opacity-95">{mult}</span>
       ) : (
         <span className="sr-only">{rawName}</span>
       )}
@@ -990,50 +1025,87 @@ export default function App() {
                           <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
                             {lang === "es" ? "Matchups defensivos" : "Defensive matchups"}
                           </h3>
-                          <div className="space-y-2 text-xs">
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-red-300/90 shrink-0">
-                                {lang === "es" ? "Débil ante" : "Weak to"}
-                              </span>
-                              <div className="flex flex-wrap justify-end gap-1.5">
-                                {selectedMon.matchups.weakTo.length > 0 ? (
-                                  selectedMon.matchups.weakTo.map((tp: string) => (
-                                    <TypeIconBadge key={`w-${tp}`} label={tp} />
-                                  ))
-                                ) : (
-                                  <span className="text-slate-400">—</span>
-                                )}
+                          {(() => {
+                            const sortByMultDesc = (list: string[]) =>
+                              [...list].sort((a, b) => {
+                                const getWeight = (s: string) => {
+                                  if (s.includes("4x")) return 4;
+                                  if (s.includes("2x")) return 2;
+                                  if (s.includes("1/2x")) return 0.5;
+                                  if (s.includes("1/4x")) return 0.25;
+                                  return 1;
+                                };
+                                return getWeight(b) - getWeight(a);
+                              });
+
+                            const weakSorted = sortByMultDesc(selectedMon.matchups.weakTo ?? []);
+                            const resistSorted = sortByMultDesc(selectedMon.matchups.resists ?? []);
+                            const immuneSorted = [...(selectedMon.matchups.immuneTo ?? [])];
+
+                            return (
+                              <div className="space-y-2.5 text-xs">
+                                <div className="flex items-start justify-between gap-3">
+                                  <span className="text-red-300/90 font-medium shrink-0 pt-1">
+                                    {lang === "es" ? "Débil ante" : "Weak to"}
+                                    {weakSorted.length > 0 && (
+                                      <span className="ml-1.5 text-[10px] font-mono text-red-300/60">
+                                        ({weakSorted.length})
+                                      </span>
+                                    )}
+                                  </span>
+                                  <div className="flex flex-wrap justify-start gap-1.5 max-w-[72%]">
+                                    {weakSorted.length > 0 ? (
+                                      weakSorted.map((tp: string) => (
+                                        <TypeIconBadge key={`w-${tp}`} label={tp} />
+                                      ))
+                                    ) : (
+                                      <span className="text-slate-400 pt-1">—</span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                <div className="flex items-start justify-between gap-3 border-t border-slate-800/70 pt-2.5">
+                                  <span className="text-emerald-300/90 font-medium shrink-0 pt-1">
+                                    {lang === "es" ? "Resiste" : "Resists"}
+                                    {resistSorted.length > 0 && (
+                                      <span className="ml-1.5 text-[10px] font-mono text-emerald-300/60">
+                                        ({resistSorted.length})
+                                      </span>
+                                    )}
+                                  </span>
+                                  <div className="flex flex-wrap justify-start gap-1.5 max-w-[72%]">
+                                    {resistSorted.length > 0 ? (
+                                      resistSorted.map((tp: string) => (
+                                        <TypeIconBadge key={`r-${tp}`} label={tp} />
+                                      ))
+                                    ) : (
+                                      <span className="text-slate-400 pt-1">—</span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                <div className="flex items-start justify-between gap-3 border-t border-slate-800/70 pt-2.5">
+                                  <span className="text-sky-300/90 font-medium shrink-0 pt-1">
+                                    {lang === "es" ? "Inmune a" : "Immune to"}
+                                    {immuneSorted.length > 0 && (
+                                      <span className="ml-1.5 text-[10px] font-mono text-sky-300/60">
+                                        ({immuneSorted.length})
+                                      </span>
+                                    )}
+                                  </span>
+                                  <div className="flex flex-wrap justify-start gap-1.5 max-w-[72%]">
+                                    {immuneSorted.length > 0 ? (
+                                      immuneSorted.map((tp: string) => (
+                                        <TypeIconBadge key={`i-${tp}`} label={tp} />
+                                      ))
+                                    ) : (
+                                      <span className="text-slate-400 pt-1">—</span>
+                                    )}
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-2 border-t border-slate-800/70 pt-2">
-                              <span className="text-emerald-300/90 shrink-0">
-                                {lang === "es" ? "Resiste" : "Resists"}
-                              </span>
-                              <div className="flex flex-wrap justify-end gap-1.5">
-                                {selectedMon.matchups.resists.length > 0 ? (
-                                  selectedMon.matchups.resists.map((tp: string) => (
-                                    <TypeIconBadge key={`r-${tp}`} label={tp} />
-                                  ))
-                                ) : (
-                                  <span className="text-slate-400">—</span>
-                                )}
-                              </div>
-                            </div>
-                            <div className="flex items-center justify-between gap-2 border-t border-slate-800/70 pt-2">
-                              <span className="text-sky-300/90 shrink-0">
-                                {lang === "es" ? "Inmune a" : "Immune to"}
-                              </span>
-                              <div className="flex flex-wrap justify-end gap-1.5">
-                                {selectedMon.matchups.immuneTo.length > 0 ? (
-                                  selectedMon.matchups.immuneTo.map((tp: string) => (
-                                    <TypeIconBadge key={`i-${tp}`} label={tp} />
-                                  ))
-                                ) : (
-                                  <span className="text-slate-400">—</span>
-                                )}
-                              </div>
-                            </div>
-                          </div>
+                            );
+                          })()}
                         </div>
                       )}
 
@@ -1071,29 +1143,37 @@ export default function App() {
 
             {/* Vista 2: Cores */}
             {tab === "cores" && (
-              <section className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <section className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                 {filteredCores.length === 0 ? (
                   <p className="text-sm text-slate-400">{t.noResults}</p>
                 ) : (
                   filteredCores.map((core, i) => (
                     <div
                       key={`${core.pokemon.join("-")}-${i}`}
-                      className="rounded-xl border border-slate-800 bg-slate-900/60 p-4 flex items-center justify-between gap-4"
+                      className="min-w-0 rounded-xl border border-slate-800 bg-slate-900/60 p-5 flex items-center justify-between gap-5"
                     >
-                      <div>
+                      <div className="min-w-0 flex-1">
                         <div className="text-xs font-mono text-slate-400">#{i + 1}</div>
-                        <div className="font-semibold mt-0.5">{core.pokemon.join(" · ")}</div>
-                      </div>
-                      <div className="text-right font-mono text-xs shrink-0">
-                        <div className="text-orange-300 font-semibold">{core.uses} uses</div>
-                        <div className="text-slate-400">
-                          {core.usage.toFixed(1)}%
-                          {core.winRate != null ? (
-                            <span className={winRateColorClass(core.winRate)}>
-                              {` · ${core.winRate.toFixed(1)}% WR`}
+                        <div className="mt-1.5 flex items-center gap-1">
+                          {core.pokemon.slice(0, 6).map((mon: string, mIdx: number) => (
+                            <span
+                              key={`${mon}-${mIdx}`}
+                              title={mon}
+                              aria-label={mon}
+                              className="inline-flex items-center justify-center shrink-0"
+                            >
+                              <PokemonSprite name={mon} sizeClass="w-[52px] h-[52px]" />
                             </span>
-                          ) : null}
+                          ))}
                         </div>
+                      </div>
+                      <div className="text-right font-mono text-xs shrink-0 pl-2">
+                        <div className="text-orange-300 font-semibold">{core.uses} uses</div>
+                        {core.winRate != null ? (
+                          <div className={winRateColorClass(core.winRate)}>
+                            {`${core.winRate.toFixed(1)}% WR`}
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   ))
